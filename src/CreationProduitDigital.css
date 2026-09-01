@@ -1,0 +1,822 @@
+
+/* =====================================================
+   POLICE
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Pacifico&display=swap');
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.produit-digital-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #24103d;
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.produit-digital-hero {
+  min-height: calc(100vh - 80px);
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+  overflow: hidden;
+
+  padding: 70px 6%;
+
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 20% 25%,
+      rgba(222, 166, 255, 0.55),
+      transparent 35%
+    ),
+
+    radial-gradient(
+      circle at 80% 60%,
+      rgba(195, 105, 255, 0.30),
+      transparent 35%
+    ),
+
+    linear-gradient(
+      135deg,
+      #f9efff 0%,
+      #ead5ff 50%,
+      #d2a0e8 100%
+    );
+}
+
+
+/* =====================================================
+   PARTIE GAUCHE
+===================================================== */
+
+.produit-digital-content {
+  width: 48%;
+
+  position: relative;
+  z-index: 5;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   PETIT TEXTE
+===================================================== */
+
+.produit-digital-small {
+  margin-bottom: 18px;
+
+  color: #71358f;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+
+/* =====================================================
+   TITRE
+===================================================== */
+
+.produit-digital-content h1 {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  line-height: 0.9;
+}
+
+
+/* =====================================================
+   CRÉATION DE
+===================================================== */
+
+.produit-title-main {
+  display: block;
+
+  color: #29113f;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: clamp(45px, 5.5vw, 78px);
+
+  font-weight: 900;
+
+  letter-spacing: -3px;
+}
+
+
+/* =====================================================
+   PRODUITS
+===================================================== */
+
+.produit-title-gradient {
+  display: block;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: clamp(50px, 6.5vw, 88px);
+
+  font-weight: 900;
+
+  letter-spacing: -4px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #8c38b9,
+      #c43bbd,
+      #e34f9d
+    );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* =====================================================
+   DIGITAUX
+===================================================== */
+
+.produit-title-script {
+  display: block;
+
+  margin: 8px 0 0 5px;
+
+  color: #35104f;
+
+  font-family: "Pacifico", cursive;
+
+  font-size: clamp(40px, 5vw, 68px);
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  transform: rotate(-3deg);
+
+  transform-origin: left center;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.produit-description {
+  max-width: 500px;
+
+  margin: 30px 0 25px;
+
+  color: #30213c;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 19px;
+
+  line-height: 1.45;
+}
+
+
+.produit-description strong {
+  display: block;
+
+  color: #5b237f;
+
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   OPTIONS
+===================================================== */
+
+.produit-options {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  max-width: 450px;
+}
+
+
+/* =====================================================
+   OPTION
+===================================================== */
+
+.produit-option {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  min-height: 70px;
+
+  padding: 9px 15px;
+
+  box-sizing: border-box;
+
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.68);
+
+  box-shadow:
+    0 6px 20px
+    rgba(83, 35, 111, 0.08);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.produit-option:hover {
+  transform: translateX(7px);
+
+  background: #ffffff;
+
+  box-shadow:
+    0 12px 30px
+    rgba(83, 35, 111, 0.15);
+}
+
+
+/* =====================================================
+   ICÔNE
+===================================================== */
+
+.produit-icon {
+  width: 48px;
+  min-width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #541b8c,
+      #a83dcc
+    );
+
+  color: white;
+
+  font-size: 23px;
+
+  box-shadow:
+    0 5px 15px
+    rgba(99, 32, 145, 0.25);
+}
+
+
+/* =====================================================
+   TITRE OPTION
+===================================================== */
+
+.produit-option h3 {
+  margin: 0 0 3px;
+
+  color: #29143e;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 800;
+}
+
+
+/* =====================================================
+   TEXTE OPTION
+===================================================== */
+
+.produit-option p {
+  margin: 0;
+
+  color: #594d62;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.35;
+}
+
+
+/* =====================================================
+   SLOGAN
+===================================================== */
+
+.produit-slogan {
+  margin: 25px 0 0;
+
+  color: #301441;
+
+  font-family: "Pacifico", cursive;
+
+  font-size: 22px;
+
+  line-height: 1.2;
+}
+
+
+.produit-slogan span {
+  color: #8d3db1;
+}
+
+
+/* =====================================================
+   BOUTON
+===================================================== */
+
+.produit-button {
+  margin-top: 20px;
+
+  padding: 14px 26px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #55228b,
+      #a53cc4,
+      #dc4d9b
+    );
+
+  color: white;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 25px
+    rgba(98, 39, 139, 0.25);
+
+  transition:
+    all 0.3s ease;
+}
+
+
+.produit-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 35px
+    rgba(98, 39, 139, 0.35);
+}
+
+
+/* =====================================================
+   VISUEL DROITE
+===================================================== */
+
+.produit-digital-visual {
+  width: 52%;
+
+  min-height: 620px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  z-index: 2;
+}
+
+
+/* =====================================================
+   PHOTO
+===================================================== */
+
+.produit-digital-image {
+  width: 100%;
+
+  max-width: 600px;
+
+  height: 560px;
+
+  object-fit: cover;
+
+  display: block;
+
+  border-radius: 30px;
+
+  box-shadow:
+    0 25px 60px
+    rgba(72, 24, 94, 0.25);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+.produit-digital-image:hover {
+  transform: scale(1.02);
+
+  box-shadow:
+    0 30px 70px
+    rgba(72, 24, 94, 0.30);
+}
+
+
+/* =====================================================
+   SECTION SERVICES
+===================================================== */
+
+.produit-services {
+  padding: 110px 7%;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #f8effd
+    );
+
+  text-align: center;
+}
+
+
+/* =====================================================
+   PETIT TITRE SECTION
+===================================================== */
+
+.produit-section-small {
+  margin-bottom: 15px;
+
+  color: #8a42b2;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+
+/* =====================================================
+   TITRE SECTION
+===================================================== */
+
+.produit-services h2 {
+  margin: 0 0 55px;
+
+  color: #28133b;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 45px;
+
+  line-height: 1.1;
+}
+
+
+.produit-services h2 span {
+  background:
+    linear-gradient(
+      90deg,
+      #e74ac8,
+      #a86cff
+    );
+
+  background-clip: text;
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.produit-grid {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 22px;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.produit-card {
+  padding: 30px 24px;
+
+  text-align: left;
+
+  background: #faf6fd;
+
+  border:
+    1px solid
+    rgba(110, 50, 145, 0.08);
+
+  border-radius: 22px;
+
+  cursor: pointer;
+
+  transition:
+    all 0.3s ease;
+}
+
+
+.produit-card:hover {
+  transform: translateY(-8px);
+
+  background: #ffffff;
+
+  box-shadow:
+    0 15px 40px
+    rgba(160, 45, 200, 0.15);
+}
+
+
+/* =====================================================
+   CARD ICON
+===================================================== */
+
+.produit-card-icon {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #5f1a9b,
+      #d13ab9
+    );
+
+  font-size: 25px;
+}
+
+
+/* =====================================================
+   CARD TITRE
+===================================================== */
+
+.produit-card h3 {
+  margin: 0 0 12px;
+
+  color: #321746;
+
+  font-size: 19px;
+}
+
+
+/* =====================================================
+   CARD TEXTE
+===================================================== */
+
+.produit-card p {
+  margin: 0;
+
+  color: #6a6170;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   TABLETTE / ÉCRAN MOYEN
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .produit-digital-hero {
+    flex-direction: column;
+
+    gap: 50px;
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+
+  .produit-digital-content {
+    width: 100%;
+  }
+
+
+  .produit-digital-visual {
+    width: 100%;
+
+    min-height: auto;
+
+    height: 500px;
+  }
+
+
+  .produit-digital-image {
+    width: 90%;
+
+    max-width: 600px;
+
+    height: 500px;
+  }
+
+
+  .produit-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .produit-digital-hero {
+    padding: 50px 5%;
+
+    gap: 40px;
+  }
+
+
+  /* =================================================
+     TITRE
+  ================================================= */
+
+  .produit-title-main {
+    font-size: 46px;
+
+    letter-spacing: -2px;
+  }
+
+
+  .produit-title-gradient {
+    font-size: 53px;
+
+    letter-spacing: -3px;
+  }
+
+
+  .produit-title-script {
+    margin-left: 5px;
+
+    font-size: 43px;
+  }
+
+
+  /* =================================================
+     DESCRIPTION
+  ================================================= */
+
+  .produit-description {
+    font-size: 16px;
+
+    margin-top: 25px;
+  }
+
+
+  /* =================================================
+     OPTIONS
+  ================================================= */
+
+  .produit-option {
+    min-height: 65px;
+
+    padding: 8px 10px;
+  }
+
+
+  .produit-icon {
+    width: 44px;
+
+    min-width: 44px;
+
+    height: 44px;
+
+    font-size: 20px;
+  }
+
+
+  .produit-option h3 {
+    font-size: 15px;
+  }
+
+
+  .produit-option p {
+    font-size: 11px;
+  }
+
+
+  /* =================================================
+     PHOTO
+  ================================================= */
+
+  .produit-digital-visual {
+    width: 100%;
+
+    height: auto;
+
+    min-height: auto;
+  }
+
+
+  .produit-digital-image {
+    width: 100%;
+
+    height: 350px;
+
+    max-width: 100%;
+
+    border-radius: 22px;
+  }
+
+
+  /* =================================================
+     SERVICES
+  ================================================= */
+
+  .produit-services {
+    padding: 75px 5%;
+  }
+
+
+  .produit-services h2 {
+    font-size: 34px;
+
+    margin-bottom: 40px;
+  }
+
+
+  .produit-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+
+  .produit-card {
+    padding: 25px 20px;
+  }
+
+}

@@ -1,0 +1,1002 @@
+
+
+.creation-site-page {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.creation-site-hero {
+
+  min-height: calc(100vh - 80px);
+
+  display: flex;
+
+  align-items: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 70px 6%;
+
+  background:
+    radial-gradient(
+      circle at 75% 35%,
+      rgba(202, 139, 255, 0.35),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #f8efff 0%,
+      #ead5ff 45%,
+      #5b248e 100%
+    );
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   LUMIÈRE
+========================================= */
+
+.creation-site-hero::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  border-radius: 50%;
+
+  background: rgba(180, 50, 220, 0.12);
+
+  filter: blur(100px);
+
+  top: -150px;
+
+  right: 20%;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   PARTIE GAUCHE
+========================================= */
+
+.creation-site-content {
+
+  width: 48%;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.creation-site-logo {
+
+  display: flex;
+
+  flex-direction: column;
+
+  width: fit-content;
+
+  margin-bottom: 20px;
+}
+
+
+.logo-p {
+
+  font-size: 48px;
+
+  font-weight: 900;
+
+  line-height: 1;
+
+  background:
+    linear-gradient(
+      135deg,
+      #34205f,
+      #9c3fd0,
+      #ed4d91
+    );
+
+  background-clip: text;
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+.logo-text {
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  color: #35204f;
+
+  margin-top: 2px;
+}
+
+
+/* =========================================
+   PETIT TEXTE
+========================================= */
+
+.creation-site-small {
+
+  margin-bottom: 18px;
+
+  color: #63308d;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+
+/* =========================================
+   TITRE
+========================================= */
+
+.creation-site-title {
+
+  margin: 0 0 25px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  line-height: 0.9;
+
+  width: 100%;
+}
+
+
+/* =========================================
+   CRÉATION DE
+========================================= */
+
+.creation-title-main {
+
+  display: block;
+
+  color: #25113e;
+
+  font-size: clamp(
+    50px,
+    6vw,
+    82px
+  );
+
+  font-weight: 900;
+
+  letter-spacing: -3px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   SITES WEB
+========================================= */
+
+.creation-title-script {
+
+  display: block;
+
+  margin-top: 8px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #7134b1,
+      #c137bd,
+      #ed4f91
+    );
+
+  background-clip: text;
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+
+  -webkit-text-fill-color: transparent;
+
+  font-size: clamp(
+    50px,
+    6vw,
+    82px
+  );
+
+  font-weight: 900;
+
+  letter-spacing: -3px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.creation-site-description {
+
+  margin-bottom: 28px;
+
+  color: #30213c;
+
+  font-size: 18px;
+
+  line-height: 1.6;
+}
+
+
+.creation-site-description strong {
+
+  color: #7134a9;
+}
+
+
+/* =========================================
+   SERVICES
+========================================= */
+
+.creation-site-options {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+  max-width: 470px;
+}
+
+
+/* =========================================
+   OPTION
+========================================= */
+
+.creation-option {
+
+  width: 100%;
+
+  min-height: 70px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 12px 18px;
+
+  border-radius: 15px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.92
+    );
+
+  color: #281039;
+
+  box-sizing: border-box;
+
+  transition:
+    all 0.3s ease;
+}
+
+
+.creation-option:hover {
+
+  transform:
+    translateX(8px);
+
+  background: white;
+
+  box-shadow:
+    0 8px 25px
+    rgba(
+      98,
+      39,
+      139,
+      0.20
+    );
+}
+
+
+/* =========================================
+   ICÔNE
+========================================= */
+
+.option-icon {
+
+  width: 45px;
+
+  height: 45px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #5b1898,
+      #a62bb9
+    );
+
+  color: white;
+
+  font-size: 22px;
+
+  box-shadow:
+    0 5px 15px
+    rgba(
+      138,
+      38,
+      180,
+      0.3
+    );
+}
+
+
+/* =========================================
+   TITRE OPTION
+========================================= */
+
+.creation-option h3 {
+
+  margin: 0 0 3px;
+
+  color: #29143e;
+
+  font-size: 15px;
+}
+
+
+/* =========================================
+   DESCRIPTION OPTION
+========================================= */
+
+.creation-option p {
+
+  margin: 0;
+
+  color: #594d62;
+
+  font-size: 12px;
+
+  line-height: 1.3;
+}
+
+
+/* =========================================
+   SLOGAN
+========================================= */
+
+.creation-site-slogan {
+
+  margin-top: 28px;
+
+  color: #32174e;
+
+  font-family: cursive;
+
+  font-size: 22px;
+
+  line-height: 1.4;
+
+  font-style: italic;
+}
+
+
+.creation-site-slogan span {
+
+  color: #8b3eb5;
+}
+
+
+/* =========================================
+   BOUTON
+========================================= */
+
+.creation-site-button {
+
+  margin-top: 18px;
+
+  border: none;
+
+  padding: 14px 27px;
+
+  border-radius: 30px;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  background:
+    linear-gradient(
+      90deg,
+      #55228b,
+      #a53cc4,
+      #dc4d9b
+    );
+
+  box-shadow:
+    0 10px 25px
+    rgba(
+      98,
+      39,
+      139,
+      0.25
+    );
+
+  transition:
+    all 0.3s ease;
+}
+
+
+.creation-site-button:hover {
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 15px 30px
+    rgba(
+      98,
+      39,
+      139,
+      0.35
+    );
+}
+
+
+/* =========================================
+   IMAGE À DROITE
+========================================= */
+
+.creation-site-image-container {
+
+  width: 52%;
+
+  height: 620px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  z-index: 2;
+}
+
+
+/* =========================================
+   PHOTO
+========================================= */
+
+.creation-site-image {
+
+  width: 90%;
+
+  height: 90%;
+
+  object-fit: cover;
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 25px 80px
+    rgba(
+      0,
+      0,
+      0,
+      0.55
+    );
+
+  transform:
+    rotate(1deg);
+
+  transition:
+    transform 0.5s ease;
+}
+
+
+.creation-site-image:hover {
+
+  transform:
+    rotate(0deg)
+    scale(1.02);
+}
+
+
+/* =========================================
+   SECTION SERVICES
+========================================= */
+
+.creation-services {
+
+  padding: 110px 7%;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #faf5fd
+    );
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   SOUS TITRE
+========================================= */
+
+.creation-section-small {
+
+  margin-bottom: 15px;
+
+  color: #8a42b2;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+
+/* =========================================
+   TITRE SECTION
+========================================= */
+
+.creation-services h2 {
+
+  margin: 0 0 55px;
+
+  color: #28133b;
+
+  font-size: 48px;
+
+  line-height: 1.1;
+}
+
+
+.creation-services h2 span {
+
+  background:
+    linear-gradient(
+      90deg,
+      #a33bc2,
+      #ed4f91
+    );
+
+  background-clip: text;
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================================
+   GRILLE
+========================================= */
+
+.creation-services-grid {
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 22px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.creation-service-card {
+
+  padding: 30px 24px;
+
+  background:
+    #faf6fd;
+
+  border:
+    1px solid
+    rgba(
+      110,
+      50,
+      145,
+      0.08
+    );
+
+  border-radius: 22px;
+
+  text-align: left;
+
+  transition:
+    all 0.3s ease;
+
+  box-sizing: border-box;
+}
+
+
+.creation-service-card:hover {
+
+  transform:
+    translateY(-8px);
+
+  background: white;
+
+  box-shadow:
+    0 15px 40px
+    rgba(
+      96,
+      43,
+      125,
+      0.12
+    );
+}
+
+
+/* =========================================
+   CARD ICON
+========================================= */
+
+.creation-service-card > div {
+
+  width: 55px;
+
+  height: 55px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #5f1a9b,
+      #d13ab9
+    );
+
+  font-size: 25px;
+}
+
+
+/* =========================================
+   CARD TITRE
+========================================= */
+
+.creation-service-card h3 {
+
+  margin: 0 0 12px;
+
+  color: #321746;
+
+  font-size: 19px;
+}
+
+
+/* =========================================
+   CARD DESCRIPTION
+========================================= */
+
+.creation-service-card p {
+
+  margin: 0;
+
+  color: #6a6170;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   TABLETTE
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .creation-site-hero {
+
+    flex-direction: column;
+
+    gap: 50px;
+
+    padding:
+      60px 6%;
+  }
+
+
+  .creation-site-content {
+
+    width: 100%;
+  }
+
+
+  .creation-site-image-container {
+
+    width: 100%;
+
+    height: 500px;
+  }
+
+
+  .creation-site-image {
+
+    width: 90%;
+
+    height: 100%;
+  }
+
+
+  .creation-services-grid {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================
+   PETITE TABLETTE
+========================================= */
+
+@media (max-width: 800px) {
+
+  .creation-title-main,
+  .creation-title-script {
+
+    font-size: 65px;
+  }
+
+
+  .creation-site-image-container {
+
+    height: 480px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .creation-site-hero {
+
+    padding:
+      50px 5%;
+
+    gap: 40px;
+  }
+
+
+  .creation-site-logo {
+
+    margin-bottom: 18px;
+  }
+
+
+  .logo-p {
+
+    font-size: 40px;
+  }
+
+
+  .logo-text {
+
+    font-size: 15px;
+  }
+
+
+  .creation-site-small {
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 15px;
+  }
+
+
+  .creation-site-title {
+
+    margin-bottom: 22px;
+  }
+
+
+  .creation-title-main,
+  .creation-title-script {
+
+    font-size: 45px;
+
+    letter-spacing: -2px;
+  }
+
+
+  .creation-title-script {
+
+    margin-top: 6px;
+  }
+
+
+  .creation-site-description {
+
+    font-size: 16px;
+
+    line-height: 1.5;
+  }
+
+
+  .creation-site-options {
+
+    max-width: 100%;
+  }
+
+
+  .creation-option {
+
+    padding:
+      12px;
+  }
+
+
+  .creation-site-slogan {
+
+    font-size: 21px;
+  }
+
+
+  .creation-site-button {
+
+    padding:
+      13px 22px;
+  }
+
+
+  /* PHOTO */
+
+  .creation-site-image-container {
+
+    width: 100%;
+
+    height: 380px;
+  }
+
+
+  .creation-site-image {
+
+    width: 100%;
+
+    height: 100%;
+
+    border-radius: 20px;
+  }
+
+
+  /* SERVICES */
+
+  .creation-services {
+
+    padding:
+      75px 5%;
+  }
+
+
+  .creation-services h2 {
+
+    font-size: 36px;
+
+    margin-bottom: 35px;
+  }
+
+
+  .creation-services-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+}
+
+
+/* =========================================
+   PETIT MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+  .creation-title-main,
+  .creation-title-script {
+
+    font-size: 39px;
+
+    letter-spacing: -1.5px;
+  }
+
+
+  .creation-site-image-container {
+
+    height: 330px;
+  }
+
+
+  .creation-site-description br {
+
+    display: none;
+  }
+
+
+  .creation-option p br {
+
+    display: none;
+  }
+
+}

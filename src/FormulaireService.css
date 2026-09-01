@@ -1,0 +1,338 @@
+/* ========================================
+   PAGE FORMULAIRE
+======================================== */
+
+.formulaire-page {
+  min-height: calc(100vh - 95px);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 80px 7%;
+
+  background: var(--background);
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.formulaire-container {
+  width: 100%;
+
+  max-width: 750px;
+
+  padding: 50px;
+
+  background: var(--white);
+
+  border-radius: 28px;
+
+  box-shadow: var(--shadow);
+}
+
+
+/* ========================================
+   SOUS-TITRE
+======================================== */
+
+.formulaire-subtitle {
+  margin-bottom: 15px;
+
+  color: var(--magenta);
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  text-align: center;
+}
+
+
+/* ========================================
+   TITRE
+======================================== */
+
+.formulaire-container h1 {
+  margin-bottom: 20px;
+
+  color: var(--violet-dark);
+
+  font-size: 48px;
+
+  line-height: 1.1;
+
+  text-align: center;
+}
+
+
+.formulaire-container h1 span {
+  background: var(--gradient);
+
+  -webkit-background-clip: text;
+
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.formulaire-description {
+  margin-bottom: 30px;
+
+  color: var(--text-light);
+
+  font-size: 16px;
+
+  line-height: 1.6;
+
+  text-align: center;
+}
+
+
+/* ========================================
+   SERVICE CHOISI
+======================================== */
+
+.service-choisi {
+  margin-bottom: 30px;
+
+  padding: 16px 20px;
+
+  border-radius: 12px;
+
+  background: #FAF3FF;
+
+  color: var(--violet-dark);
+
+  text-align: center;
+}
+
+
+.service-choisi strong {
+  margin-left: 6px;
+
+  color: var(--magenta);
+}
+
+
+/* ========================================
+   FORM GROUP
+======================================== */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--violet-dark);
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+/* ========================================
+   INPUT
+======================================== */
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+
+  border: 1px solid #E2DDE8;
+
+  border-radius: 12px;
+
+  outline: none;
+
+  padding: 14px 16px;
+
+  background: var(--background);
+
+  color: var(--violet-dark);
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 15px;
+
+  transition: 0.3s;
+}
+
+
+.form-group input {
+  height: 50px;
+}
+
+
+.form-group textarea {
+  min-height: 140px;
+
+  resize: vertical;
+}
+
+
+/* ========================================
+   FOCUS
+======================================== */
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+  border-color: var(--magenta);
+
+  box-shadow:
+    0 0 0 3px rgba(178, 54, 148, 0.08);
+
+}
+
+
+/* ========================================
+   BOUTONS
+======================================== */
+
+.form-buttons {
+
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 30px;
+
+}
+
+
+/* RETOUR */
+
+.back-button {
+
+  padding: 15px 25px;
+
+  border: 1px solid var(--violet);
+
+  border-radius: 30px;
+
+  background: transparent;
+
+  color: var(--violet-dark);
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+}
+
+
+.back-button:hover {
+
+  background: var(--violet-dark);
+
+  color: var(--white);
+
+}
+
+
+/* ENVOYER */
+
+.form-button {
+
+  flex: 1;
+
+  padding: 15px 25px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background: var(--gradient);
+
+  color: var(--white);
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  box-shadow:
+    0 8px 25px rgba(178, 54, 148, 0.22);
+
+}
+
+
+.form-button:hover {
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 30px rgba(178, 54, 148, 0.30);
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+  .formulaire-page {
+
+    padding: 50px 5%;
+
+  }
+
+
+  .formulaire-container {
+
+    padding: 35px 25px;
+
+    border-radius: 22px;
+
+  }
+
+
+  .formulaire-container h1 {
+
+    font-size: 36px;
+
+  }
+
+
+  .form-buttons {
+
+    flex-direction: column;
+
+  }
+
+
+  .back-button,
+  .form-button {
+
+    width: 100%;
+
+  }
+
+}

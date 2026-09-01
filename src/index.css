@@ -1,0 +1,960 @@
+/* ========================================
+   PIXLORA - IDENTITÉ VISUELLE
+======================================== */
+
+:root {
+  --violet-dark: #27075A;
+  --violet-deep: #3B1F5C;
+  --violet: #531C9B;
+  --violet-light: #9B59D0;
+
+  --pink: #D6336C;
+  --magenta: #B23694;
+  --coral: #E94B8A;
+
+  --text-dark: #27075A;
+  --text-light: #6B6475;
+
+  --background: #FEFAF9;
+  --white: #FFFFFF;
+
+  --gradient: linear-gradient(
+    135deg,
+    #27075A 0%,
+    #531C9B 35%,
+    #B23694 70%,
+    #E94B8A 100%
+  );
+
+  --shadow: 0 10px 30px rgba(39, 7, 90, 0.10);
+  --shadow-hover: 0 15px 40px rgba(39, 7, 90, 0.16);
+}
+
+
+/* ========================================
+   RESET
+======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+  width: 100%;
+  height: 95px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 7%;
+
+  background-color: var(--background);
+
+  position: relative;
+  z-index: 1000;
+}
+
+
+/* ========================================
+   LOGO PIXLORA
+======================================== */
+
+.logo {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 75px;
+
+  cursor: pointer;
+
+  line-height: 1;
+}
+
+
+/* ========================================
+   PETIT SYMBOLE DU LOGO
+======================================== */
+
+.logo-image {
+  width: 25px;
+  height: 25px;
+
+  object-fit: contain;
+
+  display: block;
+
+  margin-bottom: 2px;
+
+  flex-shrink: 0;
+}
+
+
+/* ========================================
+   TEXTE PIXLORA
+======================================== */
+
+.logo-text {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 19px;
+
+  font-weight: 500;
+
+  letter-spacing: -1.2px;
+
+  white-space: nowrap;
+}
+
+
+/* ========================================
+   PI ET ORA
+======================================== */
+
+.logo-normal {
+  color: var(--violet-dark);
+}
+
+
+/* ========================================
+   XL EN DÉGRADÉ
+======================================== */
+
+.logo-gradient {
+  background: linear-gradient(
+    90deg,
+    #B23694,
+    #C13584,
+    #E94B8A
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+
+  gap: 42px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: var(--violet-dark);
+
+  font-size: 15px;
+  font-weight: 500;
+
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--magenta);
+}
+
+
+/* ========================================
+   LIGNE SOUS LES LIENS
+======================================== */
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -8px;
+
+  width: 0;
+  height: 2px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    90deg,
+    #B23694,
+    #E94B8A
+  );
+
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+
+/* ========================================
+   BOUTON NAVBAR
+======================================== */
+
+.nav-button {
+  padding: 13px 25px;
+
+  border-radius: 30px;
+
+  background: var(--gradient);
+
+  color: var(--white);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 6px 18px rgba(178, 54, 148, 0.20);
+}
+
+.nav-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(178, 54, 148, 0.30);
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+  min-height: calc(100vh - 95px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 70px 7% 100px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   HERO CONTENT
+======================================== */
+
+.hero-content {
+  width: 55%;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* ========================================
+   PETIT TITRE
+======================================== */
+
+.hero-subtitle {
+  margin-bottom: 20px;
+
+  color: var(--magenta);
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+
+/* ========================================
+   GRAND TITRE
+======================================== */
+
+.hero h1 {
+  max-width: 700px;
+
+  color: var(--violet-dark);
+
+  font-size: clamp(50px, 6vw, 82px);
+
+  font-weight: 700;
+
+  line-height: 1.05;
+
+  letter-spacing: -3px;
+}
+
+
+/* ========================================
+   PARTIE COLORÉE DU TITRE
+======================================== */
+
+.hero h1 span {
+  background: var(--gradient);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.hero-description {
+  max-width: 600px;
+
+  margin-top: 28px;
+
+  color: var(--text-light);
+
+  font-size: 18px;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   HERO BUTTONS
+======================================== */
+
+.hero-buttons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-top: 38px;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px 27px;
+
+  border-radius: 30px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+
+/* ========================================
+   BOUTON PRINCIPAL
+======================================== */
+
+.primary-button {
+  color: var(--white);
+
+  background: var(--gradient);
+
+  box-shadow:
+    0 8px 25px rgba(178, 54, 148, 0.22);
+}
+
+.primary-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 30px rgba(178, 54, 148, 0.30);
+}
+
+
+/* ========================================
+   BOUTON SECONDAIRE
+======================================== */
+
+.secondary-button {
+  color: var(--violet-dark);
+
+  background-color: transparent;
+
+  border: 1.5px solid var(--violet);
+}
+
+.secondary-button:hover {
+  color: var(--white);
+
+  background-color: var(--violet-dark);
+
+  border-color: var(--violet-dark);
+
+  transform: translateY(-3px);
+}
+
+
+/* ========================================
+   HERO VISUAL
+======================================== */
+
+.hero-visual {
+  width: 40%;
+
+  height: 480px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  position: relative;
+}
+
+
+/* ========================================
+   CERCLE PRINCIPAL
+======================================== */
+
+.gradient-circle {
+  width: 360px;
+
+  height: 360px;
+
+  border-radius: 50%;
+
+  background: var(--gradient);
+
+  position: relative;
+
+  opacity: 0.95;
+
+  box-shadow:
+    0 25px 70px rgba(83, 28, 155, 0.25),
+    0 10px 35px rgba(233, 75, 138, 0.18);
+}
+
+
+/* ========================================
+   EFFET LUMINEUX
+======================================== */
+
+.gradient-circle::before {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  top: -30px;
+  right: -20px;
+
+  border-radius: 50%;
+
+  background: #F0637A;
+
+  opacity: 0.35;
+
+  filter: blur(40px);
+}
+
+
+/* ========================================
+   PIXELS DÉCORATIFS
+======================================== */
+
+.pixel {
+  position: absolute;
+
+  border-radius: 3px;
+
+  z-index: 3;
+}
+
+
+/* Pixel rose */
+
+.pixel-1 {
+  width: 34px;
+  height: 34px;
+
+  top: 55px;
+  right: 55px;
+
+  background-color: #D6336C;
+}
+
+
+/* Pixel violet clair */
+
+.pixel-2 {
+  width: 23px;
+  height: 23px;
+
+  top: 115px;
+  right: 15px;
+
+  background-color: #9B59D0;
+}
+
+
+/* Pixel violet foncé */
+
+.pixel-3 {
+  width: 17px;
+  height: 17px;
+
+  bottom: 80px;
+  left: 30px;
+
+  background-color: #3B1F5C;
+}
+
+
+/* ========================================
+   SERVICES
+======================================== */
+
+.services-preview {
+  padding: 110px 7%;
+
+  background-color: var(--white);
+
+  text-align: center;
+}
+
+
+/* Petit titre */
+
+.section-subtitle {
+  margin-bottom: 14px;
+
+  color: var(--magenta);
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+
+/* Titre */
+
+.services-preview h2 {
+  margin-bottom: 55px;
+
+  color: var(--violet-dark);
+
+  font-size: 50px;
+
+  line-height: 1.1;
+}
+
+
+/* Dégradé du titre */
+
+.services-preview h2 span {
+  background: var(--gradient);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* ========================================
+   SERVICES GRID
+======================================== */
+
+.services-grid {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+
+/* ========================================
+   SERVICE CARD
+======================================== */
+
+.service-card {
+  padding: 35px 28px;
+
+  background-color: var(--background);
+
+  border: 1px solid rgba(83, 28, 155, 0.08);
+
+  border-radius: 22px;
+
+  text-align: left;
+
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(178, 54, 148, 0.20);
+
+  box-shadow: var(--shadow-hover);
+}
+
+
+/* ========================================
+   ICÔNE SERVICE
+======================================== */
+
+.service-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 22px;
+
+  border-radius: 16px;
+
+  background: var(--gradient);
+
+  font-size: 25px;
+
+  box-shadow:
+    0 8px 20px rgba(178, 54, 148, 0.18);
+}
+
+
+/* ========================================
+   TITRE SERVICE
+======================================== */
+
+.service-card h3 {
+  margin-bottom: 12px;
+
+  color: var(--violet-dark);
+
+  font-size: 20px;
+
+  font-weight: 700;
+}
+
+
+/* ========================================
+   TEXTE SERVICE
+======================================== */
+
+.service-card p {
+  color: var(--text-light);
+
+  font-size: 15px;
+
+  line-height: 1.65;
+}
+
+
+/* ========================================
+   TABLETTE
+======================================== */
+
+@media (max-width: 1000px) {
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .nav-links {
+    gap: 25px;
+  }
+
+  .hero {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .hero h1 {
+    font-size: 58px;
+  }
+
+  .hero-visual {
+    width: 42%;
+  }
+
+  .gradient-circle {
+    width: 300px;
+    height: 300px;
+  }
+
+  .services-preview {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+  .navbar {
+    height: 85px;
+
+    padding: 0 5%;
+  }
+
+
+  /* Logo */
+
+  .logo {
+    width: 100px;
+  }
+
+ .logo-image {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 3px;
+  flex-shrink: 0;
+}
+
+  .logo-text {
+    font-size: 18px;
+
+    letter-spacing: -1px;
+  }
+
+
+  /* Navigation */
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-button {
+    padding: 11px 18px;
+
+    font-size: 13px;
+  }
+
+
+  /* Hero */
+
+  .hero {
+    min-height: auto;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 65px 5% 80px;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-subtitle {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+
+    letter-spacing: -2px;
+  }
+
+  .hero-description {
+    margin-left: auto;
+
+    margin-right: auto;
+
+    font-size: 16px;
+  }
+
+
+  /* Boutons */
+
+  .hero-buttons {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+  }
+
+
+  /* Hero visual */
+
+  .hero-visual {
+    width: 100%;
+
+    height: 330px;
+
+    margin-top: 45px;
+  }
+
+  .gradient-circle {
+    width: 250px;
+
+    height: 250px;
+  }
+
+
+  /* Pixels */
+
+  .pixel-1 {
+    top: 30px;
+
+    right: 15%;
+  }
+
+  .pixel-2 {
+    top: 75px;
+
+    right: 8%;
+  }
+
+  .pixel-3 {
+    bottom: 40px;
+
+    left: 12%;
+  }
+
+
+  /* Services */
+
+  .services-preview {
+    padding: 80px 5%;
+  }
+
+  .services-preview h2 {
+    font-size: 38px;
+
+    margin-bottom: 40px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .service-card {
+    padding: 30px 25px;
+  }
+}
+
+
+
+
+@media (max-width: 400px) {
+
+  .navbar {
+    height: 80px;
+  }
+
+  .logo {
+    width: 65px;
+  }
+
+ .logo-image {
+  width: 34px;
+  height: 34px;
+  margin-bottom: 3px;
+}
+
+  .logo-text {
+    font-size: 17px;
+
+    letter-spacing: -0.9px;
+  }
+
+  .nav-button {
+    padding: 10px 14px;
+
+    font-size: 12px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .services-preview h2 {
+    font-size: 34px;
+  }
+}

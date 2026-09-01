@@ -1,0 +1,774 @@
+
+/* =====================================================
+   POLICES
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700;800;900&display=swap');
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.design-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #24103d;
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.design-hero {
+  min-height: calc(100vh - 80px);
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 70px 6%;
+
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 20% 25%,
+      rgba(222, 166, 255, 0.55),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 60%,
+      rgba(195, 105, 255, 0.30),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #f9efff 0%,
+      #ead5ff 50%,
+      #d2a0e8 100%
+    );
+}
+
+
+/* =====================================================
+   PARTIE GAUCHE
+===================================================== */
+
+.design-hero-content {
+  width: 48%;
+
+  position: relative;
+
+  z-index: 5;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   SOUS-TITRE
+===================================================== */
+
+.design-subtitle {
+  margin: 0 0 18px;
+
+  color: #71358f;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+
+/* =====================================================
+   TITRE
+===================================================== */
+
+.design-title {
+  margin: 0;
+
+  padding: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  line-height: 0.95;
+
+  overflow: visible;
+}
+
+
+/* =====================================================
+   DESIGN
+===================================================== */
+
+.design-title-main {
+  display: block;
+
+  color: #29113f;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: clamp(
+    55px,
+    6.5vw,
+    90px
+  );
+
+  font-weight: 900;
+
+  letter-spacing: -4px;
+
+  line-height: 0.95;
+}
+
+
+/* =====================================================
+   GRAPHIQUE
+   POLICE + MULTIPLES COULEURS
+===================================================== */
+
+.design-title-script {
+  display: block;
+
+  margin: 10px 0 18px 5px;
+
+  padding: 0 8px 12px 0;
+
+  font-family: "Caveat", cursive;
+
+  font-size: clamp(
+    58px,
+    6vw,
+    82px
+  );
+
+  font-weight: 600;
+
+  line-height: 1.05;
+
+  letter-spacing: 1px;
+
+  /* Plusieurs couleurs */
+
+  background:
+    linear-gradient(
+      90deg,
+      #6a1b9a 0%,
+      #8c38b9 20%,
+      #c43bbd 45%,
+      #e34f9d 70%,
+      #8a5cf6 100%
+    );
+
+  background-clip: text;
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+
+  -webkit-text-fill-color: transparent;
+
+  transform: rotate(-3deg);
+
+  transform-origin: left center;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.design-description {
+  max-width: 500px;
+
+  margin: 25px 0;
+
+  color: #30213c;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 19px;
+
+  line-height: 1.5;
+}
+
+
+.design-description strong {
+  color: #5b237f;
+
+  font-weight: 800;
+}
+
+
+/* =====================================================
+   LISTE SERVICES
+===================================================== */
+
+.design-service-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  max-width: 450px;
+}
+
+
+/* =====================================================
+   BOUTON SERVICE
+===================================================== */
+
+.design-service-button {
+  width: 100%;
+
+  min-height: 65px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 9px 15px;
+
+  box-sizing: border-box;
+
+  border: none;
+
+  border-radius: 15px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.68
+    );
+
+  box-shadow:
+    0 6px 20px
+    rgba(
+      83,
+      35,
+      111,
+      0.08
+    );
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.design-service-button:hover {
+  transform: translateX(7px);
+
+  background: #ffffff;
+
+  box-shadow:
+    0 12px 30px
+    rgba(
+      83,
+      35,
+      111,
+      0.15
+    );
+}
+
+
+/* =====================================================
+   ICÔNE SERVICE
+===================================================== */
+
+.design-service-icon {
+  width: 48px;
+
+  min-width: 48px;
+
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #541b8c,
+      #a83dcc
+    );
+
+  color: white;
+
+  font-size: 22px;
+
+  box-shadow:
+    0 5px 15px
+    rgba(
+      99,
+      32,
+      145,
+      0.25
+    );
+}
+
+
+/* =====================================================
+   TEXTE SERVICE
+===================================================== */
+
+.design-service-text {
+  color: #29143e;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  line-height: 1.3;
+}
+
+
+/* =====================================================
+   SLOGAN
+===================================================== */
+
+.design-slogan {
+  margin: 25px 0 0;
+
+  color: #301441;
+
+  font-family: "Caveat", cursive;
+
+  font-size: 25px;
+
+  font-weight: 600;
+
+  line-height: 1.2;
+}
+
+
+.design-slogan span {
+  margin-left: 6px;
+
+  color: #8d3db1;
+}
+
+
+/* =====================================================
+   PHOTO À DROITE
+===================================================== */
+
+.design-hero-image {
+  width: 52%;
+
+  height: 620px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  z-index: 2;
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.design-hero-image img {
+  width: 500px;
+
+  height: 560px;
+
+  object-fit: cover;
+
+  border-radius: 30px;
+
+  position: relative;
+
+  z-index: 3;
+
+  box-shadow:
+    0 25px 60px
+    rgba(
+      55,
+      18,
+      80,
+      0.25
+    );
+}
+
+
+/* =====================================================
+   DÉCORATION
+===================================================== */
+
+.design-decoration {
+  position: absolute;
+
+  width: 500px;
+
+  height: 560px;
+
+  border-radius: 35px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #8c38b9,
+      #e34f9d
+    );
+
+  transform:
+    rotate(6deg);
+
+  z-index: 1;
+
+  opacity: 0.55;
+}
+
+
+/* =====================================================
+   SERVICES
+===================================================== */
+
+.design-services {
+  padding: 110px 7%;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #f8effd
+    );
+
+  text-align: center;
+}
+
+
+/* =====================================================
+   PETIT TITRE
+===================================================== */
+
+.section-subtitle {
+  margin-bottom: 15px;
+
+  color: #8a42b2;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+
+/* =====================================================
+   TITRE SECTION
+===================================================== */
+
+.design-services h2 {
+  margin: 0 0 55px;
+
+  color: #28133b;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 45px;
+
+  line-height: 1.1;
+}
+
+
+.design-services h2 span {
+  background:
+    linear-gradient(
+      90deg,
+      #e74ac8,
+      #a86cff
+    );
+
+  background-clip: text;
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.design-grid {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 22px;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.design-card {
+  padding: 30px 24px;
+
+  text-align: left;
+
+  background: #faf6fd;
+
+  border:
+    1px solid
+    rgba(
+      110,
+      50,
+      145,
+      0.08
+    );
+
+  border-radius: 22px;
+
+  cursor: pointer;
+
+  transition:
+    all 0.3s ease;
+}
+
+
+.design-card:hover {
+  transform:
+    translateY(-8px);
+
+  box-shadow:
+    0 15px 40px
+    rgba(
+      160,
+      45,
+      200,
+      0.15
+    );
+}
+
+
+/* =====================================================
+   ICÔNE CARD
+===================================================== */
+
+.design-icon {
+  width: 55px;
+
+  height: 55px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #5f1a9b,
+      #d13ab9
+    );
+
+  font-size: 25px;
+}
+
+
+/* =====================================================
+   TITRE CARD
+===================================================== */
+
+.design-card h3 {
+  margin: 0 0 12px;
+
+  color: #321746;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 19px;
+}
+
+
+/* =====================================================
+   TEXTE CARD
+===================================================== */
+
+.design-card p {
+  margin: 0;
+
+  color: #6a6170;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   TABLETTE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .design-hero {
+    flex-direction: column;
+
+    gap: 50px;
+
+    padding-top: 60px;
+  }
+
+
+  .design-hero-content {
+    width: 100%;
+  }
+
+
+  .design-hero-image {
+    width: 100%;
+
+    height: 550px;
+  }
+
+
+  .design-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .design-hero {
+    padding:
+      50px 5%;
+  }
+
+
+  /* TITRE */
+
+  .design-title-main {
+    font-size: 48px;
+
+    letter-spacing: -2px;
+  }
+
+
+  .design-title-script {
+    font-size: 58px;
+
+    margin-top: 8px;
+
+    margin-bottom: 15px;
+
+    padding-bottom: 10px;
+  }
+
+
+  /* DESCRIPTION */
+
+  .design-description {
+    font-size: 16px;
+  }
+
+
+  /* PHOTO */
+
+  .design-hero-image {
+    height: 430px;
+  }
+
+
+  .design-hero-image img {
+    width: 90%;
+
+    height: 400px;
+
+    border-radius: 25px;
+  }
+
+
+  .design-decoration {
+    width: 90%;
+
+    height: 400px;
+  }
+
+
+  /* SERVICES */
+
+  .design-services {
+    padding:
+      75px 5%;
+  }
+
+
+  .design-services h2 {
+    font-size: 34px;
+  }
+
+
+  .design-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

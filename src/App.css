@@ -1,0 +1,1712 @@
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background: #ffffff;
+
+  color: #28133b;
+
+  font-family: "DM Sans", sans-serif;
+
+  overflow-x: hidden;
+}
+
+
+button,
+a {
+  font-family: inherit;
+}
+
+
+button {
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+
+  --purple-dark: #28133b;
+  --purple: #7b2cbf;
+  --purple-light: #a83bc4;
+  --pink: #e052a0;
+
+  --text: #28133b;
+  --text-light: #665b6d;
+
+  --white: #ffffff;
+
+  --border: rgba(123, 44, 191, 0.10);
+
+  --shadow:
+    0 15px 40px rgba(63, 24, 82, 0.08);
+
+}
+
+
+/* =====================================================
+   SECTION SUBTITLE
+===================================================== */
+
+.section-subtitle {
+  margin-bottom: 15px;
+
+  color: #9146c4;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+  position: relative;
+
+  width: 100%;
+  min-height: calc(100vh - 80px);
+
+  padding: 100px 7%;
+
+  display: grid;
+
+  grid-template-columns: 1.05fr 0.95fr;
+
+  align-items: center;
+
+  gap: 60px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(180, 100, 255, 0.14),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 85% 75%,
+      rgba(230, 80, 190, 0.12),
+      transparent 32%
+    ),
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #faf6ff 100%
+    );
+}
+
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
+
+.hero-content {
+
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 650px;
+}
+
+
+.hero-subtitle {
+
+  margin-bottom: 20px;
+
+  color: #9146c4;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   HERO TITLE
+===================================================== */
+
+.hero h1 {
+
+  margin-bottom: 25px;
+
+  color: #28133b;
+
+  font-size: clamp(
+    48px,
+    6vw,
+    78px
+  );
+
+  font-weight: 900;
+
+  line-height: 1.04;
+
+  letter-spacing: -3px;
+}
+
+
+.hero h1 span {
+
+  background:
+    linear-gradient(
+      90deg,
+      #7b2cbf,
+      #b43bc5,
+      #e052a0
+    );
+
+  background-clip: text;
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* =====================================================
+   HERO DESCRIPTION
+===================================================== */
+
+.hero-description {
+
+  max-width: 600px;
+
+  margin-bottom: 35px;
+
+  color: #665b6d;
+
+  font-family: "Al-Kharashi 40", sans-serif;
+
+  font-size: 18px;
+
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   HERO BUTTONS
+===================================================== */
+
+.hero-buttons {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  flex-wrap: wrap;
+}
+
+
+/* =====================================================
+   PRIMARY BUTTON
+===================================================== */
+
+.primary-button {
+
+  padding: 15px 27px;
+
+  border: none;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #7025a8,
+      #bd3fc4
+    );
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 10px 25px rgba(
+      112,
+      37,
+      168,
+      0.20
+    );
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.primary-button:hover {
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 30px rgba(
+      112,
+      37,
+      168,
+      0.28
+    );
+}
+
+
+/* =====================================================
+   SECONDARY BUTTON
+===================================================== */
+
+.secondary-button {
+
+  padding: 14px 27px;
+
+  border: 1px solid rgba(
+    123,
+    44,
+    191,
+    0.25
+  );
+
+  border-radius: 13px;
+
+  background: #ffffff;
+
+  color: #7025a8;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+
+.secondary-button:hover {
+
+  transform: translateY(-3px);
+
+  background: #7025a8;
+
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   HERO VISUAL
+===================================================== */
+
+.hero-visual {
+
+  position: relative;
+
+  min-height: 450px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+/* =====================================================
+   GRADIENT CIRCLE
+===================================================== */
+
+.gradient-circle {
+
+  width: 350px;
+
+  height: 350px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(123, 44, 191, 0.90),
+      rgba(224, 82, 160, 0.85)
+    );
+
+  filter: blur(1px);
+
+  box-shadow:
+    0 30px 80px rgba(
+      123,
+      44,
+      191,
+      0.22
+    );
+
+  animation:
+    heroFloat 5s ease-in-out infinite;
+}
+
+
+@keyframes heroFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+}
+
+
+/* =====================================================
+   PIXELS HERO
+===================================================== */
+
+.pixel {
+
+  position: absolute;
+
+  width: 55px;
+
+  height: 55px;
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #7b2cbf,
+      #e052a0
+    );
+
+  box-shadow:
+    0 15px 35px rgba(
+      123,
+      44,
+      191,
+      0.18
+    );
+}
+
+
+.pixel-1 {
+
+  top: 65px;
+
+  right: 70px;
+
+  transform: rotate(15deg);
+}
+
+
+.pixel-2 {
+
+  bottom: 70px;
+
+  left: 45px;
+
+  width: 40px;
+
+  height: 40px;
+
+  transform: rotate(-18deg);
+}
+
+
+.pixel-3 {
+
+  top: 120px;
+
+  left: 30px;
+
+  width: 25px;
+
+  height: 25px;
+
+  border-radius: 8px;
+
+  transform: rotate(25deg);
+}
+
+
+/* =====================================================
+   SERVICES
+===================================================== */
+
+.services-preview {
+
+  width: 100%;
+
+  padding: 120px 7%;
+
+  text-align: center;
+
+  background: #ffffff;
+}
+
+
+.services-preview h2 {
+
+  max-width: 850px;
+
+  margin: 0 auto 55px;
+
+  color: #28133b;
+
+  font-size: clamp(
+    38px,
+    5vw,
+    58px
+  );
+
+  font-weight: 900;
+
+  line-height: 1.1;
+
+  letter-spacing: -2px;
+}
+
+
+.services-preview h2 span {
+
+  background:
+    linear-gradient(
+      90deg,
+      #7b2cbf,
+      #b43bc5,
+      #e052a0
+    );
+
+  background-clip: text;
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* =====================================================
+   SERVICES GRID
+===================================================== */
+
+.services-grid {
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 22px;
+}
+
+
+/* =====================================================
+   SERVICE CARD
+===================================================== */
+
+.service-card {
+
+  padding: 35px 28px;
+
+  min-height: 300px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid var(--border);
+
+  border-radius: 25px;
+
+  box-shadow:
+    0 12px 35px rgba(
+      48,
+      20,
+      65,
+      0.06
+    );
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.service-card:hover {
+
+  transform: translateY(-9px);
+
+  border-color:
+    rgba(
+      145,
+      70,
+      196,
+      0.25
+    );
+
+  box-shadow:
+    0 22px 50px rgba(
+      111,
+      43,
+      145,
+      0.13
+    );
+}
+
+
+/* =====================================================
+   SERVICE ICON
+===================================================== */
+
+.service-icon {
+
+  width: 68px;
+
+  height: 68px;
+
+  margin-bottom: 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #762bb0,
+      #c33fc0
+    );
+
+  font-size: 30px;
+
+  box-shadow:
+    0 10px 25px rgba(
+      112,
+      37,
+      168,
+      0.18
+    );
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.service-card:hover .service-icon {
+
+  transform:
+    scale(1.08)
+    rotate(-3deg);
+}
+
+
+/* =====================================================
+   SERVICE TITLE
+===================================================== */
+
+.service-card h3 {
+
+  margin-bottom: 12px;
+
+  color: #321644;
+
+  font-size: 20px;
+
+  font-weight: 800;
+}
+
+
+/* =====================================================
+   SERVICE DESCRIPTION
+===================================================== */
+
+.service-card p {
+
+  max-width: 300px;
+
+  margin-bottom: 22px;
+
+  color: #6b6170;
+
+  font-family: "Al-Kharashi 40", sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   SERVICE BUTTON
+===================================================== */
+
+.service-card button {
+
+  padding: 10px 20px;
+
+  border: none;
+
+  border-radius: 25px;
+
+  background: transparent;
+
+  color: #7b2cbf;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.service-card button:hover {
+
+  background:
+    linear-gradient(
+      135deg,
+      #7025a8,
+      #bd3fc4
+    );
+
+  color: #ffffff;
+
+  transform: translateX(3px);
+}
+
+
+/* =====================================================
+   À PROPOS
+===================================================== */
+
+.about-section {
+
+  width: 100%;
+
+  padding: 120px 7%;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(225, 190, 255, 0.20),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(196, 130, 255, 0.13),
+      transparent 32%
+    ),
+    linear-gradient(
+      180deg,
+      #faf5ff 0%,
+      #ffffff 100%
+    );
+}
+
+
+/* =====================================================
+   ABOUT TITLE
+===================================================== */
+
+.about-section h2 {
+
+  margin-bottom: 30px;
+
+  color: #28133b;
+
+  font-size: clamp(
+    38px,
+    5vw,
+    58px
+  );
+
+  font-weight: 900;
+
+  line-height: 1.1;
+
+  letter-spacing: -2px;
+}
+
+
+.about-section h2 span {
+
+  background:
+    linear-gradient(
+      90deg,
+      #7b2cbf,
+      #b43bc5,
+      #e052a0
+    );
+
+  background-clip: text;
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* =====================================================
+   ABOUT DESCRIPTION
+===================================================== */
+
+.about-description {
+
+  max-width: 800px;
+
+  margin: 0 auto 18px;
+
+  color: #5f5565;
+
+  font-family: "Al-Kharashi 40", sans-serif;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+}
+
+
+.about-description strong {
+
+  color: #4a245e;
+
+  font-weight: 800;
+}
+
+
+/* =====================================================
+   ABOUT SLOGAN
+===================================================== */
+
+.about-slogan {
+
+  margin: 35px 0 55px;
+
+  color: #9146c4;
+
+  font-size: 18px;
+
+  font-weight: 800;
+
+  font-style: italic;
+}
+
+
+/* =====================================================
+   ABOUT SERVICES
+===================================================== */
+
+.about-services {
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, 1fr);
+
+  gap: 18px;
+}
+
+
+/* =====================================================
+   ABOUT SERVICE
+===================================================== */
+
+.about-service {
+
+  min-height: 250px;
+
+  padding: 28px 18px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.88
+  );
+
+  border: 1px solid
+    rgba(
+      130,
+      55,
+      170,
+      0.10
+    );
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 10px 30px rgba(
+      48,
+      20,
+      65,
+      0.05
+    );
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.about-service:hover {
+
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 18px 40px rgba(
+      111,
+      43,
+      145,
+      0.11
+    );
+}
+
+
+/* =====================================================
+   ABOUT ICON
+===================================================== */
+
+.about-icon {
+
+  width: 58px;
+
+  height: 58px;
+
+  margin-bottom: 17px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #7b2cbf,
+      #c43bbd
+    );
+
+  font-size: 25px;
+
+  box-shadow:
+    0 8px 20px rgba(
+      123,
+      44,
+      191,
+      0.17
+    );
+}
+
+
+/* =====================================================
+   ABOUT SERVICE TITLE
+===================================================== */
+
+.about-service h3 {
+
+  margin-bottom: 10px;
+
+  color: #321644;
+
+  font-size: 17px;
+
+  font-weight: 800;
+}
+
+
+/* =====================================================
+   ABOUT SERVICE TEXT
+===================================================== */
+
+.about-service p {
+
+  color: #6b6170;
+
+  font-family: "Al-Kharashi 40", sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-section {
+
+  width: 100%;
+
+  padding: 120px 7%;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(
+        180,
+        100,
+        255,
+        0.12
+      ),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 75%,
+      rgba(
+        230,
+        80,
+        190,
+        0.10
+      ),
+      transparent 30%
+    ),
+    #ffffff;
+}
+
+
+/* =====================================================
+   CONTACT TITLE
+===================================================== */
+
+.contact-section h2 {
+
+  margin: 0 0 22px;
+
+  color: #24102f;
+
+  font-size: clamp(
+    38px,
+    5vw,
+    58px
+  );
+
+  font-weight: 900;
+
+  line-height: 1.1;
+
+  letter-spacing: -2px;
+}
+
+
+.contact-section h2 span {
+
+  background:
+    linear-gradient(
+      90deg,
+      #7b2cbf,
+      #b43bc5,
+      #e052a0
+    );
+
+  background-clip: text;
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* =====================================================
+   CONTACT DESCRIPTION
+===================================================== */
+
+.contact-description {
+
+  max-width: 650px;
+
+  margin: 0 auto 60px;
+
+  color: #6b6170;
+
+  font-family: "Al-Kharashi 40", sans-serif;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   CONTACT INFO
+===================================================== */
+
+.contact-info {
+
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, 1fr);
+
+  gap: 18px;
+
+  align-items: stretch;
+}
+
+
+/* =====================================================
+   CONTACT ITEM
+===================================================== */
+
+.contact-item {
+
+  min-height: 210px;
+
+  padding: 30px 18px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #ffffff;
+
+  border: 1px solid
+    rgba(
+      130,
+      55,
+      170,
+      0.10
+    );
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 10px 35px rgba(
+      48,
+      20,
+      65,
+      0.06
+    );
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.contact-item:hover {
+
+  transform: translateY(-8px);
+
+  border-color:
+    rgba(
+      145,
+      70,
+      196,
+      0.25
+    );
+
+  box-shadow:
+    0 20px 45px rgba(
+      111,
+      43,
+      145,
+      0.13
+    );
+}
+
+
+/* =====================================================
+   CONTACT ICON
+===================================================== */
+
+.contact-icon {
+
+  width: 64px;
+
+  height: 64px;
+
+  margin-bottom: 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #7025a8,
+      #bd3fc4
+    );
+
+  color: #ffffff;
+
+  font-size: 26px;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 10px 25px rgba(
+      112,
+      37,
+      168,
+      0.20
+    );
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.contact-item:hover
+.contact-icon {
+
+  transform:
+    scale(1.08)
+    rotate(-3deg);
+}
+
+
+/* =====================================================
+   CONTACT TITLE
+===================================================== */
+
+.contact-item h3 {
+
+  margin: 0 0 9px;
+
+  color: #321644;
+
+  font-size: 18px;
+
+  font-weight: 800;
+}
+
+
+/* =====================================================
+   CONTACT LINKS
+===================================================== */
+
+.contact-item a {
+
+  max-width: 100%;
+
+  color: #74547f;
+
+  font-family: "Al-Kharashi 40", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  text-decoration: none;
+
+  word-break: break-word;
+
+  transition:
+    color 0.3s ease;
+}
+
+
+.contact-item a:hover {
+
+  color: #b43bc5;
+
+  text-decoration: underline;
+}
+
+
+/* =====================================================
+   CONTACT COLORS
+===================================================== */
+
+.contact-item:first-child
+.contact-icon {
+
+  background:
+    linear-gradient(
+      135deg,
+      #762bb0,
+      #c33fc0
+    );
+}
+
+
+.contact-item:nth-child(2)
+.contact-icon {
+
+  background:
+    linear-gradient(
+      135deg,
+      #8435bd,
+      #d44a9f
+    );
+}
+
+
+.contact-item:nth-child(3)
+.contact-icon {
+
+  background:
+    linear-gradient(
+      135deg,
+      #5530a5,
+      #884bd0
+    );
+}
+
+
+.contact-item:nth-child(4)
+.contact-icon {
+
+  background:
+    linear-gradient(
+      135deg,
+      #7b2cbf,
+      #d34b9c
+    );
+}
+
+
+.contact-item:nth-child(5)
+.contact-icon {
+
+  background:
+    linear-gradient(
+      135deg,
+      #43215e,
+      #9a3eaa
+    );
+}
+
+
+/* =====================================================
+   TABLETTE — HERO
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .hero {
+
+    grid-template-columns: 1fr;
+
+    text-align: center;
+
+    padding-top: 90px;
+  }
+
+
+  .hero-content {
+
+    max-width: 750px;
+
+    margin: 0 auto;
+  }
+
+
+  .hero-description {
+
+    margin-left: auto;
+
+    margin-right: auto;
+  }
+
+
+  .hero-buttons {
+
+    justify-content: center;
+  }
+
+
+  .hero-visual {
+
+    min-height: 350px;
+  }
+
+
+  .services-grid {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .about-services {
+
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+
+  .contact-info {
+
+    grid-template-columns:
+      repeat(3, 1fr);
+
+    max-width: 850px;
+  }
+
+}
+
+
+/* =====================================================
+   PETITE TABLETTE
+===================================================== */
+
+@media (max-width: 750px) {
+
+  .hero {
+
+    padding:
+      80px 5%
+      70px;
+  }
+
+
+  .hero h1 {
+
+    font-size: 48px;
+
+    letter-spacing: -2px;
+  }
+
+
+  .hero-description {
+
+    font-size: 16px;
+  }
+
+
+  .gradient-circle {
+
+    width: 280px;
+
+    height: 280px;
+  }
+
+
+  .services-preview,
+  .about-section,
+  .contact-section {
+
+    padding:
+      90px 5%;
+  }
+
+
+  .services-preview h2,
+  .about-section h2,
+  .contact-section h2 {
+
+    font-size: 40px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .services-grid {
+
+    grid-template-columns: 1fr;
+
+    max-width: 500px;
+  }
+
+
+  .about-services {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    max-width: 650px;
+  }
+
+
+  .contact-description {
+
+    font-size: 15px;
+
+    margin-bottom: 45px;
+  }
+
+
+  .contact-info {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 15px;
+  }
+
+
+  .contact-item {
+
+    min-height: 190px;
+
+    padding:
+      25px 15px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 500px) {
+
+  .hero {
+
+    min-height: auto;
+
+    padding:
+      70px 6%
+      80px;
+  }
+
+
+  .hero h1 {
+
+    font-size: 40px;
+
+    letter-spacing: -1.5px;
+  }
+
+
+  .hero-subtitle {
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .hero-buttons {
+
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+
+  .primary-button,
+  .secondary-button {
+
+    width: 100%;
+
+    padding:
+      14px 20px;
+  }
+
+
+  .hero-visual {
+
+    min-height: 290px;
+  }
+
+
+  .gradient-circle {
+
+    width: 220px;
+
+    height: 220px;
+  }
+
+
+  .pixel-1 {
+
+    right: 20px;
+
+    top: 40px;
+  }
+
+
+  .pixel-2 {
+
+    left: 20px;
+
+    bottom: 40px;
+  }
+
+
+  .pixel-3 {
+
+    left: 15px;
+
+    top: 70px;
+  }
+
+
+  .services-preview,
+  .about-section,
+  .contact-section {
+
+    padding:
+      80px 6%;
+  }
+
+
+  .services-preview h2,
+  .about-section h2,
+  .contact-section h2 {
+
+    font-size: 35px;
+  }
+
+
+  .services-preview h2 span,
+  .about-section h2 span,
+  .contact-section h2 span {
+
+    display: block;
+
+    margin-top: 5px;
+  }
+
+
+  .about-description {
+
+    font-size: 15px;
+  }
+
+
+  .about-services {
+
+    grid-template-columns: 1fr;
+
+    max-width: 400px;
+  }
+
+
+  .about-service {
+
+    min-height: 210px;
+  }
+
+
+  .contact-info {
+
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+
+  .contact-item {
+
+    min-height: 175px;
+
+    border-radius: 20px;
+  }
+
+
+  .contact-icon {
+
+    width: 58px;
+
+    height: 58px;
+
+    border-radius: 17px;
+
+    font-size: 24px;
+  }
+  .contact-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.contact-icon {
+  cursor: pointer;
+}
+
+}

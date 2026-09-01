@@ -1,0 +1,930 @@
+/* =========================================
+   POLICE
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap');
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.creation-ia-page {
+  width: 100%;
+  background: #ffffff;
+  color: #25113e;
+  overflow: hidden;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.creation-ia-hero {
+  min-height: calc(100vh - 80px);
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 60px 6%;
+
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 30% 20%,
+      rgba(218, 157, 255, 0.45),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #f8efff 0%,
+      #ead5ff 45%,
+      #6b2b91 100%
+    );
+}
+
+
+/* =========================================
+   LUMIÈRE
+========================================= */
+
+.creation-ia-hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  border-radius: 50%;
+
+  background: rgba(198, 102, 255, 0.18);
+
+  filter: blur(100px);
+
+  top: -180px;
+  left: 25%;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   PARTIE GAUCHE
+========================================= */
+
+.creation-ia-content {
+  width: 48%;
+
+  position: relative;
+
+  z-index: 5;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.creation-ia-logo {
+  display: flex;
+
+  flex-direction: column;
+
+  width: fit-content;
+
+  margin-bottom: 22px;
+}
+
+
+.creation-ia-logo-p {
+  font-size: 48px;
+
+  font-weight: 900;
+
+  line-height: 0.9;
+
+  background:
+    linear-gradient(
+      135deg,
+      #35105f,
+      #9b3dcc,
+      #e84c9c
+    );
+
+  background-clip: text;
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+.creation-ia-logo-text {
+  margin-top: 3px;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  color: #35204f;
+}
+
+
+/* =========================================
+   PETIT TEXTE
+========================================= */
+
+.creation-ia-small {
+  margin: 0 0 18px;
+
+  color: #71358f;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+}
+
+
+/* =========================================
+   TITRE PRINCIPAL
+========================================= */
+
+.creation-ia-content h1 {
+  margin: 0 0 22px;
+
+  padding: 0;
+
+  display: block;
+
+  text-align: left;
+
+  line-height: 0.95;
+
+  font-weight: 900;
+}
+
+
+/* =========================================
+   CRÉATION DE
+========================================= */
+
+.creation-ia-title-main {
+  display: block;
+
+  width: fit-content;
+
+  margin: 0;
+
+  padding: 0;
+
+  color: #29113f;
+
+  font-size: clamp(
+    48px,
+    6vw,
+    82px
+  );
+
+  font-weight: 900;
+
+  line-height: 0.95;
+
+  letter-spacing: -2px;
+
+  text-align: left;
+}
+
+
+/* =========================================
+   VIDÉOS
+========================================= */
+
+.creation-ia-title-gradient {
+  display: block;
+
+  width: fit-content;
+
+  margin: 0;
+
+  padding: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      #7134b1,
+      #c137bd,
+      #ed4f91
+    );
+
+  background-clip: text;
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+
+  -webkit-text-fill-color: transparent;
+
+  font-size: clamp(
+    55px,
+    7vw,
+    90px
+  );
+
+  font-weight: 900;
+
+  line-height: 0.9;
+
+  letter-spacing: -3px;
+
+  text-align: left;
+}
+
+
+/* =========================================
+   AVEC L'IA
+========================================= */
+
+.creation-ia-title-script {
+  display: block;
+
+  width: fit-content;
+
+  /* 
+     AVEC L'IA légèrement à gauche
+  */
+
+  margin: 15px 0 0 10px;
+
+  padding: 0;
+
+  color: #8d2e91;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: clamp(
+    38px,
+    5vw,
+    65px
+  );
+
+  font-weight: 700;
+
+  font-style: normal;
+
+  line-height: 1;
+
+  letter-spacing: -1px;
+
+  text-align: left;
+
+  text-transform: uppercase;
+
+  transform: none;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.creation-ia-description {
+  margin: 25px 0;
+
+  color: #30213c;
+
+  font-size: 18px;
+
+  line-height: 1.5;
+
+  max-width: 520px;
+}
+
+
+.creation-ia-description strong {
+  color: #7134a9;
+}
+
+
+/* =========================================
+   OPTIONS
+========================================= */
+
+.creation-ia-options {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  width: 100%;
+
+  max-width: 470px;
+}
+
+
+/* =========================================
+   OPTION
+========================================= */
+
+.creation-ia-option {
+  width: 100%;
+
+  min-height: 72px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 11px 17px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.86
+  );
+
+  color: #29143e;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 8px 25px
+    rgba(76, 34, 104, 0.08);
+
+  transition:
+    all 0.3s ease;
+}
+
+
+.creation-ia-option:hover {
+  transform: translateX(8px);
+
+  background: white;
+
+  box-shadow:
+    0 12px 30px
+    rgba(76, 34, 104, 0.18);
+}
+
+
+/* =========================================
+   ICÔNE
+========================================= */
+
+.creation-ia-icon {
+  width: 48px;
+
+  min-width: 48px;
+
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #4b2180,
+      #a53bd0
+    );
+
+  color: white;
+
+  font-size: 23px;
+
+  box-shadow:
+    0 5px 15px
+    rgba(138, 38, 180, 0.25);
+}
+
+
+/* =========================================
+   TEXTE OPTION
+========================================= */
+
+.creation-ia-option-text {
+  text-align: left;
+}
+
+
+.creation-ia-option-text h3 {
+  margin: 0 0 3px;
+
+  color: #29143e;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+
+.creation-ia-option-text p {
+  margin: 0;
+
+  color: #594d62;
+
+  font-size: 12px;
+
+  line-height: 1.3;
+}
+
+
+/* =========================================
+   SLOGAN
+========================================= */
+
+.creation-ia-slogan {
+  margin: 25px 0 0;
+
+  color: #32174e;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 23px;
+
+  line-height: 1.2;
+
+  font-style: italic;
+}
+
+
+.creation-ia-slogan span {
+  color: #8b3eb5;
+}
+
+
+/* =========================================
+   BOUTON
+========================================= */
+
+.creation-ia-button {
+  margin-top: 18px;
+
+  padding: 14px 27px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #55228b,
+      #a53cc4,
+      #dc4d9b
+    );
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 25px
+    rgba(98, 39, 139, 0.25);
+
+  transition:
+    all 0.3s ease;
+}
+
+
+.creation-ia-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 30px
+    rgba(98, 39, 139, 0.35);
+}
+
+
+/* =========================================
+   PARTIE DROITE — IMAGE
+========================================= */
+
+.creation-ia-image-container {
+  width: 52%;
+
+  height: 620px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  z-index: 2;
+}
+
+
+.creation-ia-image {
+  width: 90%;
+
+  height: 90%;
+
+  object-fit: cover;
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 25px 80px
+    rgba(0, 0, 0, 0.45);
+
+  transform: rotate(1deg);
+
+  transition:
+    transform 0.5s ease;
+}
+
+
+.creation-ia-image:hover {
+  transform:
+    rotate(0deg)
+    scale(1.02);
+}
+
+
+/* =========================================
+   SECTION SERVICES
+========================================= */
+
+.creation-ia-services {
+  padding: 110px 7%;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #f8effd
+    );
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   SOUS TITRE
+========================================= */
+
+.creation-ia-section-small {
+  margin-bottom: 15px;
+
+  color: #8a42b2;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+
+/* =========================================
+   TITRE SECTION
+========================================= */
+
+.creation-ia-services h2 {
+  margin: 0 0 55px;
+
+  color: #28133b;
+
+  font-size: 48px;
+
+  line-height: 1.1;
+}
+
+
+.creation-ia-services h2 span {
+  background:
+    linear-gradient(
+      90deg,
+      #e74ac8,
+      #a86cff
+    );
+
+  background-clip: text;
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================================
+   GRILLE
+========================================= */
+
+.creation-ia-grid {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 22px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.creation-ia-card {
+  padding: 30px 24px;
+
+  background: #faf6fd;
+
+  border:
+    1px solid
+    rgba(110, 50, 145, 0.08);
+
+  border-radius: 22px;
+
+  text-align: left;
+
+  transition:
+    all 0.3s ease;
+
+  box-sizing: border-box;
+}
+
+
+.creation-ia-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 15px 40px
+    rgba(160, 45, 200, 0.15);
+}
+
+
+/* =========================================
+   CARD ICON
+========================================= */
+
+.creation-ia-card-icon {
+  width: 55px;
+
+  height: 55px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #5f1a9b,
+      #d13ab9
+    );
+
+  font-size: 25px;
+}
+
+
+/* =========================================
+   CARD TITRE
+========================================= */
+
+.creation-ia-card h3 {
+  margin: 0 0 12px;
+
+  color: #321746;
+
+  font-size: 19px;
+}
+
+
+/* =========================================
+   CARD DESCRIPTION
+========================================= */
+
+.creation-ia-card p {
+  margin: 0;
+
+  color: #6a6170;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   TABLETTE
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .creation-ia-hero {
+    flex-direction: column;
+
+    gap: 50px;
+
+    padding-top: 60px;
+  }
+
+
+  .creation-ia-content {
+    width: 100%;
+  }
+
+
+  .creation-ia-image-container {
+    width: 100%;
+
+    height: 500px;
+  }
+
+
+  .creation-ia-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .creation-ia-hero {
+    padding:
+      45px 5%;
+  }
+
+
+  /* =========================================
+     TITRE MOBILE
+  ========================================= */
+
+  .creation-ia-title-main {
+    width: fit-content;
+
+    font-size: 48px;
+
+    letter-spacing: -2px;
+
+    text-align: left;
+  }
+
+
+  .creation-ia-title-gradient {
+    width: fit-content;
+
+    font-size: 55px;
+
+    letter-spacing: -2px;
+
+    text-align: left;
+  }
+
+
+  /* =========================================
+     AVEC L'IA MOBILE
+  ========================================= */
+
+  .creation-ia-title-script {
+    width: fit-content;
+
+    margin: 12px 0 0 5px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 40px;
+
+    font-weight: 700;
+
+    font-style: normal;
+
+    line-height: 1;
+
+    letter-spacing: -1px;
+
+    text-align: left;
+
+    text-transform: uppercase;
+
+    transform: none;
+  }
+
+
+  /* =========================================
+     DESCRIPTION
+  ========================================= */
+
+  .creation-ia-description {
+    font-size: 16px;
+  }
+
+
+  /* =========================================
+     OPTIONS
+  ========================================= */
+
+  .creation-ia-options {
+    max-width: 100%;
+  }
+
+
+  .creation-ia-option {
+    padding: 11px 12px;
+  }
+
+
+  /* =========================================
+     SLOGAN
+  ========================================= */
+
+  .creation-ia-slogan {
+    font-size: 21px;
+  }
+
+
+  /* =========================================
+     IMAGE
+  ========================================= */
+
+  .creation-ia-image-container {
+    height: 380px;
+  }
+
+
+  .creation-ia-image {
+    width: 100%;
+
+    height: 100%;
+
+    border-radius: 20px;
+  }
+
+
+  /* =========================================
+     SERVICES
+  ========================================= */
+
+  .creation-ia-services {
+    padding:
+      75px 5%;
+  }
+
+
+  .creation-ia-services h2 {
+    font-size: 36px;
+  }
+
+
+  .creation-ia-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

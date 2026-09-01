@@ -1,0 +1,1122 @@
+
+import {
+  Routes,
+  Route,
+  Navigate,
+  useNavigate,
+  useLocation
+} from "react-router-dom";
+
+import { useEffect } from "react";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import {
+  faFacebookF,
+  faInstagram,
+  faTiktok,
+  faWhatsapp
+} from "@fortawesome/free-brands-svg-icons";
+
+import Navbar from "./Navbar";
+import DesignGraphique from "./DesignGraphique";
+import MontageVideo from "./MontageVideo";
+import FormulaireService from "./FormulaireService";
+import CreationSite from "./CreationSite";
+import CreationIA from "./CreationIA";
+import CreationProduitDigital from "./CreationProduitDigital";
+
+import "./App.css";
+
+
+/* =====================================================
+   PAGE ACCUEIL
+===================================================== */
+
+function Accueil() {
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+
+  /* =====================================================
+     SCROLL AUTOMATIQUE
+     
+     Fonctionnement :
+     /?section=services  → section Services
+     /?section=about     → section À propos
+     /?section=contact   → section Contact
+  ===================================================== */
+
+  useEffect(() => {
+
+    const params =
+      new URLSearchParams(location.search);
+
+    const section =
+      params.get("section");
+
+    if (!section) {
+      return;
+    }
+
+
+    const timer = setTimeout(() => {
+
+      const element =
+        document.getElementById(section);
+
+      if (element) {
+
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+
+      }
+
+    }, 300);
+
+
+    return () => {
+
+      clearTimeout(timer);
+
+    };
+
+  }, [location.search]);
+
+
+  /* =====================================================
+     PAGE
+  ===================================================== */
+
+  return (
+
+    <main>
+
+
+      {/* =================================================
+          HERO
+      ================================================= */}
+
+      <section className="hero">
+
+        <div className="hero-content">
+
+
+          <p className="hero-subtitle">
+            CRÉATIVITÉ • DESIGN • DIGITAL
+          </p>
+
+
+          <h1>
+
+            Donnez vie à vos
+
+            <span>
+              idées.
+            </span>
+
+          </h1>
+
+
+          <p className="hero-description">
+
+            Pixlora transforme vos idées en créations visuelles,
+            produits digitaux et expériences modernes.
+
+          </p>
+
+
+          <div className="hero-buttons">
+
+
+            {/* =================================================
+                BOUTON SERVICES
+            ================================================= */}
+
+            <button
+              className="primary-button"
+              onClick={() => {
+
+                const services =
+                  document.getElementById("services");
+
+
+                if (services) {
+
+                  services.scrollIntoView({
+
+                    behavior: "smooth",
+
+                    block: "start"
+
+                  });
+
+                }
+
+              }}
+            >
+
+              Découvrir nos services
+
+            </button>
+
+
+            {/* =================================================
+                BOUTON CONTACT
+            ================================================= */}
+
+            <button
+              className="secondary-button"
+              onClick={() =>
+                navigate("/formulaire-service")
+              }
+            >
+
+              Nous contacter
+
+            </button>
+
+
+          </div>
+
+        </div>
+
+
+        {/* =================================================
+            VISUEL HERO
+        ================================================= */}
+
+        <div className="hero-visual">
+
+          <div className="gradient-circle"></div>
+
+          <div className="pixel pixel-1"></div>
+
+          <div className="pixel pixel-2"></div>
+
+          <div className="pixel pixel-3"></div>
+
+        </div>
+
+      </section>
+
+
+      {/* =================================================
+          SERVICES
+      ================================================= */}
+
+      <section
+        className="services-preview"
+        id="services"
+      >
+
+
+        <p className="section-subtitle">
+          NOS SERVICES
+        </p>
+
+
+        <h2>
+
+          Créons quelque chose de
+
+          <span>
+            magnifique.
+          </span>
+
+        </h2>
+
+
+        <div className="services-grid">
+
+
+          {/* =================================================
+              DESIGN GRAPHIQUE
+          ================================================= */}
+
+          <div
+            className="service-card"
+            onClick={() =>
+              navigate("/design-graphique")
+            }
+          >
+
+            <div className="service-icon">
+              🎨
+            </div>
+
+
+            <h3>
+              Design graphique
+            </h3>
+
+
+            <p>
+
+              Création de logos, affiches,
+              identités visuelles et supports graphiques.
+
+            </p>
+
+
+            <button
+              onClick={(e) => {
+
+                e.stopPropagation();
+
+                navigate("/design-graphique");
+
+              }}
+            >
+
+              Découvrir →
+
+            </button>
+
+          </div>
+
+
+          {/* =================================================
+              MONTAGE VIDÉO
+          ================================================= */}
+
+          <div
+            className="service-card"
+            onClick={() =>
+              navigate("/montage-video")
+            }
+          >
+
+            <div className="service-icon">
+              🎬
+            </div>
+
+
+            <h3>
+              Montage vidéo
+            </h3>
+
+
+            <p>
+
+              Création et montage de vidéos modernes
+              pour vos projets et réseaux sociaux.
+
+            </p>
+
+
+            <button
+              onClick={(e) => {
+
+                e.stopPropagation();
+
+                navigate("/montage-video");
+
+              }}
+            >
+
+              Découvrir →
+
+            </button>
+
+          </div>
+
+
+          {/* =================================================
+              CRÉATION DE SITE
+          ================================================= */}
+
+          <div
+            className="service-card"
+            onClick={() =>
+              navigate("/creation-site")
+            }
+          >
+
+            <div className="service-icon">
+              💻
+            </div>
+
+
+            <h3>
+              Création de site
+            </h3>
+
+
+            <p>
+
+              Création de sites web modernes,
+              rapides et adaptés à vos besoins.
+
+            </p>
+
+
+            <button
+              onClick={(e) => {
+
+                e.stopPropagation();
+
+                navigate("/creation-site");
+
+              }}
+            >
+
+              Découvrir →
+
+            </button>
+
+          </div>
+
+
+          {/* =================================================
+              PRODUIT DIGITAL
+          ================================================= */}
+
+          <div
+            className="service-card"
+            onClick={() =>
+              navigate("/produit-digital")
+            }
+          >
+
+            <div className="service-icon">
+              📱
+            </div>
+
+
+            <h3>
+              Produit digital
+            </h3>
+
+
+            <p>
+
+              Création de produits digitaux modernes
+              et adaptés à votre activité.
+
+            </p>
+
+
+            <button
+              onClick={(e) => {
+
+                e.stopPropagation();
+
+                navigate("/produit-digital");
+
+              }}
+            >
+
+              Découvrir →
+
+            </button>
+
+          </div>
+
+
+          {/* =================================================
+              CRÉATION AVEC IA
+          ================================================= */}
+
+          <div
+            className="service-card"
+            onClick={() =>
+              navigate("/creation-ia")
+            }
+          >
+
+            <div className="service-icon">
+              🤖
+            </div>
+
+
+            <h3>
+              Création avec IA
+            </h3>
+
+
+            <p>
+
+              Création de contenus et visuels modernes
+              grâce aux outils d'intelligence artificielle.
+
+            </p>
+
+
+            <button
+              onClick={(e) => {
+
+                e.stopPropagation();
+
+                navigate("/creation-ia");
+
+              }}
+            >
+
+              Découvrir →
+
+            </button>
+
+          </div>
+
+
+        </div>
+
+      </section>
+
+
+      {/* =================================================
+          À PROPOS DE PIXLORA
+      ================================================= */}
+
+      <section
+        className="about-section"
+        id="about"
+      >
+
+
+        <p className="section-subtitle">
+          À PROPOS
+        </p>
+
+
+        <h2>
+
+          À propos de
+
+          <span>
+            Pixlora
+          </span>
+
+        </h2>
+
+
+        <p className="about-description">
+
+          <strong>
+            Pixlora
+          </strong>
+
+          {" "}est une agence créative
+          qui aide les marques, entrepreneurs et créateurs
+          à développer leur image grâce au
+
+          <strong>
+
+            {" "}design, à la vidéo et aux solutions digitales.
+
+          </strong>
+
+        </p>
+
+
+        <p className="about-description">
+
+          Nous transformons vos idées en contenus
+
+          <strong>
+
+            {" "}modernes, professionnels et percutants.
+
+          </strong>
+
+        </p>
+
+
+        <p className="about-slogan">
+
+          Creative Solutions for Your Growth.
+
+        </p>
+
+
+        {/* =================================================
+            SERVICES À PROPOS
+        ================================================= */}
+
+        <div className="about-services">
+
+
+          {/* DESIGN */}
+
+          <div className="about-service">
+
+            <div className="about-icon">
+              🎨
+            </div>
+
+
+            <h3>
+              Design Graphique
+            </h3>
+
+
+            <p>
+
+              Logos, affiches, flyers et visuels
+              pour les réseaux sociaux.
+
+            </p>
+
+          </div>
+
+
+          {/* MONTAGE */}
+
+          <div className="about-service">
+
+            <div className="about-icon">
+              🎬
+            </div>
+
+
+            <h3>
+              Montage Vidéo
+            </h3>
+
+
+            <p>
+
+              Reels, TikTok, Instagram, Facebook
+              et YouTube. Des vidéos dynamiques
+              qui captent l’attention.
+
+            </p>
+
+          </div>
+
+
+          {/* IA */}
+
+          <div className="about-service">
+
+            <div className="about-icon">
+              🤖
+            </div>
+
+
+            <h3>
+              Vidéo avec l’IA
+            </h3>
+
+
+            <p>
+
+              Création de vidéos, personnages,
+              animations et publicités grâce
+              à l'intelligence artificielle.
+
+            </p>
+
+          </div>
+
+
+          {/* SITES */}
+
+          <div className="about-service">
+
+            <div className="about-icon">
+              💻
+            </div>
+
+
+            <h3>
+              Création de Sites Web
+            </h3>
+
+
+            <p>
+
+              Sites vitrines, landing pages et
+              sites professionnels adaptés
+              à tous les écrans.
+
+            </p>
+
+          </div>
+
+
+          {/* PRODUITS */}
+
+          <div className="about-service">
+
+            <div className="about-icon">
+              📦
+            </div>
+
+
+            <h3>
+              Produits Digitaux
+            </h3>
+
+
+            <p>
+
+              E-books, templates, présentations
+              et documents digitaux prêts
+              à utiliser et à vendre.
+
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </section>
+
+
+      {/* =================================================
+          CONTACT
+      ================================================= */}
+
+      <section
+        className="contact-section"
+        id="contact"
+      >
+
+        <h2>
+
+          Parlons de votre
+
+          <span>
+            projet.
+          </span>
+
+        </h2>
+
+
+        <p className="contact-description">
+
+          Vous avez un projet ou une idée ?
+          Contactez-nous et discutons ensemble
+          de votre projet.
+
+        </p>
+
+
+        <div className="contact-info">
+
+
+          {/* =================================================
+              EMAIL
+          ================================================= */}
+
+          <div
+            className="contact-item"
+            onClick={() => {
+
+              window.location.href =
+                "mailto:pixlora26@gmail.com";
+
+            }}
+          >
+
+            <div className="contact-icon">
+              ✉
+            </div>
+
+
+            <h3>
+              Email
+            </h3>
+
+
+            <a
+              href="mailto:pixlora26@gmail.com"
+              onClick={(e) =>
+                e.stopPropagation()
+              }
+            >
+
+              pixlora26@gmail.com
+
+            </a>
+
+          </div>
+
+
+          {/* =================================================
+              WHATSAPP
+          ================================================= */}
+
+          <div
+            className="contact-item"
+            onClick={() => {
+
+              window.open(
+                "https://wa.me/21620898688",
+                "_blank"
+              );
+
+            }}
+          >
+
+            <div className="contact-icon">
+
+              <FontAwesomeIcon
+                icon={faWhatsapp}
+              />
+
+            </div>
+
+
+            <h3>
+              WhatsApp
+            </h3>
+
+
+            <a
+              href="https://wa.me/21620898688"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) =>
+                e.stopPropagation()
+              }
+            >
+
+              20 898 688
+
+            </a>
+
+          </div>
+
+
+          {/* =================================================
+              FACEBOOK
+          ================================================= */}
+
+          <div
+            className="contact-item"
+            onClick={() => {
+
+              window.open(
+                "https://www.facebook.com/profile.php?id=61592936854600",
+                "_blank"
+              );
+
+            }}
+          >
+
+            <div className="contact-icon">
+
+              <FontAwesomeIcon
+                icon={faFacebookF}
+              />
+
+            </div>
+
+
+            <h3>
+              Facebook
+            </h3>
+
+
+            <a
+              href="https://www.facebook.com/profile.php?id=61592936854600"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) =>
+                e.stopPropagation()
+              }
+            >
+
+              Pixlora
+
+            </a>
+
+          </div>
+
+
+          {/* =================================================
+              INSTAGRAM
+          ================================================= */}
+
+          <div
+            className="contact-item"
+            onClick={() => {
+
+              window.open(
+                "https://www.instagram.com/pixlora26/",
+                "_blank"
+              );
+
+            }}
+          >
+
+            <div className="contact-icon">
+
+              <FontAwesomeIcon
+                icon={faInstagram}
+              />
+
+            </div>
+
+
+            <h3>
+              Instagram
+            </h3>
+
+
+            <a
+              href="https://www.instagram.com/pixlora26/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) =>
+                e.stopPropagation()
+              }
+            >
+
+              @pixlora26
+
+            </a>
+
+          </div>
+
+
+          {/* =================================================
+              TIKTOK
+          ================================================= */}
+
+          <div
+            className="contact-item"
+            onClick={() => {
+
+              window.open(
+                "https://www.tiktok.com/@pixlora26",
+                "_blank"
+              );
+
+            }}
+          >
+
+            <div className="contact-icon">
+
+              <FontAwesomeIcon
+                icon={faTiktok}
+              />
+
+            </div>
+
+
+            <h3>
+              TikTok
+            </h3>
+
+
+            <a
+              href="https://www.tiktok.com/@pixlora26"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) =>
+                e.stopPropagation()
+              }
+            >
+
+              @pixlora26
+
+            </a>
+
+          </div>
+
+
+        </div>
+
+      </section>
+
+
+    </main>
+
+  );
+
+}
+
+
+/* =====================================================
+   APPLICATION
+===================================================== */
+
+function App() {
+
+  return (
+
+    <>
+
+
+      {/* =================================================
+          NAVBAR
+      ================================================= */}
+
+      <Navbar />
+
+
+      {/* =================================================
+          ROUTES
+      ================================================= */}
+
+      <Routes>
+
+
+        {/* =================================================
+            ACCUEIL
+        ================================================= */}
+
+        <Route
+          path="/"
+          element={<Accueil />}
+        />
+
+
+        {/* =================================================
+            À PROPOS
+        ================================================= */}
+
+        <Route
+          path="/about"
+          element={
+
+            <Navigate
+              to="/?section=about"
+              replace
+            />
+
+          }
+        />
+
+
+        {/* =================================================
+            SERVICES
+        ================================================= */}
+
+        <Route
+          path="/services"
+          element={
+
+            <Navigate
+              to="/?section=services"
+              replace
+            />
+
+          }
+        />
+
+
+        {/* =================================================
+            CONTACT
+        ================================================= */}
+
+        <Route
+          path="/contact"
+          element={
+
+            <Navigate
+              to="/?section=contact"
+              replace
+            />
+
+          }
+        />
+
+
+        {/* =================================================
+            DESIGN GRAPHIQUE
+        ================================================= */}
+
+        <Route
+          path="/design-graphique"
+          element={
+            <DesignGraphique />
+          }
+        />
+
+
+        {/* =================================================
+            MONTAGE VIDÉO
+        ================================================= */}
+
+        <Route
+          path="/montage-video"
+          element={
+            <MontageVideo />
+          }
+        />
+
+
+        {/* =================================================
+            CRÉATION SITE
+        ================================================= */}
+
+        <Route
+          path="/creation-site"
+          element={
+            <CreationSite />
+          }
+        />
+
+
+        {/* =================================================
+            PRODUIT DIGITAL
+        ================================================= */}
+
+        <Route
+          path="/produit-digital"
+          element={
+            <CreationProduitDigital />
+          }
+        />
+
+
+        {/* =================================================
+            CRÉATION IA
+        ================================================= */}
+
+        <Route
+          path="/creation-ia"
+          element={
+            <CreationIA />
+          }
+        />
+
+
+        {/* =================================================
+            FORMULAIRE
+        ================================================= */}
+
+        <Route
+          path="/formulaire-service"
+          element={
+            <FormulaireService />
+          }
+        />
+
+
+        {/* =================================================
+            ROUTE INCONNUE
+        ================================================= */}
+
+        <Route
+          path="*"
+          element={
+
+            <Navigate
+              to="/"
+              replace
+            />
+
+          }
+        />
+
+      </Routes>
+
+
+    </>
+
+  );
+
+}
+
+
+export default App;
