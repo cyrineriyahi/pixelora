@@ -1,5 +1,5 @@
 /* =====================================================
-   RESET
+   APP GLOBAL
 ===================================================== */
 
 * {
@@ -14,57 +14,14 @@ html {
 
 body {
   margin: 0;
-  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
   background: #ffffff;
-  color: #28133b;
-  font-family: "DM Sans", sans-serif;
-  overflow-x: hidden;
+  color: #151515;
 }
 
-button,
-a {
-  font-family: inherit;
-}
-
-button {
-  cursor: pointer;
-}
-
-
-/* =====================================================
-   VARIABLES
-===================================================== */
-
-:root {
-  --purple-dark: #28133b;
-  --purple: #7b2cbf;
-  --purple-light: #a83bc4;
-  --pink: #e052a0;
-  --text: #28133b;
-  --text-light: #665b6d;
-  --white: #ffffff;
-  --border: rgba(123, 44, 191, 0.10);
-
-  --shadow:
-    0 15px 40px rgba(63, 24, 82, 0.08);
-}
-
-
-/* =====================================================
-   SECTION SUBTITLE
-===================================================== */
-
-.section-subtitle {
-  margin-bottom: 15px;
-
-  color: #9146c4;
-
-  font-size: 13px;
-  font-weight: 800;
-
-  letter-spacing: 3px;
-
-  text-transform: uppercase;
+main {
+  width: 100%;
+  overflow: hidden;
 }
 
 
@@ -73,304 +30,158 @@ button {
 ===================================================== */
 
 .hero {
-  position: relative;
-
+  min-height: 100vh;
   width: 100%;
+  padding: 120px 7% 80px;
 
-  min-height: calc(100vh - 80px);
-
-  padding: 100px 7%;
-
-  display: grid;
-
-  grid-template-columns: 1.05fr 0.95fr;
-
+  display: flex;
   align-items: center;
-
-  gap: 50px;
-
-  overflow: hidden;
+  justify-content: space-between;
+  gap: 60px;
 
   background:
     radial-gradient(
       circle at 10% 20%,
-      rgba(180, 100, 255, 0.14),
-      transparent 32%
+      rgba(180, 120, 255, 0.15),
+      transparent 35%
     ),
     radial-gradient(
-      circle at 85% 75%,
-      rgba(230, 80, 190, 0.12),
-      transparent 32%
+      circle at 90% 80%,
+      rgba(80, 180, 255, 0.12),
+      transparent 35%
     ),
-    linear-gradient(
-      180deg,
-      #ffffff 0%,
-      #faf6ff 100%
-    );
+    #ffffff;
 }
 
-
-/* =====================================================
-   HERO CONTENT
-===================================================== */
-
 .hero-content {
-  position: relative;
-
-  z-index: 2;
-
+  width: 55%;
   max-width: 650px;
 }
 
-
-/* =====================================================
-   HERO SUBTITLE
-===================================================== */
-
 .hero-subtitle {
-  margin-bottom: 20px;
-
-  color: #9146c4;
-
-  font-size: 13px;
-
-  font-weight: 800;
-
+  font-size: 14px;
+  font-weight: 700;
   letter-spacing: 3px;
+  margin-bottom: 22px;
 
-  text-transform: uppercase;
-}
-
-
-/* =====================================================
-   HERO TITLE
-===================================================== */
-
-.hero h1 {
-  margin-bottom: 25px;
-
-  color: #28133b;
-
-  font-size: clamp(
-    48px,
-    6vw,
-    78px
+  background: linear-gradient(
+    90deg,
+    #8b5cf6,
+    #ec4899,
+    #06b6d4
   );
 
-  font-weight: 900;
-
-  line-height: 1.04;
-
-  letter-spacing: -3px;
-}
-
-
-.hero h1 span {
-  margin-left: 10px;
-
-  background:
-    linear-gradient(
-      90deg,
-      #7b2cbf,
-      #b43bc5,
-      #e052a0
-    );
-
-  background-clip: text;
-
   -webkit-background-clip: text;
-
-  color: transparent;
-
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+.hero h1 {
+  font-size: clamp(45px, 6vw, 78px);
+  line-height: 1.05;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
 
-/* =====================================================
-   HERO DESCRIPTION
-===================================================== */
+.hero h1 span {
+  background: linear-gradient(
+    90deg,
+    #8b5cf6,
+    #ec4899,
+    #06b6d4
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .hero-description {
   max-width: 600px;
-
-  margin-bottom: 35px;
-
-  color: #665b6d;
-
-  font-family: "Al-Kharashi 40", sans-serif;
-
   font-size: 18px;
-
-  line-height: 1.8;
+  line-height: 1.7;
+  color: #666;
+  margin-bottom: 35px;
 }
-
-
-/* =====================================================
-   HERO BUTTONS
-===================================================== */
 
 .hero-buttons {
   display: flex;
-
   align-items: center;
-
   gap: 15px;
-
   flex-wrap: wrap;
 }
 
-
-/* =====================================================
-   PRIMARY BUTTON
-===================================================== */
-
-.primary-button {
-  padding: 15px 27px;
-
+.primary-button,
+.secondary-button {
   border: none;
-
-  border-radius: 13px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #7025a8,
-      #bd3fc4
-    );
-
-  color: #ffffff;
-
+  cursor: pointer;
+  padding: 15px 25px;
+  border-radius: 12px;
   font-size: 15px;
-
-  font-weight: 700;
-
-  box-shadow:
-    0 10px 25px rgba(
-      112,
-      37,
-      168,
-      0.20
-    );
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  font-weight: 600;
+  transition: 0.3s ease;
 }
 
+.primary-button {
+  color: white;
+
+  background: linear-gradient(
+    90deg,
+    #8b5cf6,
+    #ec4899
+  );
+
+  box-shadow:
+    0 10px 25px rgba(139, 92, 246, 0.25);
+}
 
 .primary-button:hover {
   transform: translateY(-3px);
-
   box-shadow:
-    0 15px 30px rgba(
-      112,
-      37,
-      168,
-      0.28
-    );
+    0 15px 30px rgba(139, 92, 246, 0.35);
 }
-
-
-/* =====================================================
-   SECONDARY BUTTON
-===================================================== */
 
 .secondary-button {
-  padding: 14px 27px;
-
-  border: 1px solid rgba(
-    123,
-    44,
-    191,
-    0.25
-  );
-
-  border-radius: 13px;
-
   background: #ffffff;
-
-  color: #7025a8;
-
-  font-size: 15px;
-
-  font-weight: 700;
-
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease,
-    color 0.3s ease;
+  color: #222;
+  border: 1px solid #ddd;
 }
-
 
 .secondary-button:hover {
   transform: translateY(-3px);
-
-  background: #7025a8;
-
-  color: #ffffff;
+  border-color: #8b5cf6;
+  color: #8b5cf6;
 }
 
 
 /* =====================================================
-   HERO VISUAL
+   HERO IMAGE
 ===================================================== */
 
 .hero-visual {
-  position: relative;
-
-  width: 100%;
-
-  min-height: 350px;
+  width: 45%;
 
   display: flex;
-
-  align-items: center;
-
   justify-content: center;
+  align-items: center;
 }
-
-
-/* =====================================================
-   HERO PHOTO
-===================================================== */
 
 .hero-image {
   width: 300px;
-
   height: 300px;
-
-  display: block;
 
   object-fit: cover;
 
-  opacity: 1;
-
-  border-radius: 30px;
+  border-radius: 35px;
 
   box-shadow:
-    0 20px 50px rgba(
-      63,
-      24,
-      82,
-      0.15
-    );
+    0 25px 60px rgba(0, 0, 0, 0.15);
 
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: 0.4s ease;
 }
 
-
 .hero-image:hover {
-  transform: scale(1.03);
-
-  box-shadow:
-    0 25px 60px rgba(
-      63,
-      24,
-      82,
-      0.20
-    );
+  transform: translateY(-8px) rotate(1deg);
 }
 
 
@@ -380,51 +191,47 @@ button {
 
 .services-preview {
   width: 100%;
+  padding: 110px 7%;
 
-  padding: 120px 7%;
+  background:
+    radial-gradient(
+      circle at 20% 10%,
+      rgba(139, 92, 246, 0.08),
+      transparent 30%
+    ),
+    #fafafa;
 
   text-align: center;
-
-  background: #ffffff;
 }
 
+.section-subtitle {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #8b5cf6;
+  margin-bottom: 15px;
+}
 
-.services-preview h2 {
-  max-width: 850px;
+.services-preview h2,
+.about-section h2,
+.contact-section h2 {
+  font-size: clamp(32px, 4vw, 50px);
+  line-height: 1.2;
+  margin-bottom: 55px;
+}
 
-  margin: 0 auto 55px;
-
-  color: #28133b;
-
-  font-size: clamp(
-    38px,
-    5vw,
-    58px
+.services-preview h2 span,
+.about-section h2 span,
+.contact-section h2 span {
+  background: linear-gradient(
+    90deg,
+    #8b5cf6,
+    #ec4899,
+    #06b6d4
   );
 
-  font-weight: 900;
-
-  line-height: 1.1;
-
-  letter-spacing: -2px;
-}
-
-
-.services-preview h2 span {
-  background:
-    linear-gradient(
-      90deg,
-      #7b2cbf,
-      #b43bc5,
-      #e052a0
-    );
-
-  background-clip: text;
-
   -webkit-background-clip: text;
-
-  color: transparent;
-
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -434,16 +241,14 @@ button {
 ===================================================== */
 
 .services-grid {
-  max-width: 1200px;
-
-  margin: 0 auto;
+  width: 100%;
+  max-width: 1250px;
+  margin: auto;
 
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
 
-  grid-template-columns:
-    repeat(3, 1fr);
-
-  gap: 22px;
+  gap: 25px;
 }
 
 
@@ -452,33 +257,18 @@ button {
 ===================================================== */
 
 .service-card {
-  padding: 35px 28px;
+  position: relative;
 
-  min-height: 300px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  justify-content: center;
-
-  text-align: center;
+  padding: 35px 25px;
 
   background: #ffffff;
 
-  border: 1px solid var(--border);
-
+  border: 1px solid #eeeeee;
   border-radius: 25px;
 
-  box-shadow:
-    0 12px 35px rgba(
-      48,
-      20,
-      65,
-      0.06
-    );
+  text-align: left;
+
+  cursor: pointer;
 
   transition:
     transform 0.3s ease,
@@ -486,252 +276,121 @@ button {
     border-color 0.3s ease;
 }
 
-
 .service-card:hover {
-  transform: translateY(-9px);
+  transform: translateY(-8px);
 
-  border-color:
-    rgba(
-      145,
-      70,
-      196,
-      0.25
-    );
+  border-color: rgba(139, 92, 246, 0.3);
 
   box-shadow:
-    0 22px 50px rgba(
-      111,
-      43,
-      145,
-      0.13
-    );
+    0 20px 45px rgba(0, 0, 0, 0.08);
 }
 
-
-/* =====================================================
-   SERVICE ICON
-===================================================== */
-
 .service-icon {
-  width: 68px;
+  width: 65px;
+  height: 65px;
 
-  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   margin-bottom: 20px;
 
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  border-radius: 20px;
+  border-radius: 18px;
 
   background:
     linear-gradient(
       135deg,
-      #762bb0,
-      #c33fc0
+      rgba(139, 92, 246, 0.12),
+      rgba(236, 72, 153, 0.12)
     );
 
   font-size: 30px;
-
-  box-shadow:
-    0 10px 25px rgba(
-      112,
-      37,
-      168,
-      0.18
-    );
-
-  transition:
-    transform 0.3s ease;
 }
-
-
-.service-card:hover .service-icon {
-  transform:
-    scale(1.08)
-    rotate(-3deg);
-}
-
-
-/* =====================================================
-   SERVICE TITLE
-===================================================== */
 
 .service-card h3 {
+  font-size: 21px;
   margin-bottom: 12px;
-
-  color: #321644;
-
-  font-size: 20px;
-
-  font-weight: 800;
 }
-
-
-/* =====================================================
-   SERVICE DESCRIPTION
-===================================================== */
 
 .service-card p {
-  max-width: 300px;
-
-  margin-bottom: 22px;
-
-  color: #6b6170;
-
-  font-family: "Al-Kharashi 40", sans-serif;
-
+  color: #707070;
   font-size: 15px;
-
   line-height: 1.7;
+  margin-bottom: 20px;
 }
-
-
-/* =====================================================
-   SERVICE BUTTON
-===================================================== */
 
 .service-card button {
-  padding: 10px 20px;
-
   border: none;
-
-  border-radius: 25px;
-
   background: transparent;
 
-  color: #7b2cbf;
+  color: #8b5cf6;
 
   font-size: 14px;
+  font-weight: 700;
 
-  font-weight: 800;
+  cursor: pointer;
 
-  transition:
-    background 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease;
+  padding: 0;
 }
 
-
 .service-card button:hover {
-  background:
-    linear-gradient(
-      135deg,
-      #7025a8,
-      #bd3fc4
-    );
-
-  color: #ffffff;
-
-  transform: translateX(3px);
+  color: #ec4899;
 }
 
 
 /* =====================================================
-   À PROPOS
+   ABOUT
 ===================================================== */
 
 .about-section {
   width: 100%;
-
-  padding: 120px 7%;
+  padding: 110px 7%;
 
   text-align: center;
 
   background:
     radial-gradient(
-      circle at 10% 20%,
-      rgba(225, 190, 255, 0.20),
-      transparent 32%
+      circle at 80% 30%,
+      rgba(236, 72, 153, 0.08),
+      transparent 30%
     ),
-    radial-gradient(
-      circle at 90% 80%,
-      rgba(196, 130, 255, 0.13),
-      transparent 32%
-    ),
-    linear-gradient(
-      180deg,
-      #faf5ff 0%,
-      #ffffff 100%
-    );
+    #ffffff;
 }
-
 
 .about-section h2 {
   margin-bottom: 30px;
-
-  color: #28133b;
-
-  font-size: clamp(
-    38px,
-    5vw,
-    58px
-  );
-
-  font-weight: 900;
-
-  line-height: 1.1;
-
-  letter-spacing: -2px;
 }
-
-
-.about-section h2 span {
-  margin-left: 10px;
-
-  background:
-    linear-gradient(
-      90deg,
-      #7b2cbf,
-      #b43bc5,
-      #e052a0
-    );
-
-  background-clip: text;
-
-  -webkit-background-clip: text;
-
-  color: transparent;
-
-  -webkit-text-fill-color: transparent;
-}
-
 
 .about-description {
-  max-width: 800px;
+  max-width: 850px;
+  margin: 0 auto 20px;
 
-  margin: 0 auto 18px;
-
-  color: #5f5565;
-
-  font-family: "Al-Kharashi 40", sans-serif;
+  color: #666;
 
   font-size: 17px;
-
-  line-height: 1.8;
+  line-height: 1.9;
 }
-
 
 .about-description strong {
-  color: #4a245e;
-
-  font-weight: 800;
+  color: #222;
 }
 
-
 .about-slogan {
-  margin: 35px 0 0;
-
-  color: #9146c4;
+  margin-top: 40px;
 
   font-size: 18px;
+  font-weight: 700;
 
-  font-weight: 800;
+  background: linear-gradient(
+    90deg,
+    #8b5cf6,
+    #ec4899,
+    #06b6d4
+  );
 
-  font-style: italic;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 
@@ -741,108 +400,48 @@ button {
 
 .contact-section {
   width: 100%;
-
-  padding: 120px 7%;
+  padding: 110px 7%;
 
   text-align: center;
 
   background:
     radial-gradient(
-      circle at 15% 20%,
-      rgba(
-        180,
-        100,
-        255,
-        0.12
-      ),
+      circle at 10% 90%,
+      rgba(6, 182, 212, 0.08),
       transparent 30%
     ),
-    radial-gradient(
-      circle at 85% 75%,
-      rgba(
-        230,
-        80,
-        190,
-        0.10
-      ),
-      transparent 30%
-    ),
-    #ffffff;
+    #fafafa;
 }
-
 
 .contact-section h2 {
-  margin: 0 0 22px;
-
-  color: #24102f;
-
-  font-size: clamp(
-    38px,
-    5vw,
-    58px
-  );
-
-  font-weight: 900;
-
-  line-height: 1.1;
-
-  letter-spacing: -2px;
+  margin-bottom: 20px;
 }
-
-
-.contact-section h2 span {
-  margin-left: 10px;
-
-  background:
-    linear-gradient(
-      90deg,
-      #7b2cbf,
-      #b43bc5,
-      #e052a0
-    );
-
-  background-clip: text;
-
-  -webkit-background-clip: text;
-
-  color: transparent;
-
-  -webkit-text-fill-color: transparent;
-}
-
 
 .contact-description {
   max-width: 650px;
+  margin: 0 auto 50px;
 
-  margin: 0 auto 60px;
-
-  color: #6b6170;
-
-  font-family: "Al-Kharashi 40", sans-serif;
+  color: #666;
 
   font-size: 17px;
-
-  line-height: 1.8;
+  line-height: 1.7;
 }
 
 
 /* =====================================================
-   CONTACT INFO
+   CONTACT GRID
 ===================================================== */
 
 .contact-info {
-  max-width: 1150px;
+  width: 100%;
+  max-width: 1200px;
 
-  margin: 0 auto;
+  margin: auto;
 
   display: grid;
+  grid-template-columns: repeat(5, 1fr);
 
-  grid-template-columns:
-    repeat(5, 1fr);
-
-  gap: 18px;
-
-  align-items: stretch;
+  gap: 20px;
 }
 
 
@@ -851,37 +450,21 @@ button {
 ===================================================== */
 
 .contact-item {
-  min-height: 210px;
+  min-height: 190px;
 
-  padding: 30px 18px;
+  padding: 30px 15px;
 
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
-
   justify-content: center;
 
   background: #ffffff;
 
-  border: 1px solid
-    rgba(
-      130,
-      55,
-      170,
-      0.10
-    );
+  border: 1px solid #eeeeee;
+  border-radius: 25px;
 
-  border-radius: 24px;
-
-  box-shadow:
-    0 10px 35px rgba(
-      48,
-      20,
-      65,
-      0.06
-    );
+  cursor: pointer;
 
   transition:
     transform 0.3s ease,
@@ -889,511 +472,207 @@ button {
     border-color 0.3s ease;
 }
 
-
 .contact-item:hover {
-  transform: translateY(-8px);
+  transform: translateY(-7px);
 
-  border-color:
-    rgba(
-      145,
-      70,
-      196,
-      0.25
-    );
+  border-color: rgba(139, 92, 246, 0.3);
 
   box-shadow:
-    0 20px 45px rgba(
-      111,
-      43,
-      145,
-      0.13
-    );
+    0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
-
-/* =====================================================
-   CONTACT ICON
-===================================================== */
-
 .contact-icon {
-  width: 64px;
-
-  height: 64px;
-
-  margin-bottom: 20px;
+  width: 65px;
+  height: 65px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
-  border-radius: 20px;
+  margin-bottom: 18px;
+
+  border-radius: 18px;
 
   background:
     linear-gradient(
       135deg,
-      #7025a8,
-      #bd3fc4
+      rgba(139, 92, 246, 0.12),
+      rgba(236, 72, 153, 0.12)
     );
 
-  color: #ffffff;
-
-  font-size: 26px;
-
-  font-weight: 800;
-
-  box-shadow:
-    0 10px 25px rgba(
-      112,
-      37,
-      168,
-      0.20
-    );
-
-  transition:
-    transform 0.3s ease;
+  font-size: 27px;
 }
 
-
-.contact-item:hover .contact-icon {
-  transform:
-    scale(1.08)
-    rotate(-3deg);
+.contact-icon svg {
+  width: 30px;
+  height: 30px;
 }
-
 
 .contact-item h3 {
-  margin: 0 0 9px;
-
-  color: #321644;
-
   font-size: 18px;
-
-  font-weight: 800;
+  margin-bottom: 8px;
 }
 
-
 .contact-item a {
-  max-width: 100%;
-
-  color: #74547f;
-
-  font-family: "Al-Kharashi 40", sans-serif;
-
-  font-size: 14px;
-
-  font-weight: 500;
+  color: #777;
 
   text-decoration: none;
 
-  word-break: break-word;
+  font-size: 13px;
 
-  transition:
-    color 0.3s ease;
+  transition: 0.3s ease;
 }
-
 
 .contact-item a:hover {
-  color: #b43bc5;
-
-  text-decoration: underline;
+  color: #8b5cf6;
 }
 
 
 /* =====================================================
-   CONTACT COLORS
-===================================================== */
-
-.contact-item:first-child .contact-icon {
-  background:
-    linear-gradient(
-      135deg,
-      #762bb0,
-      #c33fc0
-    );
-}
-
-
-.contact-item:nth-child(2) .contact-icon {
-  background:
-    linear-gradient(
-      135deg,
-      #8435bd,
-      #d44a9f
-    );
-}
-
-
-.contact-item:nth-child(3) .contact-icon {
-  background:
-    linear-gradient(
-      135deg,
-      #5530a5,
-      #884bd0
-    );
-}
-
-
-.contact-item:nth-child(4) .contact-icon {
-  background:
-    linear-gradient(
-      135deg,
-      #7b2cbf,
-      #d34b9c
-    );
-}
-
-
-.contact-item:nth-child(5) .contact-icon {
-  background:
-    linear-gradient(
-      135deg,
-      #43215e,
-      #9a3eaa
-    );
-}
-
-
-/* =====================================================
-   TABLETTE
+   TABLET
 ===================================================== */
 
 @media (max-width: 1000px) {
 
   .hero {
-    grid-template-columns: 1fr;
-
-    text-align: center;
-
-    padding-top: 70px;
-
-    gap: 35px;
+    padding: 110px 5% 70px;
   }
 
-
-  .hero-content {
-    max-width: 750px;
-
-    margin: 0 auto;
+  .services-preview,
+  .about-section,
+  .contact-section {
+    padding: 90px 5%;
   }
-
-
-  .hero-description {
-    margin-left: auto;
-
-    margin-right: auto;
-  }
-
-
-  .hero-buttons {
-    justify-content: center;
-  }
-
-
-  .hero-visual {
-    min-height: auto;
-  }
-
-
-  .hero-image {
-    width: 280px;
-
-    height: 280px;
-  }
-
 
   .services-grid {
-    grid-template-columns:
-      repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
-
 
   .contact-info {
-    grid-template-columns:
-      repeat(3, 1fr);
-
-    max-width: 850px;
+    grid-template-columns: repeat(3, 1fr);
   }
-
 }
 
 
 /* =====================================================
-   PETITE TABLETTE
+   TABLET / MOBILE
 ===================================================== */
 
 @media (max-width: 750px) {
 
   .hero {
-    padding:
-      65px 5%
-      70px;
+    min-height: auto;
 
-    display: flex;
+    padding: 120px 6% 70px;
 
     flex-direction: column;
 
-    gap: 30px;
-
     text-align: center;
-  }
 
+    gap: 45px;
+  }
 
   .hero-content {
     width: 100%;
-
-    max-width: 600px;
   }
 
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-  .hero-visual {
-    width: 100%;
-
-    min-height: auto;
-
-    display: flex;
-
-    align-items: center;
-
+  .hero-buttons {
     justify-content: center;
   }
 
+  .hero-visual {
+    width: 100%;
+  }
 
   .hero-image {
     width: 240px;
-
     height: 240px;
-
-    object-fit: cover;
-
-    opacity: 1;
-
-    border-radius: 25px;
   }
-
-
-  .hero h1 {
-    font-size: 48px;
-
-    letter-spacing: -2px;
-  }
-
-
-  .hero-description {
-    font-size: 16px;
-  }
-
-
-  .services-preview,
-  .about-section,
-  .contact-section {
-    padding:
-      90px 5%;
-  }
-
-
-  .services-preview h2,
-  .about-section h2,
-  .contact-section h2 {
-    font-size: 40px;
-
-    letter-spacing: -1px;
-  }
-
 
   .services-grid {
-    grid-template-columns: 1fr;
-
-    max-width: 500px;
+    grid-template-columns: repeat(2, 1fr);
   }
-
-
-  .contact-description {
-    font-size: 15px;
-
-    margin-bottom: 45px;
-  }
-
 
   .contact-info {
-    grid-template-columns:
-      repeat(3, 1fr);
-
-    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
   }
-
-
-  .contact-item {
-    min-height: 190px;
-
-    padding:
-      25px 15px;
-  }
-
 }
 
 
 /* =====================================================
    MOBILE
+   SERVICES + CONTACT = 2 PAR LIGNE
 ===================================================== */
 
 @media (max-width: 500px) {
 
-  /* ================================
+  /* =========================================
      HERO
-  ================================= */
+  ========================================= */
 
   .hero {
-    min-height: auto;
+    padding: 105px 18px 60px;
 
-    padding:
-      50px 6%
-      70px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 28px;
+    gap: 35px;
   }
-
-
-  .hero-content {
-    width: 100%;
-
-    max-width: 100%;
-  }
-
 
   .hero-subtitle {
     font-size: 11px;
-
     letter-spacing: 2px;
-
-    margin-bottom: 15px;
+    margin-bottom: 18px;
   }
-
 
   .hero h1 {
-    font-size: 40px;
-
-    letter-spacing: -1.5px;
-
-    margin-bottom: 20px;
+    font-size: 42px;
+    line-height: 1.08;
   }
-
-
-  .hero h1 span {
-    margin-left: 7px;
-  }
-
 
   .hero-description {
     font-size: 15px;
-
-    line-height: 1.7;
-
+    line-height: 1.6;
     margin-bottom: 28px;
   }
 
-
   .hero-buttons {
     flex-direction: column;
-
     width: 100%;
-
-    gap: 12px;
   }
-
 
   .primary-button,
   .secondary-button {
     width: 100%;
-
-    padding:
-      14px 20px;
+    padding: 14px 18px;
   }
-
-
-  .hero-visual {
-    width: 100%;
-
-    min-height: auto;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    margin-top: 5px;
-  }
-
 
   .hero-image {
     width: 200px;
-
     height: 200px;
-
-    object-fit: cover;
-
-    display: block;
-
-    opacity: 1;
-
-    border-radius: 22px;
-
-    box-shadow:
-      0 15px 35px rgba(
-        63,
-        24,
-        82,
-        0.15
-      );
+    border-radius: 25px;
   }
 
 
-  /* ================================
-     SECTIONS
-  ================================= */
+  /* =========================================
+     SERVICES
+     2 SERVICES PAR LIGNE
+  ========================================= */
 
-  .services-preview,
-  .about-section,
-  .contact-section {
-    padding:
-      80px 6%;
+  .services-preview {
+    padding: 75px 15px;
   }
-
 
   .services-preview h2,
   .about-section h2,
   .contact-section h2 {
-    font-size: 35px;
+    font-size: 31px;
+    margin-bottom: 35px;
   }
 
-
-  .services-preview h2 span,
-  .about-section h2 span,
-  .contact-section h2 span {
-    display: block;
-
-    margin-top: 5px;
-
-    margin-left: 0;
-  }
-
-
-  .about-description {
-    font-size: 15px;
-  }
-
-
-  /* ================================
-     CONTACT : 2 COLONNES
-  ================================= */
-
-  .contact-info {
+  .services-grid {
     width: 100%;
 
     display: grid;
@@ -1402,59 +681,184 @@ button {
       repeat(2, minmax(0, 1fr));
 
     gap: 14px;
+  }
 
-    max-width: 100%;
+  .service-card {
+    width: 100%;
+    min-width: 0;
+
+    padding: 20px 11px;
+
+    border-radius: 20px;
+
+    text-align: center;
+  }
+
+  .service-icon {
+    width: 52px;
+    height: 52px;
+
+    margin: 0 auto 13px;
+
+    border-radius: 15px;
+
+    font-size: 23px;
+  }
+
+  .service-card h3 {
+    font-size: 15px;
+    line-height: 1.3;
+
+    margin-bottom: 8px;
+  }
+
+  .service-card p {
+    font-size: 11px;
+    line-height: 1.5;
+
+    margin-bottom: 14px;
+  }
+
+  .service-card button {
+    font-size: 11px;
   }
 
 
+  /* =========================================
+     ABOUT
+  ========================================= */
+
+  .about-section {
+    padding: 75px 18px;
+  }
+
+  .about-description {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .about-slogan {
+    font-size: 16px;
+  }
+
+
+  /* =========================================
+     CONTACT
+     2 CONTACTS PAR LIGNE
+  ========================================= */
+
+  .contact-section {
+    padding: 75px 15px;
+  }
+
+  .contact-description {
+    font-size: 15px;
+    line-height: 1.6;
+
+    margin-bottom: 35px;
+  }
+
+  .contact-info {
+    width: 100%;
+    max-width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+  }
+
   .contact-item {
     width: 100%;
+    min-width: 0;
 
     min-height: 175px;
 
-    padding:
-      22px 10px;
+    padding: 20px 8px;
 
     border-radius: 20px;
   }
 
-
   .contact-icon {
     width: 58px;
-
     height: 58px;
 
-    margin-bottom: 15px;
+    margin-bottom: 14px;
 
     border-radius: 17px;
 
     font-size: 24px;
   }
 
-
-  .contact-item h3 {
-    margin-bottom: 7px;
-
-    font-size: 16px;
-  }
-
-
-  .contact-item a {
-    font-size: 12px;
-
-    text-align: center;
-  }
-
-
   .contact-icon svg {
     width: 28px;
-
     height: 28px;
   }
 
-
-  .contact-icon {
-    cursor: pointer;
+  .contact-item h3 {
+    font-size: 15px;
+    margin-bottom: 7px;
   }
 
+  .contact-item a {
+    font-size: 11px;
+    text-align: center;
+
+    word-break: break-word;
+  }
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+===================================================== */
+
+@media (max-width: 360px) {
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .services-grid,
+  .contact-info {
+    gap: 10px;
+  }
+
+  .service-card {
+    padding: 17px 8px;
+  }
+
+  .service-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 20px;
+  }
+
+  .service-card h3 {
+    font-size: 13px;
+  }
+
+  .service-card p {
+    font-size: 10px;
+  }
+
+  .contact-item {
+    min-height: 160px;
+    padding: 17px 6px;
+  }
+
+  .contact-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .contact-item h3 {
+    font-size: 13px;
+  }
+
+  .contact-item a {
+    font-size: 10px;
+  }
 }
