@@ -1,5 +1,5 @@
 /* =====================================================
-   APP GLOBAL
+   RESET
 ===================================================== */
 
 * {
@@ -17,6 +17,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background: #ffffff;
   color: #151515;
+  overflow-x: hidden;
 }
 
 main {
@@ -37,6 +38,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   gap: 60px;
 
   background:
@@ -52,6 +54,11 @@ main {
     ),
     #ffffff;
 }
+
+
+/* =====================================================
+   HERO TEXT
+===================================================== */
 
 .hero-content {
   width: 55%;
@@ -98,11 +105,19 @@ main {
 
 .hero-description {
   max-width: 600px;
+
   font-size: 18px;
   line-height: 1.7;
+
   color: #666;
+
   margin-bottom: 35px;
 }
+
+
+/* =====================================================
+   HERO BUTTONS
+===================================================== */
 
 .hero-buttons {
   display: flex;
@@ -115,10 +130,14 @@ main {
 .secondary-button {
   border: none;
   cursor: pointer;
+
   padding: 15px 25px;
+
   border-radius: 12px;
+
   font-size: 15px;
   font-weight: 600;
+
   transition: 0.3s ease;
 }
 
@@ -137,6 +156,7 @@ main {
 
 .primary-button:hover {
   transform: translateY(-3px);
+
   box-shadow:
     0 15px 30px rgba(139, 92, 246, 0.35);
 }
@@ -144,11 +164,13 @@ main {
 .secondary-button {
   background: #ffffff;
   color: #222;
+
   border: 1px solid #ddd;
 }
 
 .secondary-button:hover {
   transform: translateY(-3px);
+
   border-color: #8b5cf6;
   color: #8b5cf6;
 }
@@ -167,8 +189,12 @@ main {
 }
 
 .hero-image {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  max-width: 600px;
+
+  height: auto;
+
+  aspect-ratio: 4 / 3;
 
   object-fit: cover;
 
@@ -191,6 +217,7 @@ main {
 
 .services-preview {
   width: 100%;
+
   padding: 110px 7%;
 
   background:
@@ -207,8 +234,11 @@ main {
 .section-subtitle {
   font-size: 13px;
   font-weight: 700;
+
   letter-spacing: 3px;
+
   color: #8b5cf6;
+
   margin-bottom: 15px;
 }
 
@@ -216,7 +246,9 @@ main {
 .about-section h2,
 .contact-section h2 {
   font-size: clamp(32px, 4vw, 50px);
+
   line-height: 1.2;
+
   margin-bottom: 55px;
 }
 
@@ -237,16 +269,19 @@ main {
 
 
 /* =====================================================
-   SERVICES GRID
+   SERVICES GRID DESKTOP
 ===================================================== */
 
 .services-grid {
   width: 100%;
   max-width: 1250px;
+
   margin: auto;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
 
   gap: 25px;
 }
@@ -264,6 +299,7 @@ main {
   background: #ffffff;
 
   border: 1px solid #eeeeee;
+
   border-radius: 25px;
 
   text-align: left;
@@ -279,17 +315,24 @@ main {
 .service-card:hover {
   transform: translateY(-8px);
 
-  border-color: rgba(139, 92, 246, 0.3);
+  border-color:
+    rgba(139, 92, 246, 0.3);
 
   box-shadow:
     0 20px 45px rgba(0, 0, 0, 0.08);
 }
+
+
+/* =====================================================
+   SERVICE ICON
+===================================================== */
 
 .service-icon {
   width: 65px;
   height: 65px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -309,23 +352,29 @@ main {
 
 .service-card h3 {
   font-size: 21px;
+
   margin-bottom: 12px;
 }
 
 .service-card p {
   color: #707070;
+
   font-size: 15px;
+
   line-height: 1.7;
+
   margin-bottom: 20px;
 }
 
 .service-card button {
   border: none;
+
   background: transparent;
 
   color: #8b5cf6;
 
   font-size: 14px;
+
   font-weight: 700;
 
   cursor: pointer;
@@ -344,6 +393,7 @@ main {
 
 .about-section {
   width: 100%;
+
   padding: 110px 7%;
 
   text-align: center;
@@ -363,11 +413,13 @@ main {
 
 .about-description {
   max-width: 850px;
+
   margin: 0 auto 20px;
 
   color: #666;
 
   font-size: 17px;
+
   line-height: 1.9;
 }
 
@@ -379,14 +431,16 @@ main {
   margin-top: 40px;
 
   font-size: 18px;
+
   font-weight: 700;
 
-  background: linear-gradient(
-    90deg,
-    #8b5cf6,
-    #ec4899,
-    #06b6d4
-  );
+  background:
+    linear-gradient(
+      90deg,
+      #8b5cf6,
+      #ec4899,
+      #06b6d4
+    );
 
   -webkit-background-clip: text;
   background-clip: text;
@@ -400,6 +454,7 @@ main {
 
 .contact-section {
   width: 100%;
+
   padding: 110px 7%;
 
   text-align: center;
@@ -419,17 +474,19 @@ main {
 
 .contact-description {
   max-width: 650px;
+
   margin: 0 auto 50px;
 
   color: #666;
 
   font-size: 17px;
+
   line-height: 1.7;
 }
 
 
 /* =====================================================
-   CONTACT GRID
+   CONTACT GRID DESKTOP
 ===================================================== */
 
 .contact-info {
@@ -439,14 +496,16 @@ main {
   margin: auto;
 
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
 
   gap: 20px;
 }
 
 
 /* =====================================================
-   CONTACT ITEM
+   CONTACT CARD
 ===================================================== */
 
 .contact-item {
@@ -455,13 +514,16 @@ main {
   padding: 30px 15px;
 
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
   justify-content: center;
 
   background: #ffffff;
 
   border: 1px solid #eeeeee;
+
   border-radius: 25px;
 
   cursor: pointer;
@@ -475,7 +537,8 @@ main {
 .contact-item:hover {
   transform: translateY(-7px);
 
-  border-color: rgba(139, 92, 246, 0.3);
+  border-color:
+    rgba(139, 92, 246, 0.3);
 
   box-shadow:
     0 20px 40px rgba(0, 0, 0, 0.08);
@@ -486,6 +549,7 @@ main {
   height: 65px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -510,6 +574,7 @@ main {
 
 .contact-item h3 {
   font-size: 18px;
+
   margin-bottom: 8px;
 }
 
@@ -529,13 +594,14 @@ main {
 
 
 /* =====================================================
-   TABLET
+   TABLETTE
 ===================================================== */
 
 @media (max-width: 1000px) {
 
   .hero {
     padding: 110px 5% 70px;
+    gap: 40px;
   }
 
   .services-preview,
@@ -545,160 +611,219 @@ main {
   }
 
   .services-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
   }
 
   .contact-info {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-
-/* =====================================================
-   TABLET / MOBILE
-===================================================== */
-
-@media (max-width: 750px) {
-
-  .hero {
-    min-height: auto;
-
-    padding: 120px 6% 70px;
-
-    flex-direction: column;
-
-    text-align: center;
-
-    gap: 45px;
-  }
-
-  .hero-content {
-    width: 100%;
-  }
-
-  .hero-description {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-  }
-
-  .hero-visual {
-    width: 100%;
-  }
-
-  .hero-image {
-    width: 240px;
-    height: 240px;
-  }
-
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .contact-info {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
   }
 }
 
 
 /* =====================================================
    MOBILE
-   SERVICES + CONTACT = 2 PAR LIGNE
 ===================================================== */
 
-@media (max-width: 500px) {
+@media (max-width: 750px) {
 
-  /* =========================================
+  /* -------------------------------
      HERO
-  ========================================= */
+  ------------------------------- */
 
   .hero {
-    padding: 105px 18px 60px;
+    min-height: auto;
+
+    padding: 95px 20px 60px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
 
     gap: 35px;
   }
 
+  .hero-content {
+    width: 100%;
+
+    max-width: 600px;
+  }
+
   .hero-subtitle {
     font-size: 11px;
+
     letter-spacing: 2px;
-    margin-bottom: 18px;
+
+    margin-bottom: 16px;
   }
 
   .hero h1 {
-    font-size: 42px;
+    font-size: 40px;
+
     line-height: 1.08;
+
+    margin-bottom: 20px;
   }
 
   .hero-description {
+    width: 100%;
+
+    max-width: 500px;
+
+    margin-left: auto;
+    margin-right: auto;
+
     font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 28px;
+
+    line-height: 1.65;
+
+    margin-bottom: 25px;
   }
 
+
+  /* -------------------------------
+     BUTTONS
+  ------------------------------- */
+
   .hero-buttons {
-    flex-direction: column;
     width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 12px;
   }
 
   .primary-button,
   .secondary-button {
     width: 100%;
+
+    max-width: 340px;
+
     padding: 14px 18px;
+
+    font-size: 14px;
+  }
+
+
+  /* -------------------------------
+     PHOTO
+  ------------------------------- */
+
+  .hero-visual {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
   }
 
   .hero-image {
-    width: 200px;
-    height: 200px;
-    border-radius: 25px;
+    width: 100%;
+
+    max-width: 340px;
+
+    height: auto;
+
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+
+    border-radius: 24px;
+
+    box-shadow:
+      0 18px 40px rgba(0, 0, 0, 0.14);
+  }
+
+  .hero-image:hover {
+    transform: none;
   }
 
 
-  /* =========================================
+  /* -------------------------------
      SERVICES
-     2 SERVICES PAR LIGNE
-  ========================================= */
+  ------------------------------- */
 
   .services-preview {
-    padding: 75px 15px;
+    padding: 75px 16px;
   }
 
   .services-preview h2,
   .about-section h2,
   .contact-section h2 {
     font-size: 31px;
+
+    line-height: 1.2;
+
     margin-bottom: 35px;
   }
 
   .services-grid {
+
     width: 100%;
+
+    max-width: 600px;
+
+    margin: 0 auto;
 
     display: grid;
 
+    /* IMPORTANT :
+       2 SERVICES PAR LIGNE */
     grid-template-columns:
       repeat(2, minmax(0, 1fr));
 
-    gap: 14px;
+    gap: 12px;
   }
 
+
+  /* -------------------------------
+     SERVICE CARD MOBILE
+  ------------------------------- */
+
   .service-card {
+
     width: 100%;
+
     min-width: 0;
 
-    padding: 20px 11px;
+    min-height: 225px;
+
+    padding: 20px 10px;
 
     border-radius: 20px;
 
     text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .service-card:hover {
+    transform: none;
   }
 
   .service-icon {
-    width: 52px;
-    height: 52px;
 
-    margin: 0 auto 13px;
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    margin: 0 auto 12px;
 
     border-radius: 15px;
 
@@ -706,72 +831,107 @@ main {
   }
 
   .service-card h3 {
+
+    width: 100%;
+
     font-size: 15px;
+
     line-height: 1.3;
 
     margin-bottom: 8px;
   }
 
   .service-card p {
+
+    width: 100%;
+
     font-size: 11px;
+
     line-height: 1.5;
 
-    margin-bottom: 14px;
+    margin-bottom: 12px;
+
+    color: #707070;
   }
 
   .service-card button {
+
+    margin-top: auto;
+
     font-size: 11px;
   }
 
 
-  /* =========================================
+  /* -------------------------------
      ABOUT
-  ========================================= */
+  ------------------------------- */
 
   .about-section {
     padding: 75px 18px;
   }
 
   .about-description {
+
+    width: 100%;
+
     font-size: 15px;
+
     line-height: 1.8;
   }
 
   .about-slogan {
     font-size: 16px;
+
+    line-height: 1.5;
   }
 
 
-  /* =========================================
+  /* -------------------------------
      CONTACT
-     2 CONTACTS PAR LIGNE
-  ========================================= */
+  ------------------------------- */
 
   .contact-section {
-    padding: 75px 15px;
+    padding: 75px 16px;
   }
 
   .contact-description {
+
+    width: 100%;
+
     font-size: 15px;
+
     line-height: 1.6;
 
     margin-bottom: 35px;
   }
 
   .contact-info {
+
     width: 100%;
-    max-width: 100%;
+
+    max-width: 600px;
+
+    margin: 0 auto;
 
     display: grid;
 
+    /* IMPORTANT :
+       2 CONTACTS PAR LIGNE */
     grid-template-columns:
       repeat(2, minmax(0, 1fr));
 
-    gap: 14px;
+    gap: 12px;
   }
 
+
+  /* -------------------------------
+     CONTACT CARD MOBILE
+  ------------------------------- */
+
   .contact-item {
+
     width: 100%;
+
     min-width: 0;
 
     min-height: 175px;
@@ -781,29 +941,40 @@ main {
     border-radius: 20px;
   }
 
+  .contact-item:hover {
+    transform: none;
+  }
+
   .contact-icon {
-    width: 58px;
-    height: 58px;
 
-    margin-bottom: 14px;
+    width: 55px;
+    height: 55px;
 
-    border-radius: 17px;
+    margin-bottom: 13px;
 
-    font-size: 24px;
+    border-radius: 16px;
+
+    font-size: 23px;
   }
 
   .contact-icon svg {
-    width: 28px;
-    height: 28px;
+    width: 27px;
+    height: 27px;
   }
 
   .contact-item h3 {
+
     font-size: 15px;
+
     margin-bottom: 7px;
   }
 
   .contact-item a {
+
+    max-width: 100%;
+
     font-size: 11px;
+
     text-align: center;
 
     word-break: break-word;
@@ -812,28 +983,53 @@ main {
 
 
 /* =====================================================
-   VERY SMALL PHONES
+   PETITS TÉLÉPHONES
 ===================================================== */
 
-@media (max-width: 360px) {
+@media (max-width: 380px) {
+
+  .hero {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
   .hero h1 {
     font-size: 36px;
   }
 
-  .services-grid,
-  .contact-info {
-    gap: 10px;
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-image {
+    max-width: 310px;
+  }
+
+
+  /* SERVICES : TOUJOURS 2 PAR LIGNE */
+
+  .services-preview {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .services-grid {
+    gap: 9px;
   }
 
   .service-card {
-    padding: 17px 8px;
+    min-height: 215px;
+
+    padding: 17px 7px;
   }
 
   .service-icon {
     width: 46px;
     height: 46px;
+
     font-size: 20px;
+
+    margin-bottom: 10px;
   }
 
   .service-card h3 {
@@ -842,16 +1038,34 @@ main {
 
   .service-card p {
     font-size: 10px;
+    line-height: 1.45;
+  }
+
+  .service-card button {
+    font-size: 10px;
+  }
+
+
+  /* CONTACTS : TOUJOURS 2 PAR LIGNE */
+
+  .contact-section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .contact-info {
+    gap: 9px;
   }
 
   .contact-item {
     min-height: 160px;
+
     padding: 17px 6px;
   }
 
   .contact-icon {
-    width: 52px;
-    height: 52px;
+    width: 50px;
+    height: 50px;
   }
 
   .contact-item h3 {
