@@ -29,6 +29,17 @@ main {
 
 
 /* =====================================================
+   SCROLL DES SECTIONS
+===================================================== */
+
+#services,
+#about,
+#contact {
+  scroll-margin-top: 80px;
+}
+
+
+/* =====================================================
    NAVBAR
 ===================================================== */
 
@@ -187,6 +198,8 @@ main {
 
   border: none !important;
 
+  outline: none;
+
   background: transparent !important;
 
   cursor: pointer;
@@ -306,6 +319,8 @@ main {
   background-clip: text;
 
   -webkit-text-fill-color: transparent;
+
+  color: transparent;
 }
 
 .hero-description {
@@ -467,6 +482,8 @@ main {
   background-clip: text;
 
   -webkit-text-fill-color: transparent;
+
+  color: transparent;
 }
 
 
@@ -609,6 +626,8 @@ main {
   background-clip: text;
 
   -webkit-text-fill-color: transparent;
+
+  color: transparent;
 }
 
 
@@ -717,6 +736,18 @@ main {
 
 @media screen and (max-width: 768px) {
 
+
+  /* =================================================
+     SCROLL MOBILE
+  ================================================= */
+
+  #services,
+  #about,
+  #contact {
+    scroll-margin-top: 70px;
+  }
+
+
   /* =================================================
      NAVBAR MOBILE
   ================================================= */
@@ -737,6 +768,9 @@ main {
     background: #ffffff;
   }
 
+
+  /* LOGO */
+
   .logo-image {
     width: 32px;
     height: 32px;
@@ -746,7 +780,10 @@ main {
     font-size: 23px;
   }
 
-  /* CACHER NAVIGATION DESKTOP */
+
+  /* =================================================
+     CACHER MENU DESKTOP
+  ================================================= */
 
   .nav-links {
     display: none !important;
@@ -756,7 +793,10 @@ main {
     display: none !important;
   }
 
-  /* AFFICHER MENU ☰ */
+
+  /* =================================================
+     AFFICHER HAMBURGER
+  ================================================= */
 
   .mobile-menu-button {
     display: flex !important;
@@ -764,7 +804,7 @@ main {
 
 
   /* =================================================
-     MENU DÉROULANT
+     MENU MOBILE
   ================================================= */
 
   .mobile-menu {
@@ -815,6 +855,9 @@ main {
 
     z-index: 99999;
   }
+
+
+  /* BOUTONS MENU */
 
   .mobile-menu button {
     width: 100%;
@@ -881,6 +924,9 @@ main {
     background: #ffffff;
   }
 
+
+  /* TEXTE */
+
   .hero-content {
     width: 100%;
 
@@ -921,6 +967,9 @@ main {
     margin: 0 auto 30px;
   }
 
+
+  /* BOUTONS */
+
   .hero-buttons {
     width: 100%;
 
@@ -936,7 +985,8 @@ main {
     font-size: 13px;
   }
 
-  /* IMAGE SOUS LE TEXTE */
+
+  /* IMAGE */
 
   .hero-visual {
     width: 100%;
@@ -967,6 +1017,14 @@ main {
     background: #ffffff;
   }
 
+  .section-subtitle {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+  }
+
   .services-preview h2 {
     color: #111111;
 
@@ -976,6 +1034,7 @@ main {
 
     margin-bottom: 35px;
   }
+
 
   /* 3 CARTES PAR LIGNE */
 
@@ -1102,6 +1161,7 @@ main {
     color: #666675;
   }
 
+
   /* 2 CONTACTS PAR LIGNE */
 
   .contact-info {
@@ -1142,6 +1202,7 @@ main {
 
     font-size: 9px;
   }
+
 }
 
 
@@ -1150,6 +1211,9 @@ main {
 ===================================================== */
 
 @media screen and (max-width: 380px) {
+
+
+  /* NAVBAR */
 
   .navbar {
     padding: 0 4%;
@@ -1166,11 +1230,17 @@ main {
     font-size: 21px;
   }
 
+
+  /* MENU */
+
   .mobile-menu {
     right: 4%;
 
     width: 190px;
   }
+
+
+  /* HERO */
 
   .hero {
     padding-left: 4%;
@@ -1187,6 +1257,9 @@ main {
   .hero-description {
     font-size: 14px;
   }
+
+
+  /* SERVICES */
 
   .services-preview {
     padding-left: 3%;
@@ -1223,11 +1296,18 @@ main {
     font-size: 7px;
   }
 
+
+  /* ABOUT */
+
   .about-section {
     background: #ffffff;
   }
 
+
+  /* CONTACT */
+
   .contact-section {
     background: #ffffff;
   }
+
 }

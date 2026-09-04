@@ -47,13 +47,11 @@ function Accueil() {
 
   useEffect(() => {
 
-    const params =
-      new URLSearchParams(
-        location.search
-      );
+    const params = new URLSearchParams(
+      location.search
+    );
 
-    const section =
-      params.get("section");
+    const section = params.get("section");
 
     if (!section) {
       return;
@@ -109,7 +107,10 @@ function Accueil() {
             modernes.
           </p>
 
+
           <div className="hero-buttons">
+
+            {/* BOUTON SERVICES */}
 
             <button
               className="primary-button"
@@ -135,6 +136,8 @@ function Accueil() {
             </button>
 
 
+            {/* BOUTON CONTACT */}
+
             <button
               className="secondary-button"
               onClick={() =>
@@ -151,7 +154,9 @@ function Accueil() {
         </div>
 
 
-        {/* PHOTO */}
+        {/* =================================================
+            PHOTO
+        ================================================= */}
 
         <div className="hero-visual">
 
@@ -188,7 +193,9 @@ function Accueil() {
         <div className="services-grid">
 
 
-          {/* DESIGN GRAPHIQUE */}
+          {/* =================================================
+              DESIGN GRAPHIQUE
+          ================================================= */}
 
           <div
             className="service-card"
@@ -230,7 +237,9 @@ function Accueil() {
           </div>
 
 
-          {/* MONTAGE VIDEO */}
+          {/* =================================================
+              MONTAGE VIDEO
+          ================================================= */}
 
           <div
             className="service-card"
@@ -272,7 +281,9 @@ function Accueil() {
           </div>
 
 
-          {/* CREATION SITE */}
+          {/* =================================================
+              CREATION SITE
+          ================================================= */}
 
           <div
             className="service-card"
@@ -313,7 +324,9 @@ function Accueil() {
           </div>
 
 
-          {/* PRODUIT DIGITAL */}
+          {/* =================================================
+              PRODUIT DIGITAL
+          ================================================= */}
 
           <div
             className="service-card"
@@ -354,7 +367,9 @@ function Accueil() {
           </div>
 
 
-          {/* CREATION IA */}
+          {/* =================================================
+              CREATION IA
+          ================================================= */}
 
           <div
             className="service-card"
@@ -457,6 +472,10 @@ function Accueil() {
         id="contact"
       >
 
+        <p className="section-subtitle">
+          CONTACT
+        </p>
+
         <h2>
           Parlons de votre <span>projet.</span>
         </h2>
@@ -471,7 +490,9 @@ function Accueil() {
         <div className="contact-info">
 
 
-          {/* EMAIL */}
+          {/* =================================================
+              EMAIL
+          ================================================= */}
 
           <div
             className="contact-item"
@@ -503,7 +524,9 @@ function Accueil() {
           </div>
 
 
-          {/* WHATSAPP */}
+          {/* =================================================
+              WHATSAPP
+          ================================================= */}
 
           <div
             className="contact-item"
@@ -543,7 +566,9 @@ function Accueil() {
           </div>
 
 
-          {/* FACEBOOK */}
+          {/* =================================================
+              FACEBOOK
+          ================================================= */}
 
           <div
             className="contact-item"
@@ -583,7 +608,9 @@ function Accueil() {
           </div>
 
 
-          {/* INSTAGRAM */}
+          {/* =================================================
+              INSTAGRAM
+          ================================================= */}
 
           <div
             className="contact-item"
@@ -623,7 +650,9 @@ function Accueil() {
           </div>
 
 
-          {/* TIKTOK */}
+          {/* =================================================
+              TIKTOK
+          ================================================= */}
 
           <div
             className="contact-item"
@@ -682,19 +711,33 @@ function App() {
 
     <>
 
+      {/* NAVBAR */}
+
       <Navbar />
+
+
+      {/* =================================================
+          ROUTES
+      ================================================= */}
 
       <Routes>
 
-        {/* ACCUEIL */}
+
+        {/* =================================================
+            ACCUEIL
+        ================================================= */}
 
         <Route
           path="/"
-          element={<Accueil />}
+          element={
+            <Accueil />
+          }
         />
 
 
-        {/* À PROPOS */}
+        {/* =================================================
+            À PROPOS
+        ================================================= */}
 
         <Route
           path="/about"
@@ -707,7 +750,9 @@ function App() {
         />
 
 
-        {/* SERVICES */}
+        {/* =================================================
+            SERVICES
+        ================================================= */}
 
         <Route
           path="/services"
@@ -720,7 +765,9 @@ function App() {
         />
 
 
-        {/* CONTACT */}
+        {/* =================================================
+            CONTACT
+        ================================================= */}
 
         <Route
           path="/contact"
@@ -733,7 +780,9 @@ function App() {
         />
 
 
-        {/* DESIGN GRAPHIQUE */}
+        {/* =================================================
+            DESIGN GRAPHIQUE
+        ================================================= */}
 
         <Route
           path="/design-graphique"
@@ -743,7 +792,9 @@ function App() {
         />
 
 
-        {/* MONTAGE VIDEO */}
+        {/* =================================================
+            MONTAGE VIDEO
+        ================================================= */}
 
         <Route
           path="/montage-video"
@@ -753,7 +804,9 @@ function App() {
         />
 
 
-        {/* CREATION SITE */}
+        {/* =================================================
+            CREATION SITE
+        ================================================= */}
 
         <Route
           path="/creation-site"
@@ -763,7 +816,9 @@ function App() {
         />
 
 
-        {/* PRODUIT DIGITAL */}
+        {/* =================================================
+            PRODUIT DIGITAL
+        ================================================= */}
 
         <Route
           path="/produit-digital"
@@ -773,7 +828,9 @@ function App() {
         />
 
 
-        {/* CREATION IA */}
+        {/* =================================================
+            CREATION IA
+        ================================================= */}
 
         <Route
           path="/creation-ia"
@@ -783,7 +840,9 @@ function App() {
         />
 
 
-        {/* FORMULAIRE */}
+        {/* =================================================
+            FORMULAIRE SERVICE
+        ================================================= */}
 
         <Route
           path="/formulaire-service"
@@ -793,7 +852,9 @@ function App() {
         />
 
 
-        {/* PAGE INEXISTANTE */}
+        {/* =================================================
+            PAGE INEXISTANTE
+        ================================================= */}
 
         <Route
           path="*"
@@ -811,5 +872,6 @@ function App() {
 
   );
 }
+
 
 export default App;

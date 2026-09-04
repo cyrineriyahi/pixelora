@@ -5,6 +5,7 @@ import {
   useLocation
 } from "react-router-dom";
 
+
 function Navbar() {
 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,18 +14,18 @@ function Navbar() {
   const location = useLocation();
 
 
-  // =====================================================
-  // FERMER LE MENU
-  // =====================================================
+  /* =====================================================
+     FERMER LE MENU
+  ===================================================== */
 
   const closeMenu = () => {
     setMenuOpen(false);
   };
 
 
-  // =====================================================
-  // ACCUEIL
-  // =====================================================
+  /* =====================================================
+     ACCUEIL
+  ===================================================== */
 
   const handleHome = (e) => {
 
@@ -38,9 +39,9 @@ function Navbar() {
   };
 
 
-  // =====================================================
-  // SERVICES
-  // =====================================================
+  /* =====================================================
+     SERVICES
+  ===================================================== */
 
   const handleServices = (e) => {
 
@@ -50,6 +51,8 @@ function Navbar() {
 
     closeMenu();
 
+
+    // Si on est déjà sur l'accueil
     if (location.pathname === "/") {
 
       const services =
@@ -64,17 +67,21 @@ function Navbar() {
 
       }
 
-    } else {
+    }
+
+    // Si on est sur une autre page
+    else {
 
       navigate("/?section=services");
 
     }
+
   };
 
 
-  // =====================================================
-  // À PROPOS
-  // =====================================================
+  /* =====================================================
+     À PROPOS
+  ===================================================== */
 
   const handleAbout = (e) => {
 
@@ -84,6 +91,8 @@ function Navbar() {
 
     closeMenu();
 
+
+    // Si on est déjà sur l'accueil
     if (location.pathname === "/") {
 
       const about =
@@ -98,17 +107,21 @@ function Navbar() {
 
       }
 
-    } else {
+    }
+
+    // Si on est sur une autre page
+    else {
 
       navigate("/?section=about");
 
     }
+
   };
 
 
-  // =====================================================
-  // CONTACT
-  // =====================================================
+  /* =====================================================
+     CONTACT
+  ===================================================== */
 
   const handleContact = (e) => {
 
@@ -118,6 +131,8 @@ function Navbar() {
 
     closeMenu();
 
+
+    // Si on est déjà sur l'accueil
     if (location.pathname === "/") {
 
       const contact =
@@ -132,17 +147,21 @@ function Navbar() {
 
       }
 
-    } else {
+    }
+
+    // Si on est sur une autre page
+    else {
 
       navigate("/?section=contact");
 
     }
+
   };
 
 
-  // =====================================================
-  // JSX
-  // =====================================================
+  /* =====================================================
+     JSX
+  ===================================================== */
 
   return (
 
@@ -190,6 +209,9 @@ function Navbar() {
 
       <ul className="nav-links">
 
+
+        {/* ACCUEIL */}
+
         <li>
 
           <Link
@@ -201,6 +223,8 @@ function Navbar() {
 
         </li>
 
+
+        {/* SERVICES */}
 
         <li>
 
@@ -214,6 +238,8 @@ function Navbar() {
         </li>
 
 
+        {/* À PROPOS */}
+
         <li>
 
           <a
@@ -225,6 +251,8 @@ function Navbar() {
 
         </li>
 
+
+        {/* CONTACT */}
 
         <li>
 
@@ -254,7 +282,7 @@ function Navbar() {
 
 
       {/* =================================================
-          BOUTON ☰ MOBILE
+          BOUTON HAMBURGER MOBILE
       ================================================= */}
 
       <button
@@ -290,6 +318,9 @@ function Navbar() {
 
         <div className="mobile-menu">
 
+
+          {/* ACCUEIL */}
+
           <button
             type="button"
             onClick={handleHome}
@@ -297,6 +328,8 @@ function Navbar() {
             Accueil
           </button>
 
+
+          {/* SERVICES */}
 
           <button
             type="button"
@@ -306,6 +339,8 @@ function Navbar() {
           </button>
 
 
+          {/* À PROPOS */}
+
           <button
             type="button"
             onClick={handleAbout}
@@ -313,6 +348,8 @@ function Navbar() {
             À propos
           </button>
 
+
+          {/* CONTACT */}
 
           <button
             type="button"
@@ -329,5 +366,6 @@ function Navbar() {
 
   );
 }
+
 
 export default Navbar;
