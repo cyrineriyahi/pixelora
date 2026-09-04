@@ -14,15 +14,19 @@ html {
 
 body {
   margin: 0;
-  background: white;
-  color: white;
+
+  background: #ffffff;
+  color: #111111;
+
   font-family: Arial, Helvetica, sans-serif;
+
   overflow-x: hidden;
 }
 
 main {
   width: 100%;
 }
+
 
 /* =====================================================
    NAVBAR
@@ -39,10 +43,12 @@ main {
   justify-content: space-between;
 
   position: relative;
+
   z-index: 1000;
 
-  background: white;
+  background: #ffffff;
 }
+
 
 /* =====================================================
    LOGO
@@ -55,6 +61,7 @@ main {
   gap: 8px;
 
   text-decoration: none;
+
   cursor: pointer;
 
   flex-shrink: 0;
@@ -71,13 +78,14 @@ main {
 
 .logo-text {
   font-size: 27px;
+
   font-weight: 800;
 
   display: flex;
 }
 
 .logo-normal {
-  color: white;
+  color: #111111;
 }
 
 .logo-gradient {
@@ -95,6 +103,7 @@ main {
 
   color: transparent;
 }
+
 
 /* =====================================================
    NAVIGATION DESKTOP
@@ -117,19 +126,21 @@ main {
 }
 
 .nav-links a {
-  color: white;
+  color: #111111;
 
   text-decoration: none;
 
   font-size: 15px;
+
   font-weight: 500;
 
   transition: 0.3s;
 }
 
 .nav-links a:hover {
-  color: #b57cff;
+  color: #8b5cf6;
 }
+
 
 /* =====================================================
    BOUTON NAVBAR
@@ -151,6 +162,7 @@ main {
   );
 
   font-size: 14px;
+
   font-weight: 600;
 
   transition: 0.3s;
@@ -159,6 +171,7 @@ main {
 .nav-button:hover {
   transform: translateY(-2px);
 }
+
 
 /* =====================================================
    BOUTON MENU MOBILE
@@ -179,7 +192,9 @@ main {
   cursor: pointer;
 
   flex-direction: column;
+
   justify-content: center;
+
   align-items: center;
 
   gap: 5px;
@@ -193,12 +208,13 @@ main {
   width: 26px;
   height: 2px;
 
-  background: white;
+  background: #111111;
 
   border-radius: 10px;
 
   transition: all 0.3s ease;
 }
+
 
 /* =====================================================
    ☰ → X
@@ -216,6 +232,7 @@ main {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+
 /* =====================================================
    MENU MOBILE
 ===================================================== */
@@ -223,6 +240,7 @@ main {
 .mobile-menu {
   display: none;
 }
+
 
 /* =====================================================
    HERO
@@ -242,6 +260,8 @@ main {
   justify-content: space-between;
 
   gap: 50px;
+
+  background: #ffffff;
 }
 
 .hero-content {
@@ -257,11 +277,17 @@ main {
 
   margin-bottom: 20px;
 
-  color: #b57cff;
+  color: #8b5cf6;
 }
 
 .hero h1 {
-  font-size: clamp(45px, 6vw, 80px);
+  color: #111111;
+
+  font-size: clamp(
+    45px,
+    6vw,
+    80px
+  );
 
   line-height: 1.05;
 
@@ -289,10 +315,11 @@ main {
 
   line-height: 1.7;
 
-  color: #b8b8c8;
+  color: #666675;
 
   margin-bottom: 35px;
 }
+
 
 /* =====================================================
    HERO BUTTONS
@@ -338,26 +365,24 @@ main {
 }
 
 .secondary-button {
-  background: transparent;
+  background: white;
 
   border: 1px solid rgba(
-    255,
-    255,
-    255,
-    0.2
+    139,
+    92,
+    246,
+    0.35
   );
 
-  color: white;
+  color: #111111;
 }
 
 .secondary-button:hover {
-  background: rgba(
-    255,
-    255,
-    255,
-    0.08
-  );
+  background: #f8f5ff;
+
+  border-color: #8b5cf6;
 }
+
 
 /* =====================================================
    HERO IMAGE
@@ -369,6 +394,7 @@ main {
   display: flex;
 
   justify-content: center;
+
   align-items: center;
 }
 
@@ -386,6 +412,7 @@ main {
   border-radius: 35px;
 }
 
+
 /* =====================================================
    SERVICES
 ===================================================== */
@@ -396,6 +423,8 @@ main {
   padding: 120px 7%;
 
   text-align: center;
+
+  background: #ffffff;
 }
 
 .section-subtitle {
@@ -403,7 +432,7 @@ main {
 
   letter-spacing: 3px;
 
-  color: #b57cff;
+  color: #8b5cf6;
 
   font-weight: 600;
 
@@ -413,6 +442,8 @@ main {
 .services-preview h2,
 .about-section h2,
 .contact-section h2 {
+  color: #111111;
+
   font-size: clamp(
     35px,
     5vw,
@@ -438,6 +469,7 @@ main {
   -webkit-text-fill-color: transparent;
 }
 
+
 /* =====================================================
    SERVICES GRID
 ===================================================== */
@@ -456,18 +488,13 @@ main {
 
   border-radius: 24px;
 
-  background: rgba(
-    255,
-    255,
-    255,
-    0.04
-  );
+  background: #f8f7ff;
 
   border: 1px solid rgba(
-    255,
-    255,
-    255,
-    0.08
+    139,
+    92,
+    246,
+    0.15
   );
 
   text-align: left;
@@ -486,6 +513,15 @@ main {
     255,
     0.5
   );
+
+  box-shadow:
+    0 15px 35px
+    rgba(
+      139,
+      92,
+      246,
+      0.10
+    );
 }
 
 .service-icon {
@@ -495,13 +531,15 @@ main {
 }
 
 .service-card h3 {
+  color: #111111;
+
   font-size: 20px;
 
   margin-bottom: 15px;
 }
 
 .service-card p {
-  color: #a8a8b8;
+  color: #666675;
 
   font-size: 14px;
 
@@ -515,12 +553,13 @@ main {
 
   background: transparent;
 
-  color: #b57cff;
+  color: #8b5cf6;
 
   font-weight: 600;
 
   cursor: pointer;
 }
+
 
 /* =====================================================
    À PROPOS
@@ -532,6 +571,8 @@ main {
   padding: 120px 7%;
 
   text-align: center;
+
+  background: #ffffff;
 }
 
 .about-description {
@@ -543,11 +584,11 @@ main {
 
   line-height: 1.8;
 
-  color: #b8b8c8;
+  color: #666675;
 }
 
 .about-description strong {
-  color: white;
+  color: #111111;
 }
 
 .about-slogan {
@@ -570,6 +611,7 @@ main {
   -webkit-text-fill-color: transparent;
 }
 
+
 /* =====================================================
    CONTACT
 ===================================================== */
@@ -580,6 +622,8 @@ main {
   padding: 120px 7%;
 
   text-align: center;
+
+  background: #ffffff;
 }
 
 .contact-description {
@@ -587,7 +631,7 @@ main {
 
   margin: -30px auto 60px;
 
-  color: #b8b8c8;
+  color: #666675;
 
   line-height: 1.7;
 }
@@ -606,18 +650,13 @@ main {
 
   border-radius: 20px;
 
-  background: rgba(
-    255,
-    255,
-    255,
-    0.04
-  );
+  background: #f8f7ff;
 
   border: 1px solid rgba(
-    255,
-    255,
-    255,
-    0.08
+    139,
+    92,
+    246,
+    0.15
   );
 
   cursor: pointer;
@@ -627,6 +666,22 @@ main {
 
 .contact-item:hover {
   transform: translateY(-5px);
+
+  border-color: rgba(
+    181,
+    124,
+    255,
+    0.5
+  );
+
+  box-shadow:
+    0 15px 35px
+    rgba(
+      139,
+      92,
+      246,
+      0.10
+    );
 }
 
 .contact-icon {
@@ -636,11 +691,13 @@ main {
 }
 
 .contact-item h3 {
+  color: #111111;
+
   margin-bottom: 10px;
 }
 
 .contact-item a {
-  color: #aaaabd;
+  color: #666675;
 
   text-decoration: none;
 
@@ -648,6 +705,11 @@ main {
 
   word-break: break-word;
 }
+
+.contact-item a:hover {
+  color: #8b5cf6;
+}
+
 
 /* =====================================================
    MOBILE
@@ -671,6 +733,8 @@ main {
     align-items: center;
 
     justify-content: space-between;
+
+    background: #ffffff;
   }
 
   .logo-image {
@@ -697,6 +761,7 @@ main {
   .mobile-menu-button {
     display: flex !important;
   }
+
 
   /* =================================================
      MENU DÉROULANT
@@ -793,6 +858,7 @@ main {
     color: #b57cff !important;
   }
 
+
   /* =================================================
      HERO MOBILE
   ================================================= */
@@ -811,6 +877,8 @@ main {
     align-items: center;
 
     gap: 35px;
+
+    background: #ffffff;
   }
 
   .hero-content {
@@ -827,9 +895,13 @@ main {
     letter-spacing: 2px;
 
     margin-bottom: 15px;
+
+    color: #8b5cf6;
   }
 
   .hero h1 {
+    color: #111111;
+
     font-size: 40px;
 
     line-height: 1.1;
@@ -843,6 +915,8 @@ main {
     font-size: 15px;
 
     line-height: 1.6;
+
+    color: #666675;
 
     margin: 0 auto 30px;
   }
@@ -880,6 +954,7 @@ main {
     border-radius: 25px;
   }
 
+
   /* =================================================
      SERVICES MOBILE
   ================================================= */
@@ -888,9 +963,13 @@ main {
     width: 100%;
 
     padding: 80px 4%;
+
+    background: #ffffff;
   }
 
   .services-preview h2 {
+    color: #111111;
+
     font-size: 31px;
 
     line-height: 1.2;
@@ -917,6 +996,8 @@ main {
     padding: 18px 7px;
 
     border-radius: 14px;
+
+    background: #f8f7ff;
   }
 
   .service-icon {
@@ -926,6 +1007,8 @@ main {
   }
 
   .service-card h3 {
+    color: #111111;
+
     font-size: 11px;
 
     line-height: 1.3;
@@ -934,6 +1017,8 @@ main {
   }
 
   .service-card p {
+    color: #666675;
+
     font-size: 8px;
 
     line-height: 1.45;
@@ -943,7 +1028,10 @@ main {
 
   .service-card button {
     font-size: 8px;
+
+    color: #8b5cf6;
   }
+
 
   /* =================================================
      ABOUT MOBILE
@@ -953,9 +1041,13 @@ main {
     width: 100%;
 
     padding: 80px 5%;
+
+    background: #ffffff;
   }
 
   .about-section h2 {
+    color: #111111;
+
     font-size: 33px;
 
     line-height: 1.2;
@@ -967,11 +1059,18 @@ main {
     font-size: 15px;
 
     line-height: 1.7;
+
+    color: #666675;
+  }
+
+  .about-description strong {
+    color: #111111;
   }
 
   .about-slogan {
     font-size: 17px;
   }
+
 
   /* =================================================
      CONTACT MOBILE
@@ -981,9 +1080,13 @@ main {
     width: 100%;
 
     padding: 80px 5%;
+
+    background: #ffffff;
   }
 
   .contact-section h2 {
+    color: #111111;
+
     font-size: 33px;
 
     line-height: 1.2;
@@ -995,6 +1098,8 @@ main {
     font-size: 14px;
 
     margin: 0 auto 40px;
+
+    color: #666675;
   }
 
   /* 2 CONTACTS PAR LIGNE */
@@ -1014,6 +1119,8 @@ main {
     padding: 22px 8px;
 
     border-radius: 15px;
+
+    background: #f8f7ff;
   }
 
   .contact-icon {
@@ -1023,15 +1130,20 @@ main {
   }
 
   .contact-item h3 {
+    color: #111111;
+
     font-size: 13px;
 
     margin-bottom: 8px;
   }
 
   .contact-item a {
+    color: #666675;
+
     font-size: 9px;
   }
 }
+
 
 /* =====================================================
    TRÈS PETITS TÉLÉPHONES
@@ -1041,6 +1153,8 @@ main {
 
   .navbar {
     padding: 0 4%;
+
+    background: #ffffff;
   }
 
   .logo-image {
@@ -1060,7 +1174,10 @@ main {
 
   .hero {
     padding-left: 4%;
+
     padding-right: 4%;
+
+    background: #ffffff;
   }
 
   .hero h1 {
@@ -1073,7 +1190,10 @@ main {
 
   .services-preview {
     padding-left: 3%;
+
     padding-right: 3%;
+
+    background: #ffffff;
   }
 
   .services-grid {
@@ -1101,5 +1221,13 @@ main {
 
   .service-card button {
     font-size: 7px;
+  }
+
+  .about-section {
+    background: #ffffff;
+  }
+
+  .contact-section {
+    background: #ffffff;
   }
 }
