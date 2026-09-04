@@ -1,10 +1,21 @@
-
+import { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
 function Navbar() {
 
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const navigate = useNavigate();
   const location = useLocation();
+
+
+  // ============================================
+  // FERMER LE MENU
+  // ============================================
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
 
 
   // ============================================
@@ -14,6 +25,8 @@ function Navbar() {
   const handleServices = (e) => {
 
     e.preventDefault();
+
+    closeMenu();
 
     if (location.pathname === "/") {
 
@@ -34,6 +47,7 @@ function Navbar() {
       navigate("/?section=services");
 
     }
+
   };
 
 
@@ -44,6 +58,8 @@ function Navbar() {
   const handleAbout = (e) => {
 
     e.preventDefault();
+
+    closeMenu();
 
     if (location.pathname === "/") {
 
@@ -64,6 +80,7 @@ function Navbar() {
       navigate("/?section=about");
 
     }
+
   };
 
 
@@ -75,7 +92,8 @@ function Navbar() {
 
     e.preventDefault();
 
-    // Si on est déjà sur l'accueil
+    closeMenu();
+
     if (location.pathname === "/") {
 
       const contact =
@@ -92,11 +110,23 @@ function Navbar() {
 
     } else {
 
-      // Si on est sur une autre page,
-      // revenir à l'accueil avec la section contact
       navigate("/?section=contact");
 
     }
+
+  };
+
+
+  // ============================================
+  // ACCUEIL
+  // ============================================
+
+  const handleHome = () => {
+
+    closeMenu();
+
+    navigate("/");
+
   };
 
 
@@ -112,6 +142,7 @@ function Navbar() {
       <Link
         to="/"
         className="logo"
+        onClick={closeMenu}
       >
 
         <img
@@ -140,28 +171,27 @@ function Navbar() {
 
 
       {/* ============================================
-          NAVIGATION
+          NAVIGATION DESKTOP
       ============================================ */}
 
       <ul className="nav-links">
 
 
-        {/* ==========================================
-            ACCUEIL
-        ========================================== */}
+        {/* ACCUEIL */}
 
         <li>
 
-          <Link to="/">
+          <Link
+            to="/"
+            onClick={closeMenu}
+          >
             Accueil
           </Link>
 
         </li>
 
 
-        {/* ==========================================
-            SERVICES
-        ========================================== */}
+        {/* SERVICES */}
 
         <li>
 
@@ -175,9 +205,7 @@ function Navbar() {
         </li>
 
 
-        {/* ==========================================
-            À PROPOS
-        ========================================== */}
+        {/* À PROPOS */}
 
         <li>
 
@@ -191,9 +219,7 @@ function Navbar() {
         </li>
 
 
-        {/* ==========================================
-            CONTACT
-        ========================================== */}
+        {/* CONTACT */}
 
         <li>
 
@@ -221,6 +247,74 @@ function Navbar() {
         Nous contacter
       </a>
 
+
+      {/* ============================================
+          BOUTON MENU MOBILE ☰
+      ============================================ */}
+
+      <button
+        className={`mobile-menu-button ${
+          menuOpen ? "active" : ""
+        }`}
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Ouvrir le menu"
+      >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+
+      {/* ============================================
+          MENU MOBILE
+      ============================================ */}
+
+      {menuOpen && (
+
+        <div className="mobile-menu">
+
+
+          {/* ACCUEIL */}
+
+          <button
+            onClick={handleHome}
+          >
+            Accueil
+          </button>
+
+
+          {/* SERVICES */}
+
+          <button
+            onClick={handleServices}
+          >
+            Services
+          </button>
+
+
+          {/* À PROPOS */}
+
+          <button
+            onClick={handleAbout}
+          >
+            À propos
+          </button>
+
+
+          {/* CONTACT */}
+
+          <button
+            onClick={handleContact}
+          >
+            Contact
+          </button>
+
+
+        </div>
+
+      )}
 
     </nav>
 
