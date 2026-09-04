@@ -42,13 +42,15 @@ function Accueil() {
 
 
   /* =====================================================
-     SCROLL AUTOMATIQUE APRÈS NAVIGATION
+     SCROLL AUTOMATIQUE
   ===================================================== */
 
   useEffect(() => {
 
     const params =
-      new URLSearchParams(location.search);
+      new URLSearchParams(
+        location.search
+      );
 
     const section =
       params.get("section");
@@ -56,7 +58,6 @@ function Accueil() {
     if (!section) {
       return;
     }
-
 
     const timer = setTimeout(() => {
 
@@ -73,7 +74,6 @@ function Accueil() {
       }
 
     }, 300);
-
 
     return () => {
       clearTimeout(timer);
@@ -93,40 +93,32 @@ function Accueil() {
 
       <section className="hero">
 
-
-        {/* TEXTE */}
-
         <div className="hero-content">
 
           <p className="hero-subtitle">
             CRÉATIVITÉ • DESIGN • DIGITAL
           </p>
 
-
           <h1>
             Donnez vie à vos <span>idées.</span>
           </h1>
 
-
           <p className="hero-description">
-
-            Pixlora transforme vos idées en créations visuelles,
-            produits digitaux et expériences modernes.
-
+            Pixlora transforme vos idées en créations
+            visuelles, produits digitaux et expériences
+            modernes.
           </p>
 
-
           <div className="hero-buttons">
-
-
-            {/* SERVICES */}
 
             <button
               className="primary-button"
               onClick={() => {
 
                 const services =
-                  document.getElementById("services");
+                  document.getElementById(
+                    "services"
+                  );
 
                 if (services) {
 
@@ -143,12 +135,12 @@ function Accueil() {
             </button>
 
 
-            {/* CONTACT */}
-
             <button
               className="secondary-button"
               onClick={() =>
-                navigate("/formulaire-service")
+                navigate(
+                  "/formulaire-service"
+                )
               }
             >
               Nous contacter
@@ -187,23 +179,23 @@ function Accueil() {
           NOS SERVICES
         </p>
 
-
         <h2>
-          Créons quelque chose de <span>magnifique.</span>
+          Créons quelque chose de{" "}
+          <span>magnifique.</span>
         </h2>
 
 
         <div className="services-grid">
 
 
-          {/* ==========================================
-              DESIGN GRAPHIQUE
-          ========================================== */}
+          {/* DESIGN GRAPHIQUE */}
 
           <div
             className="service-card"
             onClick={() =>
-              navigate("/design-graphique")
+              navigate(
+                "/design-graphique"
+              )
             }
           >
 
@@ -211,24 +203,24 @@ function Accueil() {
               🎨
             </div>
 
-
             <h3>
               Design graphique
             </h3>
 
-
             <p>
               Création de logos, affiches,
-              identités visuelles et supports graphiques.
+              identités visuelles et supports
+              graphiques.
             </p>
-
 
             <button
               onClick={(e) => {
 
                 e.stopPropagation();
 
-                navigate("/design-graphique");
+                navigate(
+                  "/design-graphique"
+                );
 
               }}
             >
@@ -238,14 +230,14 @@ function Accueil() {
           </div>
 
 
-          {/* ==========================================
-              MONTAGE VIDEO
-          ========================================== */}
+          {/* MONTAGE VIDEO */}
 
           <div
             className="service-card"
             onClick={() =>
-              navigate("/montage-video")
+              navigate(
+                "/montage-video"
+              )
             }
           >
 
@@ -253,24 +245,24 @@ function Accueil() {
               🎬
             </div>
 
-
             <h3>
               Montage vidéo
             </h3>
 
-
             <p>
-              Création et montage de vidéos modernes
-              pour vos projets et réseaux sociaux.
+              Création et montage de vidéos
+              modernes pour vos projets et
+              réseaux sociaux.
             </p>
-
 
             <button
               onClick={(e) => {
 
                 e.stopPropagation();
 
-                navigate("/montage-video");
+                navigate(
+                  "/montage-video"
+                );
 
               }}
             >
@@ -280,14 +272,14 @@ function Accueil() {
           </div>
 
 
-          {/* ==========================================
-              CREATION SITE
-          ========================================== */}
+          {/* CREATION SITE */}
 
           <div
             className="service-card"
             onClick={() =>
-              navigate("/creation-site")
+              navigate(
+                "/creation-site"
+              )
             }
           >
 
@@ -295,24 +287,23 @@ function Accueil() {
               💻
             </div>
 
-
             <h3>
               Création de site
             </h3>
-
 
             <p>
               Création de sites web modernes,
               rapides et adaptés à vos besoins.
             </p>
 
-
             <button
               onClick={(e) => {
 
                 e.stopPropagation();
 
-                navigate("/creation-site");
+                navigate(
+                  "/creation-site"
+                );
 
               }}
             >
@@ -322,14 +313,14 @@ function Accueil() {
           </div>
 
 
-          {/* ==========================================
-              PRODUIT DIGITAL
-          ========================================== */}
+          {/* PRODUIT DIGITAL */}
 
           <div
             className="service-card"
             onClick={() =>
-              navigate("/produit-digital")
+              navigate(
+                "/produit-digital"
+              )
             }
           >
 
@@ -337,24 +328,23 @@ function Accueil() {
               📱
             </div>
 
-
             <h3>
               Produit digital
             </h3>
 
-
             <p>
-              Création de produits digitaux modernes
-              et adaptés à votre activité.
+              Création de produits digitaux
+              modernes et adaptés à votre activité.
             </p>
-
 
             <button
               onClick={(e) => {
 
                 e.stopPropagation();
 
-                navigate("/produit-digital");
+                navigate(
+                  "/produit-digital"
+                );
 
               }}
             >
@@ -364,14 +354,14 @@ function Accueil() {
           </div>
 
 
-          {/* ==========================================
-              CREATION IA
-          ========================================== */}
+          {/* CREATION IA */}
 
           <div
             className="service-card"
             onClick={() =>
-              navigate("/creation-ia")
+              navigate(
+                "/creation-ia"
+              )
             }
           >
 
@@ -379,24 +369,24 @@ function Accueil() {
               🤖
             </div>
 
-
             <h3>
               Création avec IA
             </h3>
 
-
             <p>
-              Création de contenus et visuels modernes
-              grâce aux outils d'intelligence artificielle.
+              Création de contenus et visuels
+              modernes grâce aux outils
+              d'intelligence artificielle.
             </p>
-
 
             <button
               onClick={(e) => {
 
                 e.stopPropagation();
 
-                navigate("/creation-ia");
+                navigate(
+                  "/creation-ia"
+                );
 
               }}
             >
@@ -404,7 +394,6 @@ function Accueil() {
             </button>
 
           </div>
-
 
         </div>
 
@@ -424,24 +413,23 @@ function Accueil() {
           À PROPOS
         </p>
 
-
         <h2>
           À propos de <span>Pixlora</span>
         </h2>
 
-
         <p className="about-description">
 
-          <strong>Pixlora</strong> est une agence créative
-          qui aide les marques, entrepreneurs et créateurs
-          à développer leur image grâce au{" "}
+          <strong>Pixlora</strong> est une agence
+          créative qui aide les marques,
+          entrepreneurs et créateurs à développer
+          leur image grâce au{" "}
 
           <strong>
-            design, à la vidéo et aux solutions digitales.
+            design, à la vidéo et aux solutions
+            digitales.
           </strong>
 
         </p>
-
 
         <p className="about-description">
 
@@ -452,7 +440,6 @@ function Accueil() {
           </strong>
 
         </p>
-
 
         <p className="about-slogan">
           Creative Solutions for Your Growth.
@@ -474,13 +461,10 @@ function Accueil() {
           Parlons de votre <span>projet.</span>
         </h2>
 
-
         <p className="contact-description">
-
           Vous avez un projet ou une idée ?
           Contactez-nous et discutons ensemble
           de votre projet.
-
         </p>
 
 
@@ -503,11 +487,9 @@ function Accueil() {
               ✉
             </div>
 
-
             <h3>
               Email
             </h3>
-
 
             <a
               href="mailto:pixlora26@gmail.com"
@@ -543,11 +525,9 @@ function Accueil() {
 
             </div>
 
-
             <h3>
               WhatsApp
             </h3>
-
 
             <a
               href="https://wa.me/21620898688"
@@ -585,11 +565,9 @@ function Accueil() {
 
             </div>
 
-
             <h3>
               Facebook
             </h3>
-
 
             <a
               href="https://www.facebook.com/profile.php?id=61592936854600"
@@ -627,11 +605,9 @@ function Accueil() {
 
             </div>
 
-
             <h3>
               Instagram
             </h3>
-
 
             <a
               href="https://www.instagram.com/pixlora26/"
@@ -669,11 +645,9 @@ function Accueil() {
 
             </div>
 
-
             <h3>
               TikTok
             </h3>
-
 
             <a
               href="https://www.tiktok.com/@pixlora26"
@@ -688,7 +662,6 @@ function Accueil() {
 
           </div>
 
-
         </div>
 
       </section>
@@ -696,7 +669,6 @@ function Accueil() {
     </main>
 
   );
-
 }
 
 
@@ -713,7 +685,6 @@ function App() {
       <Navbar />
 
       <Routes>
-
 
         {/* ACCUEIL */}
 
@@ -839,7 +810,6 @@ function App() {
     </>
 
   );
-
 }
 
 export default App;

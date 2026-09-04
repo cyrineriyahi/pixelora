@@ -1,5 +1,9 @@
 import { useState } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import {
+  Link,
+  useNavigate,
+  useLocation
+} from "react-router-dom";
 
 function Navbar() {
 
@@ -9,22 +13,40 @@ function Navbar() {
   const location = useLocation();
 
 
-  // ============================================
+  // =====================================================
   // FERMER LE MENU
-  // ============================================
+  // =====================================================
 
   const closeMenu = () => {
     setMenuOpen(false);
   };
 
 
-  // ============================================
+  // =====================================================
+  // ACCUEIL
+  // =====================================================
+
+  const handleHome = (e) => {
+
+    if (e) {
+      e.preventDefault();
+    }
+
+    closeMenu();
+
+    navigate("/");
+  };
+
+
+  // =====================================================
   // SERVICES
-  // ============================================
+  // =====================================================
 
   const handleServices = (e) => {
 
-    e.preventDefault();
+    if (e) {
+      e.preventDefault();
+    }
 
     closeMenu();
 
@@ -47,17 +69,18 @@ function Navbar() {
       navigate("/?section=services");
 
     }
-
   };
 
 
-  // ============================================
+  // =====================================================
   // À PROPOS
-  // ============================================
+  // =====================================================
 
   const handleAbout = (e) => {
 
-    e.preventDefault();
+    if (e) {
+      e.preventDefault();
+    }
 
     closeMenu();
 
@@ -80,17 +103,18 @@ function Navbar() {
       navigate("/?section=about");
 
     }
-
   };
 
 
-  // ============================================
+  // =====================================================
   // CONTACT
-  // ============================================
+  // =====================================================
 
   const handleContact = (e) => {
 
-    e.preventDefault();
+    if (e) {
+      e.preventDefault();
+    }
 
     closeMenu();
 
@@ -113,31 +137,21 @@ function Navbar() {
       navigate("/?section=contact");
 
     }
-
   };
 
 
-  // ============================================
-  // ACCUEIL
-  // ============================================
-
-  const handleHome = () => {
-
-    closeMenu();
-
-    navigate("/");
-
-  };
-
+  // =====================================================
+  // JSX
+  // =====================================================
 
   return (
 
     <nav className="navbar">
 
 
-      {/* ============================================
+      {/* =================================================
           LOGO
-      ============================================ */}
+      ================================================= */}
 
       <Link
         to="/"
@@ -170,14 +184,11 @@ function Navbar() {
       </Link>
 
 
-      {/* ============================================
-          NAVIGATION DESKTOP
-      ============================================ */}
+      {/* =================================================
+          MENU DESKTOP
+      ================================================= */}
 
       <ul className="nav-links">
-
-
-        {/* ACCUEIL */}
 
         <li>
 
@@ -191,8 +202,6 @@ function Navbar() {
         </li>
 
 
-        {/* SERVICES */}
-
         <li>
 
           <a
@@ -205,8 +214,6 @@ function Navbar() {
         </li>
 
 
-        {/* À PROPOS */}
-
         <li>
 
           <a
@@ -218,8 +225,6 @@ function Navbar() {
 
         </li>
 
-
-        {/* CONTACT */}
 
         <li>
 
@@ -235,9 +240,9 @@ function Navbar() {
       </ul>
 
 
-      {/* ============================================
-          BOUTON NOUS CONTACTER
-      ============================================ */}
+      {/* =================================================
+          BOUTON CONTACT DESKTOP
+      ================================================= */}
 
       <a
         href="#contact"
@@ -248,16 +253,26 @@ function Navbar() {
       </a>
 
 
-      {/* ============================================
-          BOUTON MENU MOBILE ☰
-      ============================================ */}
+      {/* =================================================
+          BOUTON ☰ MOBILE
+      ================================================= */}
 
       <button
-        className={`mobile-menu-button ${
-          menuOpen ? "active" : ""
-        }`}
-        onClick={() => setMenuOpen(!menuOpen)}
-        aria-label="Ouvrir le menu"
+        type="button"
+        className={
+          `mobile-menu-button ${
+            menuOpen ? "active" : ""
+          }`
+        }
+        onClick={() =>
+          setMenuOpen(!menuOpen)
+        }
+        aria-label={
+          menuOpen
+            ? "Fermer le menu"
+            : "Ouvrir le menu"
+        }
+        aria-expanded={menuOpen}
       >
 
         <span></span>
@@ -267,50 +282,44 @@ function Navbar() {
       </button>
 
 
-      {/* ============================================
+      {/* =================================================
           MENU MOBILE
-      ============================================ */}
+      ================================================= */}
 
       {menuOpen && (
 
         <div className="mobile-menu">
 
-
-          {/* ACCUEIL */}
-
           <button
+            type="button"
             onClick={handleHome}
           >
             Accueil
           </button>
 
 
-          {/* SERVICES */}
-
           <button
+            type="button"
             onClick={handleServices}
           >
             Services
           </button>
 
 
-          {/* À PROPOS */}
-
           <button
+            type="button"
             onClick={handleAbout}
           >
             À propos
           </button>
 
 
-          {/* CONTACT */}
-
           <button
+            type="button"
             onClick={handleContact}
           >
             Contact
           </button>
-
 
         </div>
 
@@ -319,7 +328,6 @@ function Navbar() {
     </nav>
 
   );
-
 }
 
 export default Navbar;
