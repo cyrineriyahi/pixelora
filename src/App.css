@@ -14,12 +14,9 @@ html {
 
 body {
   margin: 0;
-
   background: #ffffff;
   color: #111111;
-
   font-family: Arial, Helvetica, sans-serif;
-
   overflow-x: hidden;
 }
 
@@ -55,7 +52,7 @@ main {
 
   position: relative;
 
-  z-index: 1000;
+  z-index: 100000;
 
   background: #ffffff;
 }
@@ -76,6 +73,8 @@ main {
   cursor: pointer;
 
   flex-shrink: 0;
+
+  min-width: 0;
 }
 
 .logo-image {
@@ -85,6 +84,8 @@ main {
   object-fit: contain;
 
   display: block;
+
+  flex-shrink: 0;
 }
 
 .logo-text {
@@ -93,6 +94,8 @@ main {
   font-weight: 800;
 
   display: flex;
+
+  white-space: nowrap;
 }
 
 .logo-normal {
@@ -177,6 +180,8 @@ main {
   font-weight: 600;
 
   transition: 0.3s;
+
+  white-space: nowrap;
 }
 
 .nav-button:hover {
@@ -191,14 +196,17 @@ main {
 .mobile-menu-button {
   display: none;
 
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
+
+  min-width: 44px;
 
   padding: 0;
+  margin: 0;
 
-  border: none !important;
+  border: 0 !important;
 
-  outline: none;
+  outline: none !important;
 
   background: transparent !important;
 
@@ -210,16 +218,23 @@ main {
 
   align-items: center;
 
-  gap: 5px;
+  gap: 6px;
 
   flex-shrink: 0;
+
+  position: relative;
+
+  z-index: 100002;
+
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .mobile-menu-button span {
   display: block;
 
-  width: 26px;
-  height: 2px;
+  width: 27px;
+  height: 3px;
 
   background: #111111;
 
@@ -234,7 +249,7 @@ main {
 ===================================================== */
 
 .mobile-menu-button.active span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+  transform: translateY(9px) rotate(45deg);
 }
 
 .mobile-menu-button.active span:nth-child(2) {
@@ -242,7 +257,7 @@ main {
 }
 
 .mobile-menu-button.active span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+  transform: translateY(-9px) rotate(-45deg);
 }
 
 
@@ -736,7 +751,6 @@ main {
 
 @media screen and (max-width: 768px) {
 
-
   /* =================================================
      SCROLL MOBILE
   ================================================= */
@@ -765,11 +779,23 @@ main {
 
     justify-content: space-between;
 
+    position: relative;
+
     background: #ffffff;
+
+    z-index: 100000;
   }
 
 
-  /* LOGO */
+  /* =================================================
+     LOGO MOBILE
+  ================================================= */
+
+  .logo {
+    min-width: 0;
+
+    max-width: calc(100% - 60px);
+  }
 
   .logo-image {
     width: 32px;
@@ -800,6 +826,34 @@ main {
 
   .mobile-menu-button {
     display: flex !important;
+
+    visibility: visible !important;
+
+    opacity: 1 !important;
+
+    width: 44px;
+    height: 44px;
+
+    min-width: 44px;
+
+    flex-shrink: 0;
+
+    position: relative;
+
+    z-index: 100002;
+  }
+
+  .mobile-menu-button span {
+    display: block !important;
+
+    visibility: visible !important;
+
+    opacity: 1;
+
+    width: 27px;
+    height: 3px;
+
+    background: #111111 !important;
   }
 
 
@@ -853,11 +907,13 @@ main {
         0.5
       );
 
-    z-index: 99999;
+    z-index: 100003;
   }
 
 
-  /* BOUTONS MENU */
+  /* =================================================
+     BOUTONS MENU
+  ================================================= */
 
   .mobile-menu button {
     width: 100%;
@@ -868,7 +924,7 @@ main {
 
     border: none !important;
 
-    outline: none;
+    outline: none !important;
 
     background: transparent !important;
 
@@ -887,6 +943,10 @@ main {
     cursor: pointer;
 
     transition: 0.2s;
+
+    -webkit-appearance: none;
+
+    appearance: none;
   }
 
   .mobile-menu button:hover,
@@ -968,7 +1028,9 @@ main {
   }
 
 
-  /* BOUTONS */
+  /* =================================================
+     BOUTONS HERO
+  ================================================= */
 
   .hero-buttons {
     width: 100%;
@@ -986,7 +1048,9 @@ main {
   }
 
 
-  /* IMAGE */
+  /* =================================================
+     IMAGE
+  ================================================= */
 
   .hero-visual {
     width: 100%;
@@ -1212,13 +1276,18 @@ main {
 
 @media screen and (max-width: 380px) {
 
-
   /* NAVBAR */
 
   .navbar {
     padding: 0 4%;
 
+    height: 68px;
+
     background: #ffffff;
+  }
+
+  .logo {
+    max-width: calc(100% - 55px);
   }
 
   .logo-image {
@@ -1231,16 +1300,49 @@ main {
   }
 
 
-  /* MENU */
+  /* =================================================
+     HAMBURGER PETIT TELEPHONE
+  ================================================= */
 
-  .mobile-menu {
-    right: 4%;
+  .mobile-menu-button {
+    display: flex !important;
 
-    width: 190px;
+    width: 42px;
+    height: 42px;
+
+    min-width: 42px;
+
+    visibility: visible !important;
+
+    opacity: 1 !important;
+
+    z-index: 100002;
+  }
+
+  .mobile-menu-button span {
+    width: 25px;
+    height: 3px;
+
+    background: #111111 !important;
   }
 
 
-  /* HERO */
+  /* MENU */
+
+  .mobile-menu {
+    top: 68px;
+
+    right: 4%;
+
+    width: 190px;
+
+    z-index: 100003;
+  }
+
+
+  /* =================================================
+     HERO
+  ================================================= */
 
   .hero {
     padding-left: 4%;
@@ -1259,7 +1361,9 @@ main {
   }
 
 
-  /* SERVICES */
+  /* =================================================
+     SERVICES
+  ================================================= */
 
   .services-preview {
     padding-left: 3%;
@@ -1297,14 +1401,18 @@ main {
   }
 
 
-  /* ABOUT */
+  /* =================================================
+     ABOUT
+  ================================================= */
 
   .about-section {
     background: #ffffff;
   }
 
 
-  /* CONTACT */
+  /* =================================================
+     CONTACT
+  ================================================= */
 
   .contact-section {
     background: #ffffff;
