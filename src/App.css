@@ -204,7 +204,7 @@ main {
   padding: 0;
   margin: 0;
 
-  border: 0 !important;
+  border: none !important;
 
   outline: none !important;
 
@@ -773,13 +773,13 @@ main {
 
     padding: 0 5%;
 
-    display: flex;
+    display: flex !important;
 
-    align-items: center;
+    align-items: center !important;
 
-    justify-content: space-between;
+    justify-content: space-between !important;
 
-    position: relative;
+    position: relative !important;
 
     background: #ffffff;
 
@@ -821,7 +821,7 @@ main {
 
 
   /* =================================================
-     AFFICHER HAMBURGER
+     HAMBURGER
   ================================================= */
 
   .mobile-menu-button {
@@ -831,16 +831,41 @@ main {
 
     opacity: 1 !important;
 
-    width: 44px;
-    height: 44px;
+    width: 44px !important;
 
-    min-width: 44px;
+    height: 44px !important;
 
-    flex-shrink: 0;
+    min-width: 44px !important;
 
-    position: relative;
+    padding: 0 !important;
 
-    z-index: 100002;
+    margin: 0 !important;
+
+    border: none !important;
+
+    outline: none !important;
+
+    background: transparent !important;
+
+    flex-direction: column !important;
+
+    justify-content: center !important;
+
+    align-items: center !important;
+
+    gap: 6px !important;
+
+    flex-shrink: 0 !important;
+
+    position: relative !important;
+
+    z-index: 100002 !important;
+
+    cursor: pointer !important;
+
+    -webkit-appearance: none !important;
+
+    appearance: none !important;
   }
 
   .mobile-menu-button span {
@@ -848,12 +873,17 @@ main {
 
     visibility: visible !important;
 
-    opacity: 1;
+    opacity: 1 !important;
 
-    width: 27px;
-    height: 3px;
+    width: 27px !important;
+
+    height: 3px !important;
 
     background: #111111 !important;
+
+    border-radius: 10px !important;
+
+    transition: all 0.3s ease !important;
   }
 
 
@@ -862,28 +892,28 @@ main {
   ================================================= */
 
   .mobile-menu {
-    position: absolute;
+    position: absolute !important;
 
-    top: 70px;
+    top: 70px !important;
 
-    right: 5%;
+    right: 5% !important;
 
-    width: 210px;
+    width: 210px !important;
 
-    display: flex;
+    display: flex !important;
 
-    flex-direction: column;
+    flex-direction: column !important;
 
-    gap: 4px;
+    gap: 4px !important;
 
-    padding: 10px;
+    padding: 10px !important;
 
     background: rgba(
       15,
       15,
       30,
       0.98
-    );
+    ) !important;
 
     backdrop-filter: blur(15px);
 
@@ -907,20 +937,22 @@ main {
         0.5
       );
 
-    z-index: 100003;
+    z-index: 100003 !important;
   }
 
 
   /* =================================================
-     BOUTONS MENU
+     BOUTONS MENU MOBILE
   ================================================= */
 
   .mobile-menu button {
-    width: 100%;
+    display: block !important;
 
-    min-height: 45px;
+    width: 100% !important;
 
-    padding: 12px 15px;
+    min-height: 45px !important;
+
+    padding: 12px 15px !important;
 
     border: none !important;
 
@@ -932,7 +964,7 @@ main {
 
     font-family: Arial, Helvetica, sans-serif;
 
-    font-size: 15px;
+    font-size: 15px !important;
 
     font-weight: 500;
 
@@ -984,9 +1016,6 @@ main {
     background: #ffffff;
   }
 
-
-  /* TEXTE */
-
   .hero-content {
     width: 100%;
 
@@ -1029,7 +1058,7 @@ main {
 
 
   /* =================================================
-     BOUTONS HERO
+     BOUTONS HERO MOBILE
   ================================================= */
 
   .hero-buttons {
@@ -1049,7 +1078,7 @@ main {
 
 
   /* =================================================
-     IMAGE
+     IMAGE MOBILE
   ================================================= */
 
   .hero-visual {
@@ -1276,7 +1305,9 @@ main {
 
 @media screen and (max-width: 380px) {
 
-  /* NAVBAR */
+  /* =================================================
+     NAVBAR
+  ================================================= */
 
   .navbar {
     padding: 0 4%;
@@ -1307,36 +1338,42 @@ main {
   .mobile-menu-button {
     display: flex !important;
 
-    width: 42px;
-    height: 42px;
+    width: 42px !important;
 
-    min-width: 42px;
+    height: 42px !important;
+
+    min-width: 42px !important;
 
     visibility: visible !important;
 
     opacity: 1 !important;
 
-    z-index: 100002;
+    z-index: 100002 !important;
   }
 
   .mobile-menu-button span {
-    width: 25px;
-    height: 3px;
+    display: block !important;
+
+    width: 25px !important;
+
+    height: 3px !important;
 
     background: #111111 !important;
   }
 
 
-  /* MENU */
+  /* =================================================
+     MENU
+  ================================================= */
 
   .mobile-menu {
-    top: 68px;
+    top: 68px !important;
 
-    right: 4%;
+    right: 4% !important;
 
-    width: 190px;
+    width: 190px !important;
 
-    z-index: 100003;
+    z-index: 100003 !important;
   }
 
 
