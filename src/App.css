@@ -1137,14 +1137,24 @@ main {
   }
 
   /* ===================================================
-     ICÔNE E-MAIL / CONTACT PLUS GRANDE SUR MOBILE
+     ICÔNES CONTACT MOBILE
+     LES AUTRES RESTENT NORMALES
   =================================================== */
 
   .contact-icon {
 
-    font-size: 50px;
+    font-size: 23px;
 
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+  }
+
+  /* EMAIL UNIQUEMENT */
+
+  .email-icon {
+
+    font-size: 100px;
+
+    margin-bottom: 20px;
   }
 
   .contact-item h3 {
@@ -1198,7 +1208,9 @@ main {
   }
 
 
-  /* HAMBURGER */
+  /* ===================================================
+     HAMBURGER
+  =================================================== */
 
   .mobile-menu-button {
 
@@ -1382,12 +1394,15 @@ main {
     background: #ffffff;
   }
 
-  /* ICÔNE E-MAIL TRÈS GRAND ÉCRAN */
 
-  .contact-icon {
+  /* ===================================================
+     EMAIL UNIQUEMENT
+  =================================================== */
 
-    font-size: 45px;
+  .email-icon {
 
-    margin-bottom: 10px;
+    font-size: 85px;
+
+    margin-bottom: 15px;
   }
 }
