@@ -17,7 +17,7 @@ import {
   faWhatsapp
 } from "@fortawesome/free-brands-svg-icons";
 
-import Navbar from "./Navbar";
+import Navbar from "./components/Navbar";
 
 import DesignGraphique from "./DesignGraphique";
 import MontageVideo from "./MontageVideo";

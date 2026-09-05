@@ -5,179 +5,105 @@ import {
   useLocation
 } from "react-router-dom";
 
-
 function Navbar() {
-
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navigate = useNavigate();
   const location = useLocation();
 
-
-  /* =====================================================
-     FERMER LE MENU
-  ===================================================== */
-
+  // Fermer le menu mobile
   const closeMenu = () => {
     setMenuOpen(false);
   };
 
-
-  /* =====================================================
-     ACCUEIL
-  ===================================================== */
-
+  // Accueil
   const handleHome = (e) => {
-
     if (e) {
       e.preventDefault();
     }
 
     closeMenu();
-
     navigate("/");
   };
 
-
-  /* =====================================================
-     SERVICES
-  ===================================================== */
-
+  // Services
   const handleServices = (e) => {
-
     if (e) {
       e.preventDefault();
     }
 
     closeMenu();
 
-
-    // Si on est déjà sur l'accueil
     if (location.pathname === "/") {
-
-      const services =
-        document.getElementById("services");
+      const services = document.getElementById("services");
 
       if (services) {
-
         services.scrollIntoView({
           behavior: "smooth",
           block: "start"
         });
-
       }
-
-    }
-
-    // Si on est sur une autre page
-    else {
-
+    } else {
       navigate("/?section=services");
-
     }
-
   };
 
-
-  /* =====================================================
-     À PROPOS
-  ===================================================== */
-
+  // À propos
   const handleAbout = (e) => {
-
     if (e) {
       e.preventDefault();
     }
 
     closeMenu();
 
-
-    // Si on est déjà sur l'accueil
     if (location.pathname === "/") {
-
-      const about =
-        document.getElementById("about");
+      const about = document.getElementById("about");
 
       if (about) {
-
         about.scrollIntoView({
           behavior: "smooth",
           block: "start"
         });
-
       }
-
-    }
-
-    // Si on est sur une autre page
-    else {
-
+    } else {
       navigate("/?section=about");
-
     }
-
   };
 
-
-  /* =====================================================
-     CONTACT
-  ===================================================== */
-
+  // Contact
   const handleContact = (e) => {
-
     if (e) {
       e.preventDefault();
     }
 
     closeMenu();
 
-
-    // Si on est déjà sur l'accueil
     if (location.pathname === "/") {
-
-      const contact =
-        document.getElementById("contact");
+      const contact = document.getElementById("contact");
 
       if (contact) {
-
         contact.scrollIntoView({
           behavior: "smooth",
           block: "start"
         });
-
       }
-
-    }
-
-    // Si on est sur une autre page
-    else {
-
+    } else {
       navigate("/?section=contact");
-
     }
-
   };
 
-
-  /* =====================================================
-     JSX
-  ===================================================== */
-
   return (
-
     <nav className="navbar">
 
-
-      {/* =================================================
+      {/* ================================
           LOGO
-      ================================================= */}
+      ================================= */}
 
       <Link
         to="/"
         className="logo"
         onClick={closeMenu}
       >
-
         <img
           src="/icon logo pixlora.png"
           alt="Pixlora Logo"
@@ -185,7 +111,6 @@ function Navbar() {
         />
 
         <div className="logo-text">
-
           <span className="logo-normal">
             pi
           </span>
@@ -197,80 +122,58 @@ function Navbar() {
           <span className="logo-normal">
             ora
           </span>
-
         </div>
-
       </Link>
 
 
-      {/* =================================================
+      {/* ================================
           MENU DESKTOP
-      ================================================= */}
+      ================================= */}
 
       <ul className="nav-links">
 
-
-        {/* ACCUEIL */}
-
         <li>
-
           <Link
             to="/"
             onClick={closeMenu}
           >
             Accueil
           </Link>
-
         </li>
 
-
-        {/* SERVICES */}
-
         <li>
-
           <a
             href="#services"
             onClick={handleServices}
           >
             Services
           </a>
-
         </li>
 
-
-        {/* À PROPOS */}
-
         <li>
-
           <a
             href="#about"
             onClick={handleAbout}
           >
             À propos
           </a>
-
         </li>
 
-
-        {/* CONTACT */}
-
         <li>
-
           <a
             href="#contact"
             onClick={handleContact}
           >
             Contact
           </a>
-
         </li>
 
       </ul>
 
 
-      {/* =================================================
+      {/* ================================
           BOUTON CONTACT DESKTOP
-      ================================================= */}
+      ================================= */}
 
       <a
         href="#contact"
@@ -281,20 +184,16 @@ function Navbar() {
       </a>
 
 
-      {/* =================================================
+      {/* ================================
           BOUTON HAMBURGER MOBILE
-      ================================================= */}
+      ================================= */}
 
       <button
         type="button"
-        className={
-          `mobile-menu-button ${
-            menuOpen ? "active" : ""
-          }`
-        }
-        onClick={() =>
-          setMenuOpen(!menuOpen)
-        }
+        className={`mobile-menu-button ${
+          menuOpen ? "active" : ""
+        }`}
+        onClick={() => setMenuOpen(!menuOpen)}
         aria-label={
           menuOpen
             ? "Fermer le menu"
@@ -302,24 +201,18 @@ function Navbar() {
         }
         aria-expanded={menuOpen}
       >
-
         <span></span>
         <span></span>
         <span></span>
-
       </button>
 
 
-      {/* =================================================
+      {/* ================================
           MENU MOBILE
-      ================================================= */}
+      ================================= */}
 
       {menuOpen && (
-
         <div className="mobile-menu">
-
-
-          {/* ACCUEIL */}
 
           <button
             type="button"
@@ -328,9 +221,6 @@ function Navbar() {
             Accueil
           </button>
 
-
-          {/* SERVICES */}
-
           <button
             type="button"
             onClick={handleServices}
@@ -338,18 +228,12 @@ function Navbar() {
             Services
           </button>
 
-
-          {/* À PROPOS */}
-
           <button
             type="button"
             onClick={handleAbout}
           >
             À propos
           </button>
-
-
-          {/* CONTACT */}
 
           <button
             type="button"
@@ -359,13 +243,10 @@ function Navbar() {
           </button>
 
         </div>
-
       )}
 
     </nav>
-
   );
 }
-
 
 export default Navbar;
