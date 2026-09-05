@@ -1,61 +1,25 @@
-
-/* =====================================================
-   RESET
-===================================================== */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  background: #ffffff;
-  color: #111111;
-  font-family: Arial, Helvetica, sans-serif;
-  overflow-x: hidden;
-}
-
-main {
-  width: 100%;
-}
-
-
-/* =====================================================
-   SCROLL DES SECTIONS
-===================================================== */
-
-#services,
-#about,
-#contact {
-  scroll-margin-top: 80px;
-}
-
-
 /* =====================================================
    NAVBAR
 ===================================================== */
 
 .navbar {
   width: 100%;
-  height: 80px;
-
-  padding: 0 7%;
+  height: 70px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  position: relative;
+  padding: 0 5%;
 
-  z-index: 100000;
+  box-sizing: border-box;
 
   background: #ffffff;
+
+  position: relative;
+  z-index: 999999;
+
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -66,16 +30,11 @@ main {
 .logo {
   display: flex;
   align-items: center;
-
   gap: 8px;
 
   text-decoration: none;
 
   cursor: pointer;
-
-  flex-shrink: 0;
-
-  min-width: 0;
 }
 
 .logo-image {
@@ -85,18 +44,15 @@ main {
   object-fit: contain;
 
   display: block;
-
-  flex-shrink: 0;
 }
 
 .logo-text {
-  font-size: 27px;
-
-  font-weight: 800;
-
   display: flex;
+  align-items: center;
 
-  white-space: nowrap;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -1px;
 }
 
 .logo-normal {
@@ -105,51 +61,50 @@ main {
 
 .logo-gradient {
   background: linear-gradient(
-    90deg,
-    #ff4ecd,
+    135deg,
     #8b5cf6,
-    #4f9cff
+    #ec4899
   );
 
   -webkit-background-clip: text;
-  background-clip: text;
-
   -webkit-text-fill-color: transparent;
 
-  color: transparent;
+  background-clip: text;
 }
 
 
 /* =====================================================
-   NAVIGATION DESKTOP
+   MENU DESKTOP
 ===================================================== */
 
 .nav-links {
-  list-style: none;
-
   display: flex;
   align-items: center;
 
   gap: 35px;
+
+  list-style: none;
 
   margin: 0;
   padding: 0;
 }
 
 .nav-links li {
-  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
-  color: #111111;
-
   text-decoration: none;
 
-  font-size: 15px;
+  color: #111111;
 
+  font-size: 15px;
   font-weight: 500;
 
-  transition: 0.3s;
+  transition: 0.3s ease;
+
+  cursor: pointer;
 }
 
 .nav-links a:hover {
@@ -158,98 +113,90 @@ main {
 
 
 /* =====================================================
-   BOUTON NAVBAR
+   BOUTON NOUS CONTACTER
 ===================================================== */
 
 .nav-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 11px 22px;
+
+  border-radius: 25px;
+
   text-decoration: none;
 
-  color: white;
-
-  padding: 12px 20px;
-
-  border-radius: 10px;
-
   background: linear-gradient(
-    90deg,
-    #ff4ecd,
-    #8b5cf6
+    135deg,
+    #8b5cf6,
+    #ec4899
   );
 
-  font-size: 14px;
+  color: #ffffff;
 
+  font-size: 14px;
   font-weight: 600;
 
-  transition: 0.3s;
+  border: none;
 
-  white-space: nowrap;
+  cursor: pointer;
+
+  transition: 0.3s ease;
 }
 
 .nav-button:hover {
   transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(139, 92, 246, 0.25);
 }
 
 
 /* =====================================================
-   BOUTON MENU MOBILE
+   BOUTON HAMBURGER
 ===================================================== */
 
 .mobile-menu-button {
   display: none;
 
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
 
-  min-width: 44px;
+  padding: 8px;
 
-  padding: 0;
-  margin: 0;
-
-  border: 0;
-  outline: 0;
+  border: none;
+  outline: none;
 
   background: transparent;
 
   cursor: pointer;
 
   flex-direction: column;
-
+  align-items: center;
   justify-content: center;
 
-  align-items: center;
-
-  gap: 6px;
-
-  flex-shrink: 0;
-
-  position: relative;
-
-  z-index: 999999;
-
-  -webkit-appearance: none;
-  appearance: none;
+  gap: 5px;
 }
 
 .mobile-menu-button span {
   display: block;
 
-  width: 27px;
-  height: 3px;
+  width: 24px;
+  height: 2px;
 
   background: #111111;
 
   border-radius: 10px;
 
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 
-/* =====================================================
-   ☰ → X
-===================================================== */
+/* Animation hamburger */
 
 .mobile-menu-button.active span:nth-child(1) {
-  transform: translateY(9px) rotate(45deg);
+  transform: translateY(7px) rotate(45deg);
 }
 
 .mobile-menu-button.active span:nth-child(2) {
@@ -257,7 +204,7 @@ main {
 }
 
 .mobile-menu-button.active span:nth-child(3) {
-  transform: translateY(-9px) rotate(-45deg);
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 
@@ -271,620 +218,48 @@ main {
 
 
 /* =====================================================
-   HERO
-===================================================== */
-
-.hero {
-  min-height: calc(100vh - 80px);
-
-  width: 100%;
-
-  padding: 70px 7%;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  gap: 50px;
-
-  background: #ffffff;
-}
-
-.hero-content {
-  width: 55%;
-}
-
-.hero-subtitle {
-  font-size: 13px;
-
-  letter-spacing: 3px;
-
-  font-weight: 600;
-
-  margin-bottom: 20px;
-
-  color: #8b5cf6;
-}
-
-.hero h1 {
-  color: #111111;
-
-  font-size: clamp(
-    45px,
-    6vw,
-    80px
-  );
-
-  line-height: 1.05;
-
-  margin-bottom: 25px;
-}
-
-.hero h1 span {
-  background: linear-gradient(
-    90deg,
-    #ff4ecd,
-    #8b5cf6,
-    #4f9cff
-  );
-
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  -webkit-text-fill-color: transparent;
-
-  color: transparent;
-}
-
-.hero-description {
-  max-width: 600px;
-
-  font-size: 18px;
-
-  line-height: 1.7;
-
-  color: #666675;
-
-  margin-bottom: 35px;
-}
-
-
-/* =====================================================
-   HERO BUTTONS
-===================================================== */
-
-.hero-buttons {
-  display: flex;
-
-  gap: 15px;
-
-  flex-wrap: wrap;
-}
-
-.primary-button,
-.secondary-button {
-  padding: 14px 24px;
-
-  border-radius: 12px;
-
-  font-size: 15px;
-
-  font-weight: 600;
-
-  cursor: pointer;
-
-  transition: 0.3s;
-}
-
-.primary-button {
-  border: none;
-
-  color: white;
-
-  background: linear-gradient(
-    90deg,
-    #ff4ecd,
-    #8b5cf6
-  );
-}
-
-.primary-button:hover {
-  transform: translateY(-3px);
-}
-
-.secondary-button {
-  background: white;
-
-  border: 1px solid rgba(
-    139,
-    92,
-    246,
-    0.35
-  );
-
-  color: #111111;
-}
-
-.secondary-button:hover {
-  background: #f8f5ff;
-
-  border-color: #8b5cf6;
-}
-
-
-/* =====================================================
-   HERO IMAGE
-===================================================== */
-
-.hero-visual {
-  width: 45%;
-
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-}
-
-.hero-image {
-  width: 100%;
-
-  max-width: 600px;
-
-  aspect-ratio: 4 / 3;
-
-  object-fit: cover;
-
-  display: block;
-
-  border-radius: 35px;
-}
-
-
-/* =====================================================
-   SERVICES
-===================================================== */
-
-.services-preview {
-  width: 100%;
-
-  padding: 120px 7%;
-
-  text-align: center;
-
-  background: #ffffff;
-}
-
-.section-subtitle {
-  font-size: 13px;
-
-  letter-spacing: 3px;
-
-  color: #8b5cf6;
-
-  font-weight: 600;
-
-  margin-bottom: 15px;
-}
-
-.services-preview h2,
-.about-section h2,
-.contact-section h2 {
-  color: #111111;
-
-  font-size: clamp(
-    35px,
-    5vw,
-    60px
-  );
-
-  margin-bottom: 60px;
-}
-
-.services-preview h2 span,
-.about-section h2 span,
-.contact-section h2 span {
-  background: linear-gradient(
-    90deg,
-    #ff4ecd,
-    #8b5cf6,
-    #4f9cff
-  );
-
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  -webkit-text-fill-color: transparent;
-
-  color: transparent;
-}
-
-
-/* =====================================================
-   SERVICES GRID
-===================================================== */
-
-.services-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
-
-  gap: 25px;
-}
-
-.service-card {
-  padding: 35px 25px;
-
-  border-radius: 24px;
-
-  background: #f8f7ff;
-
-  border: 1px solid rgba(
-    139,
-    92,
-    246,
-    0.15
-  );
-
-  text-align: left;
-
-  cursor: pointer;
-
-  transition: 0.3s;
-}
-
-.service-card:hover {
-  transform: translateY(-8px);
-
-  border-color: rgba(
-    181,
-    124,
-    255,
-    0.5
-  );
-
-  box-shadow:
-    0 15px 35px
-    rgba(
-      139,
-      92,
-      246,
-      0.10
-    );
-}
-
-.service-icon {
-  font-size: 35px;
-
-  margin-bottom: 20px;
-}
-
-.service-card h3 {
-  color: #111111;
-
-  font-size: 20px;
-
-  margin-bottom: 15px;
-}
-
-.service-card p {
-  color: #666675;
-
-  font-size: 14px;
-
-  line-height: 1.7;
-
-  margin-bottom: 20px;
-}
-
-.service-card button {
-  border: none;
-
-  background: transparent;
-
-  color: #8b5cf6;
-
-  font-weight: 600;
-
-  cursor: pointer;
-}
-
-
-/* =====================================================
-   À PROPOS
-===================================================== */
-
-.about-section {
-  width: 100%;
-
-  padding: 120px 7%;
-
-  text-align: center;
-
-  background: #ffffff;
-}
-
-.about-description {
-  max-width: 850px;
-
-  margin: 0 auto 20px;
-
-  font-size: 18px;
-
-  line-height: 1.8;
-
-  color: #666675;
-}
-
-.about-description strong {
-  color: #111111;
-}
-
-.about-slogan {
-  margin-top: 40px;
-
-  font-size: 20px;
-
-  font-weight: 600;
-
-  background: linear-gradient(
-    90deg,
-    #ff4ecd,
-    #8b5cf6,
-    #4f9cff
-  );
-
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  -webkit-text-fill-color: transparent;
-
-  color: transparent;
-}
-
-
-/* =====================================================
-   CONTACT
-===================================================== */
-
-.contact-section {
-  width: 100%;
-
-  padding: 120px 7%;
-
-  text-align: center;
-
-  background: #ffffff;
-}
-
-.contact-description {
-  max-width: 650px;
-
-  margin: -30px auto 60px;
-
-  color: #666675;
-
-  line-height: 1.7;
-}
-
-.contact-info {
-  display: grid;
-
-  grid-template-columns:
-    repeat(5, minmax(0, 1fr));
-
-  gap: 20px;
-}
-
-.contact-item {
-  padding: 30px 15px;
-
-  border-radius: 20px;
-
-  background: #f8f7ff;
-
-  border: 1px solid rgba(
-    139,
-    92,
-    246,
-    0.15
-  );
-
-  cursor: pointer;
-
-  transition: 0.3s;
-}
-
-.contact-item:hover {
-  transform: translateY(-5px);
-
-  border-color: rgba(
-    181,
-    124,
-    255,
-    0.5
-  );
-
-  box-shadow:
-    0 15px 35px
-    rgba(
-      139,
-      92,
-      246,
-      0.10
-    );
-}
-
-.contact-icon {
-  font-size: 25px;
-
-  margin-bottom: 15px;
-}
-
-.contact-item h3 {
-  color: #111111;
-
-  margin-bottom: 10px;
-}
-
-.contact-item a {
-  color: #666675;
-
-  text-decoration: none;
-
-  font-size: 13px;
-
-  word-break: break-word;
-}
-
-.contact-item a:hover {
-  color: #8b5cf6;
-}
-
-
-/* =====================================================
-   MOBILE
+   VERSION MOBILE
 ===================================================== */
 
 @media screen and (max-width: 768px) {
 
-  #services,
-  #about,
-  #contact {
-    scroll-margin-top: 70px;
-  }
-
-
-  /* ===================================================
-     NAVBAR MOBILE
-  =================================================== */
-
   .navbar {
-    width: 100%;
-
     height: 70px;
 
     padding: 0 5%;
 
-    display: flex !important;
-
-    align-items: center !important;
-
-    justify-content: space-between !important;
-
-    position: relative !important;
-
     background: #ffffff;
 
-    z-index: 100000;
+    position: relative;
+
+    z-index: 999999;
   }
 
 
-  /* LOGO */
-
-  .logo {
-    min-width: 0;
-
-    max-width: calc(100% - 60px);
-  }
-
-  .logo-image {
-    width: 32px;
-    height: 32px;
-  }
-
-  .logo-text {
-    font-size: 23px;
-  }
-
-
-  /* CACHER NAVIGATION DESKTOP */
+  /* Cacher le menu desktop */
 
   .nav-links {
-    display: none !important;
+    display: none;
   }
 
   .nav-button {
-    display: none !important;
+    display: none;
   }
 
 
-  /* ===================================================
-     HAMBURGER
-  =================================================== */
+  /* Afficher hamburger */
 
   .mobile-menu-button {
-    display: flex !important;
-
-    visibility: visible !important;
-
-    opacity: 1 !important;
-
-    width: 44px !important;
-
-    height: 44px !important;
-
-    min-width: 44px !important;
-
-    padding: 0 !important;
-
-    margin: 0 !important;
-
-    border: 0 !important;
-
-    outline: 0 !important;
-
-    background: transparent !important;
-
-    flex-direction: column !important;
-
-    justify-content: center !important;
-
-    align-items: center !important;
-
-    gap: 6px !important;
-
-    flex-shrink: 0 !important;
-
-    position: relative !important;
-
-    z-index: 999999 !important;
-
-    cursor: pointer !important;
-
-    -webkit-appearance: none !important;
-
-    appearance: none !important;
-  }
-
-  .mobile-menu-button span {
-    display: block !important;
-
-    visibility: visible !important;
-
-    opacity: 1 !important;
-
-    width: 27px !important;
-
-    height: 3px !important;
-
-    background: #111111 !important;
-
-    border-radius: 10px !important;
-
-    transition: all 0.3s ease !important;
+    display: flex;
   }
 
 
   /* ===================================================
-     MENU OUVERT
-     FOND BLANC
+     MENU MOBILE BLANC
   =================================================== */
 
   .mobile-menu {
+
     position: absolute !important;
 
     top: 70px !important;
@@ -901,31 +276,47 @@ main {
 
     padding: 10px !important;
 
-    /* CHANGEMENT : FOND BLANC */
-    background: #ffffff !important;
+    box-sizing: border-box;
+
+    /* FOND BLANC */
+
+    background-color: #ffffff !important;
+
+    background-image: none !important;
+
+    /* BORDURE */
 
     border: 1px solid rgba(
       139,
       92,
       246,
-      0.15
-    );
+      0.20
+    ) !important;
 
-    border-radius: 16px;
+    border-radius: 16px !important;
+
+    /* OMBRE */
 
     box-shadow:
-      0 15px 40px
-      rgba(
+      0 15px 40px rgba(
         0,
         0,
         0,
         0.15
-      );
+      ) !important;
+
+    opacity: 1 !important;
 
     z-index: 1000000 !important;
   }
 
+
+  /* ===================================================
+     BOUTONS DU MENU MOBILE
+  =================================================== */
+
   .mobile-menu button {
+
     display: block !important;
 
     width: 100% !important;
@@ -934,475 +325,95 @@ main {
 
     padding: 12px 15px !important;
 
+    box-sizing: border-box;
+
     border: none !important;
 
     outline: none !important;
 
-    background: transparent !important;
+    /* FOND BLANC */
 
-    /* CHANGEMENT : TEXTE NOIR */
+    background-color: #ffffff !important;
+
+    background-image: none !important;
+
+    /* TEXTE NOIR */
+
     color: #111111 !important;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:
+      Arial,
+      Helvetica,
+      sans-serif !important;
 
     font-size: 15px !important;
 
-    font-weight: 500;
+    font-weight: 500 !important;
 
-    text-align: left;
+    text-align: left !important;
 
-    border-radius: 10px;
+    border-radius: 10px !important;
 
-    cursor: pointer;
+    cursor: pointer !important;
 
-    transition: 0.2s;
+    transition: 0.2s ease !important;
 
     -webkit-appearance: none;
 
     appearance: none;
   }
 
+
+  /* ===================================================
+     HOVER MENU MOBILE
+  =================================================== */
+
   .mobile-menu button:hover,
   .mobile-menu button:active {
-    /* CHANGEMENT : HOVER CLAIR */
-    background: #f8f5ff !important;
+
+    background-color: #f8f5ff !important;
+
+    background-image: none !important;
 
     color: #8b5cf6 !important;
   }
-
-
-  /* ===================================================
-     HERO MOBILE
-  =================================================== */
-
-  .hero {
-    width: 100%;
-
-    min-height: auto;
-
-    padding: 40px 5% 70px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    gap: 35px;
-
-    background: #ffffff;
-  }
-
-  .hero-content {
-    width: 100%;
-
-    order: 1;
-
-    text-align: center;
-  }
-
-  .hero-subtitle {
-    font-size: 10px;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 15px;
-
-    color: #8b5cf6;
-  }
-
-  .hero h1 {
-    color: #111111;
-
-    font-size: 40px;
-
-    line-height: 1.1;
-
-    margin-bottom: 20px;
-  }
-
-  .hero-description {
-    width: 100%;
-
-    font-size: 15px;
-
-    line-height: 1.6;
-
-    color: #666675;
-
-    margin: 0 auto 30px;
-  }
-
-  .hero-buttons {
-    width: 100%;
-
-    justify-content: center;
-
-    gap: 10px;
-  }
-
-  .primary-button,
-  .secondary-button {
-    padding: 12px 16px;
-
-    font-size: 13px;
-  }
-
-  .hero-visual {
-    width: 100%;
-
-    order: 2;
-  }
-
-  .hero-image {
-    width: 100%;
-
-    max-width: 100%;
-
-    aspect-ratio: 4 / 3;
-
-    border-radius: 25px;
-  }
-
-
-  /* ===================================================
-     SERVICES MOBILE
-  =================================================== */
-
-  .services-preview {
-    width: 100%;
-
-    padding: 80px 4%;
-
-    background: #ffffff;
-  }
-
-  .section-subtitle {
-    font-size: 10px;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 12px;
-  }
-
-  .services-preview h2 {
-    color: #111111;
-
-    font-size: 31px;
-
-    line-height: 1.2;
-
-    margin-bottom: 35px;
-  }
-
-  .services-grid {
-    width: 100%;
-
-    display: grid !important;
-
-    grid-template-columns:
-      repeat(3, minmax(0, 1fr)) !important;
-
-    gap: 8px !important;
-  }
-
-  .service-card {
-    width: 100%;
-
-    padding: 18px 7px;
-
-    border-radius: 14px;
-
-    background: #f8f7ff;
-  }
-
-  .service-icon {
-    font-size: 23px;
-
-    margin-bottom: 10px;
-  }
-
-  .service-card h3 {
-    color: #111111;
-
-    font-size: 11px;
-
-    line-height: 1.3;
-
-    margin-bottom: 8px;
-  }
-
-  .service-card p {
-    color: #666675;
-
-    font-size: 8px;
-
-    line-height: 1.45;
-
-    margin-bottom: 10px;
-  }
-
-  .service-card button {
-    font-size: 8px;
-
-    color: #8b5cf6;
-  }
-
-
-  /* ===================================================
-     ABOUT MOBILE
-  =================================================== */
-
-  .about-section {
-    width: 100%;
-
-    padding: 80px 5%;
-
-    background: #ffffff;
-  }
-
-  .about-section h2 {
-    color: #111111;
-
-    font-size: 33px;
-
-    line-height: 1.2;
-
-    margin-bottom: 35px;
-  }
-
-  .about-description {
-    font-size: 15px;
-
-    line-height: 1.7;
-
-    color: #666675;
-  }
-
-  .about-description strong {
-    color: #111111;
-  }
-
-  .about-slogan {
-    font-size: 17px;
-  }
-
-
-  /* ===================================================
-     CONTACT MOBILE
-  =================================================== */
-
-  .contact-section {
-    width: 100%;
-
-    padding: 80px 5%;
-
-    background: #ffffff;
-  }
-
-  .contact-section h2 {
-    color: #111111;
-
-    font-size: 33px;
-
-    line-height: 1.2;
-
-    margin-bottom: 35px;
-  }
-
-  .contact-description {
-    font-size: 14px;
-
-    margin: 0 auto 40px;
-
-    color: #666675;
-  }
-
-  .contact-info {
-    width: 100%;
-
-    display: grid !important;
-
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr)) !important;
-
-    gap: 10px !important;
-  }
-
-  .contact-item {
-    padding: 22px 8px;
-
-    border-radius: 15px;
-
-    background: #f8f7ff;
-  }
-
-  .contact-icon {
-    font-size: 23px;
-
-    margin-bottom: 10px;
-  }
-
-  .contact-item h3 {
-    color: #111111;
-
-    font-size: 13px;
-
-    margin-bottom: 8px;
-  }
-
-  .contact-item a {
-    color: #666675;
-
-    font-size: 9px;
-  }
-
 }
 
 
 /* =====================================================
-   TRÈS PETITS TÉLÉPHONES
+   PETITS ÉCRANS
 ===================================================== */
 
 @media screen and (max-width: 380px) {
 
   .navbar {
     padding: 0 4%;
-
-    height: 68px;
-
-    background: #ffffff;
-  }
-
-  .logo {
-    max-width: calc(100% - 55px);
   }
 
   .logo-image {
-    width: 29px;
-    height: 29px;
+    width: 34px;
+    height: 34px;
   }
 
   .logo-text {
-    font-size: 21px;
+    font-size: 22px;
   }
 
-
-  /* HAMBURGER PETIT ÉCRAN */
-
-  .mobile-menu-button {
-    display: flex !important;
-
-    width: 42px !important;
-
-    height: 42px !important;
-
-    min-width: 42px !important;
-
-    visibility: visible !important;
-
-    opacity: 1 !important;
-
-    z-index: 999999 !important;
-  }
-
-  .mobile-menu-button span {
-    display: block !important;
-
-    width: 25px !important;
-
-    height: 3px !important;
-
-    background: #111111 !important;
-
-    visibility: visible !important;
-
-    opacity: 1 !important;
-  }
 
   .mobile-menu {
+
     top: 68px !important;
 
     right: 4% !important;
 
     width: 190px !important;
 
+    background-color: #ffffff !important;
+
+    background-image: none !important;
+
+    opacity: 1 !important;
+
     z-index: 1000000 !important;
-
-    /* FOND BLANC AUSSI SUR PETIT ÉCRAN */
-    background: #ffffff !important;
   }
-
-
-  /* HERO */
-
-  .hero {
-    padding-left: 4%;
-
-    padding-right: 4%;
-
-    background: #ffffff;
-  }
-
-  .hero h1 {
-    font-size: 35px;
-  }
-
-  .hero-description {
-    font-size: 14px;
-  }
-
-
-  /* SERVICES */
-
-  .services-preview {
-    padding-left: 3%;
-
-    padding-right: 3%;
-
-    background: #ffffff;
-  }
-
-  .services-grid {
-    grid-template-columns:
-      repeat(3, minmax(0, 1fr)) !important;
-
-    gap: 6px !important;
-  }
-
-  .service-card {
-    padding: 15px 5px;
-  }
-
-  .service-icon {
-    font-size: 20px;
-  }
-
-  .service-card h3 {
-    font-size: 9px;
-  }
-
-  .service-card p {
-    font-size: 7px;
-  }
-
-  .service-card button {
-    font-size: 7px;
-  }
-
-
-  /* ABOUT */
-
-  .about-section {
-    background: #ffffff;
-  }
-
-
-  /* CONTACT */
-
-  .contact-section {
-    background: #ffffff;
-  }
-
 }
-
