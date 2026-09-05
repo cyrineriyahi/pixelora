@@ -1,3 +1,4 @@
+```css
 /* =====================================================
    RESET
 ===================================================== */
@@ -880,6 +881,7 @@ main {
 
   /* ===================================================
      MENU OUVERT
+     FOND BLANC
   =================================================== */
 
   .mobile-menu {
@@ -899,21 +901,13 @@ main {
 
     padding: 10px !important;
 
-    background: rgba(
-      15,
-      15,
-      30,
-      0.98
-    ) !important;
-
-    backdrop-filter: blur(15px);
-
-    -webkit-backdrop-filter: blur(15px);
+    /* CHANGEMENT : FOND BLANC */
+    background: #ffffff !important;
 
     border: 1px solid rgba(
-      255,
-      255,
-      255,
+      139,
+      92,
+      246,
       0.15
     );
 
@@ -925,7 +919,7 @@ main {
         0,
         0,
         0,
-        0.5
+        0.15
       );
 
     z-index: 1000000 !important;
@@ -946,7 +940,8 @@ main {
 
     background: transparent !important;
 
-    color: white !important;
+    /* CHANGEMENT : TEXTE NOIR */
+    color: #111111 !important;
 
     font-family: Arial, Helvetica, sans-serif;
 
@@ -969,14 +964,10 @@ main {
 
   .mobile-menu button:hover,
   .mobile-menu button:active {
-    background: rgba(
-      255,
-      255,
-      255,
-      0.08
-    ) !important;
+    /* CHANGEMENT : HOVER CLAIR */
+    background: #f8f5ff !important;
 
-    color: #b57cff !important;
+    color: #8b5cf6 !important;
   }
 
 
@@ -1337,6 +1328,9 @@ main {
     width: 190px !important;
 
     z-index: 1000000 !important;
+
+    /* FOND BLANC AUSSI SUR PETIT ÉCRAN */
+    background: #ffffff !important;
   }
 
 
@@ -1411,3 +1405,4 @@ main {
   }
 
 }
+```
