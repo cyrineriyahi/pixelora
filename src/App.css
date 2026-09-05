@@ -43,17 +43,12 @@ main {
 .navbar {
   width: 100%;
   height: 80px;
-
   padding: 0 7%;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   position: relative;
-
   z-index: 100000;
-
   background: #ffffff;
 }
 
@@ -65,36 +60,25 @@ main {
 .logo {
   display: flex;
   align-items: center;
-
   gap: 8px;
-
   text-decoration: none;
-
   cursor: pointer;
-
   flex-shrink: 0;
-
   min-width: 0;
 }
 
 .logo-image {
   width: 40px;
   height: 40px;
-
   object-fit: contain;
-
   display: block;
-
   flex-shrink: 0;
 }
 
 .logo-text {
   font-size: 27px;
-
   font-weight: 800;
-
   display: flex;
-
   white-space: nowrap;
 }
 
@@ -112,9 +96,7 @@ main {
 
   -webkit-background-clip: text;
   background-clip: text;
-
   -webkit-text-fill-color: transparent;
-
   color: transparent;
 }
 
@@ -125,12 +107,9 @@ main {
 
 .nav-links {
   list-style: none;
-
   display: flex;
   align-items: center;
-
   gap: 35px;
-
   margin: 0;
   padding: 0;
 }
@@ -141,13 +120,9 @@ main {
 
 .nav-links a {
   color: #111111;
-
   text-decoration: none;
-
   font-size: 15px;
-
   font-weight: 500;
-
   transition: 0.3s;
 }
 
@@ -162,11 +137,8 @@ main {
 
 .nav-button {
   text-decoration: none;
-
   color: white;
-
   padding: 12px 20px;
-
   border-radius: 10px;
 
   background: linear-gradient(
@@ -176,11 +148,8 @@ main {
   );
 
   font-size: 14px;
-
   font-weight: 600;
-
   transition: 0.3s;
-
   white-space: nowrap;
 }
 
@@ -195,50 +164,32 @@ main {
 
 .mobile-menu-button {
   display: none;
-
   width: 44px;
   height: 44px;
-
   min-width: 44px;
-
   padding: 0;
   margin: 0;
-
   border: 0;
   outline: 0;
-
   background: transparent;
-
   cursor: pointer;
-
   flex-direction: column;
-
   justify-content: center;
-
   align-items: center;
-
   gap: 6px;
-
   flex-shrink: 0;
-
   position: relative;
-
   z-index: 2147483647;
-
   -webkit-appearance: none;
   appearance: none;
 }
 
 .mobile-menu-button span {
   display: block;
-
   width: 27px;
   height: 3px;
-
   background: #111111;
-
   border-radius: 10px;
-
   transition: all 0.3s ease;
 }
 
@@ -275,19 +226,12 @@ main {
 
 .hero {
   min-height: calc(100vh - 80px);
-
   width: 100%;
-
   padding: 70px 7%;
-
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
-
   gap: 50px;
-
   background: #ffffff;
 }
 
@@ -297,13 +241,9 @@ main {
 
 .hero-subtitle {
   font-size: 13px;
-
   letter-spacing: 3px;
-
   font-weight: 600;
-
   margin-bottom: 20px;
-
   color: #8b5cf6;
 }
 
@@ -317,7 +257,6 @@ main {
   );
 
   line-height: 1.05;
-
   margin-bottom: 25px;
 }
 
@@ -331,21 +270,15 @@ main {
 
   -webkit-background-clip: text;
   background-clip: text;
-
   -webkit-text-fill-color: transparent;
-
   color: transparent;
 }
 
 .hero-description {
   max-width: 600px;
-
   font-size: 18px;
-
   line-height: 1.7;
-
   color: #666675;
-
   margin-bottom: 35px;
 }
 
@@ -356,30 +289,22 @@ main {
 
 .hero-buttons {
   display: flex;
-
   gap: 15px;
-
   flex-wrap: wrap;
 }
 
 .primary-button,
 .secondary-button {
   padding: 14px 24px;
-
   border-radius: 12px;
-
   font-size: 15px;
-
   font-weight: 600;
-
   cursor: pointer;
-
   transition: 0.3s;
 }
 
 .primary-button {
   border: none;
-
   color: white;
 
   background: linear-gradient(
@@ -408,7 +333,6 @@ main {
 
 .secondary-button:hover {
   background: #f8f5ff;
-
   border-color: #8b5cf6;
 }
 
@@ -419,25 +343,17 @@ main {
 
 .hero-visual {
   width: 45%;
-
   display: flex;
-
   justify-content: center;
-
   align-items: center;
 }
 
 .hero-image {
   width: 100%;
-
   max-width: 600px;
-
   aspect-ratio: 4 / 3;
-
   object-fit: cover;
-
   display: block;
-
   border-radius: 35px;
 }
 
@@ -448,23 +364,16 @@ main {
 
 .services-preview {
   width: 100%;
-
   padding: 120px 7%;
-
   text-align: center;
-
   background: #ffffff;
 }
 
 .section-subtitle {
   font-size: 13px;
-
   letter-spacing: 3px;
-
   color: #8b5cf6;
-
   font-weight: 600;
-
   margin-bottom: 15px;
 }
 
@@ -494,9 +403,7 @@ main {
 
   -webkit-background-clip: text;
   background-clip: text;
-
   -webkit-text-fill-color: transparent;
-
   color: transparent;
 }
 
@@ -516,9 +423,7 @@ main {
 
 .service-card {
   padding: 35px 25px;
-
   border-radius: 24px;
-
   background: #f8f7ff;
 
   border: 1px solid rgba(
@@ -529,9 +434,7 @@ main {
   );
 
   text-align: left;
-
   cursor: pointer;
-
   transition: 0.3s;
 }
 
@@ -557,37 +460,27 @@ main {
 
 .service-icon {
   font-size: 35px;
-
   margin-bottom: 20px;
 }
 
 .service-card h3 {
   color: #111111;
-
   font-size: 20px;
-
   margin-bottom: 15px;
 }
 
 .service-card p {
   color: #666675;
-
   font-size: 14px;
-
   line-height: 1.7;
-
   margin-bottom: 20px;
 }
 
 .service-card button {
   border: none;
-
   background: transparent;
-
   color: #8b5cf6;
-
   font-weight: 600;
-
   cursor: pointer;
 }
 
@@ -598,23 +491,16 @@ main {
 
 .about-section {
   width: 100%;
-
   padding: 120px 7%;
-
   text-align: center;
-
   background: #ffffff;
 }
 
 .about-description {
   max-width: 850px;
-
   margin: 0 auto 20px;
-
   font-size: 18px;
-
   line-height: 1.8;
-
   color: #666675;
 }
 
@@ -624,9 +510,7 @@ main {
 
 .about-slogan {
   margin-top: 40px;
-
   font-size: 20px;
-
   font-weight: 600;
 
   background: linear-gradient(
@@ -638,9 +522,7 @@ main {
 
   -webkit-background-clip: text;
   background-clip: text;
-
   -webkit-text-fill-color: transparent;
-
   color: transparent;
 }
 
@@ -651,21 +533,15 @@ main {
 
 .contact-section {
   width: 100%;
-
   padding: 120px 7%;
-
   text-align: center;
-
   background: #ffffff;
 }
 
 .contact-description {
   max-width: 650px;
-
   margin: -30px auto 60px;
-
   color: #666675;
-
   line-height: 1.7;
 }
 
@@ -680,9 +556,7 @@ main {
 
 .contact-item {
   padding: 30px 15px;
-
   border-radius: 20px;
-
   background: #f8f7ff;
 
   border: 1px solid rgba(
@@ -693,7 +567,6 @@ main {
   );
 
   cursor: pointer;
-
   transition: 0.3s;
 }
 
@@ -724,23 +597,18 @@ main {
 
 .contact-icon {
   font-size: 40px;
-
   margin-bottom: 15px;
 }
 
 .contact-item h3 {
   color: #111111;
-
   margin-bottom: 10px;
 }
 
 .contact-item a {
   color: #666675;
-
   text-decoration: none;
-
   font-size: 13px;
-
   word-break: break-word;
 }
 
@@ -768,15 +636,11 @@ main {
 
   .navbar {
     width: 100%;
-
     height: 70px;
-
     padding: 0 5%;
 
     display: flex !important;
-
     align-items: center !important;
-
     justify-content: space-between !important;
 
     position: relative !important;
@@ -793,7 +657,6 @@ main {
 
   .logo {
     min-width: 0;
-
     max-width: calc(100% - 60px);
   }
 
@@ -826,31 +689,23 @@ main {
 
   .mobile-menu-button {
     display: flex !important;
-
     visibility: visible !important;
-
     opacity: 1 !important;
 
     width: 44px !important;
-
     height: 44px !important;
-
     min-width: 44px !important;
 
     padding: 0 !important;
-
     margin: 0 !important;
 
     border: 0 !important;
-
     outline: 0 !important;
 
     background: transparent !important;
 
     flex-direction: column !important;
-
     justify-content: center !important;
-
     align-items: center !important;
 
     gap: 6px !important;
@@ -864,19 +719,15 @@ main {
     cursor: pointer !important;
 
     -webkit-appearance: none !important;
-
     appearance: none !important;
   }
 
   .mobile-menu-button span {
     display: block !important;
-
     visibility: visible !important;
-
     opacity: 1 !important;
 
     width: 27px !important;
-
     height: 3px !important;
 
     background: #111111 !important;
@@ -888,7 +739,7 @@ main {
 
 
   /* ===================================================
-     MENU MOBILE — FOND BLANC FORCÉ
+     MENU MOBILE
   =================================================== */
 
   nav.navbar .mobile-menu {
@@ -896,7 +747,6 @@ main {
     position: absolute !important;
 
     top: 70px !important;
-
     right: 5% !important;
 
     width: 210px !important;
@@ -912,15 +762,12 @@ main {
     box-sizing: border-box !important;
 
     background-color: #ffffff !important;
-
     background-image: none !important;
 
     opacity: 1 !important;
-
     visibility: visible !important;
 
     backdrop-filter: none !important;
-
     -webkit-backdrop-filter: none !important;
 
     border: 1px solid #e5d9ff !important;
@@ -946,7 +793,6 @@ main {
     display: block !important;
 
     width: 100% !important;
-
     min-height: 45px !important;
 
     padding: 12px 15px !important;
@@ -954,11 +800,9 @@ main {
     box-sizing: border-box !important;
 
     border: none !important;
-
     outline: none !important;
 
     background-color: #ffffff !important;
-
     background-image: none !important;
 
     color: #111111 !important;
@@ -969,7 +813,6 @@ main {
       sans-serif !important;
 
     font-size: 15px !important;
-
     font-weight: 500 !important;
 
     text-align: left !important;
@@ -985,10 +828,8 @@ main {
     opacity: 1 !important;
 
     -webkit-appearance: none !important;
-
     appearance: none !important;
   }
-
 
   nav.navbar .mobile-menu button:hover,
   nav.navbar .mobile-menu button:active {
@@ -1295,13 +1136,15 @@ main {
     background: #f8f7ff;
   }
 
-  /* ICÔNE E-MAIL / CONTACT AGRANDIE */
+  /* ===================================================
+     ICÔNE E-MAIL / CONTACT PLUS GRANDE SUR MOBILE
+  =================================================== */
 
   .contact-icon {
 
-    font-size: 35px;
+    font-size: 50px;
 
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
   .contact-item h3 {
@@ -1539,9 +1382,11 @@ main {
     background: #ffffff;
   }
 
+  /* ICÔNE E-MAIL TRÈS GRAND ÉCRAN */
+
   .contact-icon {
 
-    font-size: 35px;
+    font-size: 45px;
 
     margin-bottom: 10px;
   }
