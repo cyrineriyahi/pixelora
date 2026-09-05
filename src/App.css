@@ -717,10 +717,15 @@ main {
     );
 }
 
-.contact-icon {
-  font-size: 30px;
 
-  margin-bottom: 20px;
+/* =====================================================
+   ICÔNES CONTACT
+===================================================== */
+
+.contact-icon {
+  font-size: 40px;
+
+  margin-bottom: 15px;
 }
 
 .contact-item h3 {
@@ -1290,9 +1295,11 @@ main {
     background: #f8f7ff;
   }
 
+  /* ICÔNE E-MAIL / CONTACT AGRANDIE */
+
   .contact-icon {
 
-    font-size: 23px;
+    font-size: 35px;
 
     margin-bottom: 10px;
   }
@@ -1530,5 +1537,12 @@ main {
   .contact-section {
 
     background: #ffffff;
+  }
+
+  .contact-icon {
+
+    font-size: 35px;
+
+    margin-bottom: 10px;
   }
 }
