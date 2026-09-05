@@ -592,7 +592,7 @@ main {
 
 
 /* =====================================================
-   ICÔNES CONTACT DESKTOP
+   ICÔNES CONTACT
 ===================================================== */
 
 .contact-icon {
@@ -1136,16 +1136,15 @@ main {
     background: #f8f7ff;
   }
 
-
   /* ===================================================
-     ICÔNE CONTACT TRÈS GRANDE SUR MOBILE
+     ICÔNE E-MAIL / CONTACT PLUS GRANDE SUR MOBILE
   =================================================== */
 
   .contact-icon {
 
-    font-size: 100px;
+    font-size: 50px;
 
-    margin-bottom: 20px;
+    margin-bottom: 12px;
   }
 
   .contact-item h3 {
@@ -1199,9 +1198,7 @@ main {
   }
 
 
-  /* ===================================================
-     HAMBURGER
-  =================================================== */
+  /* HAMBURGER */
 
   .mobile-menu-button {
 
@@ -1385,15 +1382,12 @@ main {
     background: #ffffff;
   }
 
-
-  /* ===================================================
-     ICÔNE CONTACT TRÈS GRANDE
-  =================================================== */
+  /* ICÔNE E-MAIL TRÈS GRAND ÉCRAN */
 
   .contact-icon {
 
-    font-size: 85px;
+    font-size: 45px;
 
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
 }
