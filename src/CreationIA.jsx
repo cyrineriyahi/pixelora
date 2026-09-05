@@ -20,7 +20,6 @@ function CreationIA() {
 
         <div className="creation-ia-content">
 
-
           {/* PETIT TEXTE */}
 
           <p className="creation-ia-small">
@@ -61,7 +60,6 @@ function CreationIA() {
           {/* SERVICES */}
 
           <div className="creation-ia-options">
-
 
             {/* SERVICE 1 */}
 
@@ -210,102 +208,6 @@ function CreationIA() {
             alt="Création de vidéos avec intelligence artificielle"
             className="creation-ia-image"
           />
-
-        </div>
-
-      </section>
-
-
-      {/* =========================================
-          SECTION SERVICES
-      ========================================= */}
-
-      <section className="creation-ia-services">
-
-        <p className="creation-ia-section-small">
-          NOS SOLUTIONS IA
-        </p>
-
-        <h2>
-          Donnez vie à vos
-          <span> idées.</span>
-        </h2>
-
-
-        <div className="creation-ia-grid">
-
-
-          <div className="creation-ia-card">
-
-            <div className="creation-ia-card-icon">
-              🤖
-            </div>
-
-            <h3>
-              Vidéos IA
-            </h3>
-
-            <p>
-              Transformez vos idées en vidéos
-              créatives grâce à l'intelligence
-              artificielle.
-            </p>
-
-          </div>
-
-
-          <div className="creation-ia-card">
-
-            <div className="creation-ia-card-icon">
-              🎬
-            </div>
-
-            <h3>
-              Publicité
-            </h3>
-
-            <p>
-              Créez des contenus publicitaires
-              modernes et captivants.
-            </p>
-
-          </div>
-
-
-          <div className="creation-ia-card">
-
-            <div className="creation-ia-card-icon">
-              ✨
-            </div>
-
-            <h3>
-              Animation IA
-            </h3>
-
-            <p>
-              Donnez vie à vos personnages,
-              produits et concepts.
-            </p>
-
-          </div>
-
-
-          <div className="creation-ia-card">
-
-            <div className="creation-ia-card-icon">
-              🚀
-            </div>
-
-            <h3>
-              Réseaux sociaux
-            </h3>
-
-            <p>
-              Des vidéos adaptées à Instagram,
-              TikTok et autres plateformes.
-            </p>
-
-          </div>
 
         </div>
 
