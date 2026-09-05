@@ -1,4 +1,3 @@
-
 import { useNavigate } from "react-router-dom";
 import "./CreationSite.css";
 
@@ -41,7 +40,6 @@ function CreationSite() {
         ========================================= */}
 
         <div className="creation-site-content">
-
 
 
           {/* PETIT TEXTE */}
@@ -164,7 +162,7 @@ function CreationSite() {
                 <h3>
                   Landing pages
                 </h3>
- 
+
                 <p>
                   Convertissez vos visiteurs
                   <br />
@@ -260,117 +258,6 @@ function CreationSite() {
 
         </div>
 
-
-      </section>
-
-
-      {/* =========================================
-          SECTION SERVICES
-      ========================================= */}
-
-      <section className="creation-services">
-
-
-        <p className="creation-section-small">
-          NOS SOLUTIONS
-        </p>
-
-
-        <h2>
-
-          Un site pensé pour
-
-          <span>
-            votre réussite.
-          </span>
-
-        </h2>
-
-
-        <div className="creation-services-grid">
-
-
-          {/* CARD 1 */}
-
-          <div className="creation-service-card">
-
-            <div>
-              🖥️
-            </div>
-
-            <h3>
-              Design moderne
-            </h3>
-
-            <p>
-              Une interface élégante et adaptée
-              à votre identité visuelle.
-            </p>
-
-          </div>
-
-
-          {/* CARD 2 */}
-
-          <div className="creation-service-card">
-
-            <div>
-              ⚡
-            </div>
-
-            <h3>
-              Performance
-            </h3>
-
-            <p>
-              Des pages rapides et optimisées
-              pour une meilleure expérience.
-            </p>
-
-          </div>
-
-
-          {/* CARD 3 */}
-
-          <div className="creation-service-card">
-
-            <div>
-              📱
-            </div>
-
-            <h3>
-              Responsive
-            </h3>
-
-            <p>
-              Votre site fonctionne parfaitement
-              sur ordinateur, tablette et mobile.
-            </p>
-
-          </div>
-
-
-          {/* CARD 4 */}
-
-          <div className="creation-service-card">
-
-            <div>
-              🔒
-            </div>
-
-            <h3>
-              Sécurité
-            </h3>
-
-            <p>
-              Une base solide pour protéger
-              votre site et vos données.
-            </p>
-
-          </div>
-
-
-        </div>
 
       </section>
 

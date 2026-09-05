@@ -30,6 +30,7 @@ function DesignGraphique() {
             PIXLORA • CRÉATIVITÉ • DESIGN
           </p>
 
+
           {/* TITRE */}
 
           <h1 className="design-title">
@@ -212,118 +213,8 @@ function DesignGraphique() {
             alt="Design graphique Pixlora"
           />
 
-
         </div>
 
-
-      </section>
-
-
-      {/* ========================================
-          SERVICES DÉTAILLÉS
-      ======================================== */}
-
-      <section className="design-services">
-
-        <p className="section-subtitle">
-          NOS SERVICES
-        </p>
-
-        <h2>
-
-          Tout pour votre
-
-          <span>
-            identité visuelle.
-          </span>
-
-        </h2>
-
-
-        <div className="design-grid">
-
-
-          {/* LOGO */}
-
-          <div className="design-card">
-
-            <div className="design-icon">
-              🎨
-            </div>
-
-            <h3>
-              Création de logos
-            </h3>
-
-            <p>
-              Création d'un logo professionnel,
-              moderne et adapté à votre marque.
-            </p>
-
-          </div>
-
-
-          {/* AFFICHES */}
-
-          <div className="design-card">
-
-            <div className="design-icon">
-              🖼️
-            </div>
-
-            <h3>
-              Affiches et flyers
-            </h3>
-
-            <p>
-              Création d'affiches et flyers
-              attractifs pour vos événements.
-            </p>
-
-          </div>
-
-
-          {/* RÉSEAUX */}
-
-          <div className="design-card">
-
-            <div className="design-icon">
-              📱
-            </div>
-
-            <h3>
-              Réseaux sociaux
-            </h3>
-
-            <p>
-              Création de publications modernes
-              pour Instagram, Facebook et autres.
-            </p>
-
-          </div>
-
-
-          {/* IDENTITÉ */}
-
-          <div className="design-card">
-
-            <div className="design-icon">
-              ✨
-            </div>
-
-            <h3>
-              Identité visuelle
-            </h3>
-
-            <p>
-              Création d'une identité visuelle
-              cohérente pour votre entreprise.
-            </p>
-
-          </div>
-
-
-        </div>
 
       </section>
 
